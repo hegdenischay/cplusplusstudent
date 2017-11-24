@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
+-->
+
+
+
+
+
+
+
+
+
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+  <title>Introduction to Algorithms - Chapter 2 (Part 2) &middot; The C++ Student</title>
+
+
+
+<meta name="description" content="Here, we talk about analysis of an algorithm, and introduce two new algorithms.
+">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/study/notes/2017/10/17/Chap2Part2/">
+
+<link rel="alternate" type="application/atom+xml" title="The C++ Student Feed" href="http://localhost:4000/feed.xml">
+
+
+  <link rel="prev" href="http://localhost:4000/study/notes/2017/10/16/Chap2Sol/">
+
+
+
+  <link rel="next" href="http://localhost:4000/c/2017/11/14/IOCCC-Anonymous/">
+
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+
+<link id="_katexJS"  rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js">
+<link id="_katexCSS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css">
+
+
+<!--[if gt IE 8]><!---->
+
+
+<script>
+  WebFontConfig = {
+    
+    google: {
+      families: 'Roboto+Slab:700|Noto+Sans:400,400i,700,700i'.split('|')
+    },
+    
+
+    custom: {
+      families: ['icomoon'],
+      urls: ['/assets/icomoon/style.css']
+    }
+  };
+</script>
+<!--<![endif]-->
+
+<script>
+  !function(n,e){function t(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function o(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}n._loaded=!1,n.loadJSDeferred=function(a,d){function r(){n._loaded=!0;var r=e.createElement("script");r.src=a,d&&(("onload"in r?t:o)(r,d),r.onload||t(r,d));var l=e.getElementsByTagName("script")[0];l.parentNode.insertBefore(r,l)}n._loaded?r():n.addEventListener?n.addEventListener("load",r,!1):n.attachEvent?n.attachEvent("onload",r):n.onload=r}}(window,document);
+
+  !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+
+  !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+
+  window.disablePushState = false;
+  window.disableDrawer = false;
+</script>
+
+<!--[if lt IE 9]>
+<script src="/assets/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+
+
+<!--[if gt IE 8]><!---->
+<style>
+  
+  article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}*{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:#333;background-color:#fff;overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}img,.img{display:block;max-width:100%;margin-bottom:1rem;border:none}img.lead,.img.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-weight:bold;text-rendering:optimizeLegibility}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin:3rem 0 1rem;line-height:1.6}h1,.h1{font-size:2rem;line-height:1.25}h2,.h2{font-size:1.5rem}h3,.h3{font-size:1.17em}p{margin-top:0;margin-bottom:1rem}p.lead{font-size:1.25rem;font-weight:300;padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:1.5rem 0;border:0;border-top:1px solid #eee}.hr{padding-bottom:.5rem;border-bottom:1px solid #eee;margin-bottom:1.5rem}h4,h5,h6,.h4,.h5,.h6{margin-bottom:0.5rem;font-size:1rem}table{margin-bottom:1rem;width:100%;width:calc(100% + 2rem);margin-left:-1rem;border:1px solid #e5e5e5;border-collapse:collapse;border-spacing:0}td,th{padding:.25rem .5rem;border:1px solid #e5e5e5}td:first-child,th:first-child{padding-left:1rem}td:last-child,th:last-child{padding-right:1rem}thead+tbody,tbody+tbody,tfoot{border-top:3px double #e5e5e5}tbody tr:nth-child(odd) td,tbody tr:nth-child(odd) th{background-color:#f9f9f9}footer{margin-bottom:2rem}.page,.post{margin-bottom:3em}.page li+li,.post li+li{margin-top:.25rem}.page>header,.post>header{margin-bottom:2rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:#9a9a9a}.related-posts{padding-left:0;list-style:none}.related-posts>li,.related-posts>li+li{margin-top:1rem}.related-posts>li>small,.related-posts>li+li>small{font-size:75%;color:#9a9a9a}.message{margin-bottom:1rem;padding:1rem;color:#787878;background-color:#f9f9f9;margin-left:-1rem;margin-right:-1rem}body,main{position:relative;overflow-x:hidden}@media screen{body::before{content:'';width:.5rem;background:#e5e5e5;position:absolute;left:0;top:0;bottom:0}}@media screen and (min-width: 40em){html{font-size:17px}}@media screen and (min-width: 54em){html{font-size:16px}}@media screen and (min-width: 72em){html{font-size:17px}}@media screen and (min-width: 125em){html{font-size:18px}}.sr-only{display:none}.clearfix,.sidebar-social::after,.clearafter::after{content:"";display:table;clear:both}a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}.img{overflow:hidden;background-color:#f9f9f9}.img>img{margin:0;width:100%;height:100%}.sixteen-nine{position:relative}.sixteen-nine::before{display:block;content:"";width:100%;padding-top:56.25%}.sixteen-nine>*{position:absolute;top:0;left:0;right:0;bottom:0}h1+hr,h2+hr,h3+hr,h4+hr,h5+hr,h6+hr{margin-top:0}.fade-in{animation-duration:500ms;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-2rem);opacity:0}50%{transform:translateY(-2rem);opacity:0}to{transform:translateY(0);opacity:1}}.mb6{margin-bottom:6rem}.sidebar{color:rgba(255,255,255,0.75);text-align:left}.sidebar::before{content:"";position:absolute;z-index:2;top:0;left:0;bottom:0;right:0;background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%)}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}#_yDrawer{position:relative;padding:1rem 0}@media screen{#_yDrawer{padding:2rem 1rem;min-height:640px;min-height:100vh}}@media screen and (min-width: 54em){#_yDrawer{position:fixed;top:0;left:0;bottom:0;width:18rem;margin-left:0}}@media screen and (min-width: 97.5em){#_yDrawer{width:calc(50% - 28rem)}}@media screen{#_yDrawer.loaded{min-height:0;padding:0}}.sidebar-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:#202020 center / cover}.sidebar-sticky{position:relative;z-index:3}@media screen{.sidebar-sticky{position:absolute;right:2rem;bottom:1rem;left:auto;max-width:14rem}}@media print{.sidebar-sticky{padding:0 2rem}}.sidebar-about>h1{color:#fff;font-size:2rem}.sidebar-nav>ul{list-style:none;padding-left:0;margin-bottom:.5rem}a.sidebar-nav-item{font-weight:bold;display:block;line-height:1.75;padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,0.2)}@media screen{.y-drawer-scrim{z-index:2}.y-drawer-content{width:18rem;left:-17.5rem;z-index:3}}@media screen and (min-width: 97.5em){.y-drawer-content{width:calc(50% - 28rem)}}.sidebar-social{margin-bottom:.5rem}.sidebar-social>ul{list-style:none;padding-left:0;margin:0 -.25rem}.sidebar-social>ul>li{float:left;margin:0 .25rem}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.6rem;line-height:3rem;width:3.1249rem;height:4rem;padding:.5rem 0}.sidebar-social>ul li+li{margin-top:0}.fixed-top{position:fixed;top:0;left:0;width:100%;z-index:1}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;height:0}.menu{display:inline-block;padding:1.75rem 1.5rem;border-bottom:none;margin-left:-1.5rem;color:#9a9a9a !important}.menu::after{content:"\2630"}@media screen and (min-width: 54em){.menu{padding:1.25rem 1.5rem;position:absolute;left:-9999px}.menu:focus{position:static}}.animation-main{pointer-events:none}.loading{display:none}@media print{.menu{display:none}}.animation-main{opacity:0;will-change:opacity}.loading{position:absolute;top:0;right:0;padding:5.25rem 4.5rem;transform-origin:top right;transform:scale(0.33)}.content{position:relative;margin-left:auto;margin-right:auto;padding:5rem 1rem 12rem}@media screen{.content{max-width:38rem;padding-left:1.5rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem;padding:4rem 1rem 12rem;margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 72em){.content{margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 92em){.content{max-width:48rem}}@media screen and (min-width: 97.5em){.content{margin:auto}}.me{float:right;width:6.5rem;height:6.5rem;margin-left:1rem;margin-bottom:.5rem;border-radius:100%;position:relative}@media screen and (min-width: 40em){.me{width:7rem;height:7rem}}@media screen and (min-width: 54em){.me{width:6.5rem;height:6.5rem}}@media screen and (min-width: 60em){.me{width:7rem;height:7rem}}main>footer{position:absolute;bottom:0;left:0;right:0;padding:0 1rem;color:#9a9a9a;font-size:smaller;text-align:center}main>footer>p{margin-bottom:0}html{font-family:Helvetica, Arial, sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Helvetica, Arial, sans-serif}
+
+</style>
+
+
+<link id="_stylePreload" rel="preload" as="style" href="/assets/css/hydejack.css?v=6.6.1">
+<script>document.getElementById('_stylePreload').onload=function(){this.rel='stylesheet'}</script>
+
+<!-- NOTE: These styles interact with JavsScript, so they MUST NOT be changed -->
+<style id="_pageStyle">
+
+.content a{color:#A85641;border-color:rgba(168,86,65,0.2)}.content a:hover{border-color:#A85641}:focus{outline-color:#A85641}::selection{color:#fff;background:#A85641}::-moz-selection{color:#fff;background:#A85641}
+
+</style>
+
+
+<noscript>
+  <link rel="stylesheet" href="/assets/css/hydejack.css?v=6.6.1">
+
+  
+  
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Noto+Sans:400,400i,700,700i">
+    <style>
+      html { font-family: 'Noto Sans', Helvetica, Arial, sans-serif }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }
+    </style>
+  
+
+  
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+</noscript>
+<!--<![endif]-->
+
+
+
+
+
+
+<!--[if gt IE 8]><!---->
+<script async src="/assets/bower_components/webfontloader/webfontloader.js"></script>
+<!--<![endif]-->
+
+</head>
+
+<body>
+  
+<div class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <a id="_menu" class="menu no-hover" href="#_title">
+      <span class="sr-only">Menu</span>
+    </a>
+  </div>
+</div>
+
+
+<div id="_yPushState">
+  <div class="fade-in">
+    <main id="_main" class="content" role="main" data-color="#A85641" data-image="/dandelion.png">
+      
+
+<article id="post-study/notes/2017/10/17/Chap2Part2" class="post" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Introduction to Algorithms - Chapter 2 (Part 2)
+      
+    </h1>
+
+    <p class="post-date heading">
+      <time datetime="2017-10-17T00:30:00+05:30">17 Oct 2017</time>
+      
+
+
+
+
+
+
+
+
+
+in <span>Study</span> / <span>Notes</span>
+
+      
+
+
+
+
+
+
+
+
+
+on <span>Algorithms</span>
+
+    </p>
+
+    
+  
+  
+<p class="message">Here, we talk about analysis of an algorithm, and introduce two new algorithms.</p>
+
+
+
+
+  </header>
+
+  
+    <ul id="markdown-toc">
+  <li><a href="#analysis-of-algorithms" id="markdown-toc-analysis-of-algorithms">Analysis of Algorithms</a></li>
+  <li><a href="#analysis-of-insertion-sort" id="markdown-toc-analysis-of-insertion-sort">Analysis of Insertion Sort</a>    <ul>
+      <li><a href="#finding-time-taken-in-best-case" id="markdown-toc-finding-time-taken-in-best-case">Finding Time Taken In Best Case</a></li>
+      <li><a href="#finding-time-taken-in-worst-case" id="markdown-toc-finding-time-taken-in-worst-case">Finding Time Taken In Worst Case</a></li>
+    </ul>
+  </li>
+  <li><a href="#divide-and-conquer-principle" id="markdown-toc-divide-and-conquer-principle">Divide And Conquer Principle</a>    <ul>
+      <li><a href="#merge-sort" id="markdown-toc-merge-sort">Merge Sort</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="analysis-of-algorithms">Analysis of Algorithms</h2>
+<p><em>Analyzing</em> an algorithm normally means predicting the <em>resources</em> that the algorithm requires.</p>
+
+<blockquote>
+  <p>Occasionally, resources such as memory, communication band-
+width, or computer hardware are of primary concern, but most often it is compu-
+tational time that we want to measure.</p>
+</blockquote>
+
+<p>Okay, let’s do this!</p>
+
+<p>(We assume here that the technology used for these algorithms here utilizes a generic one-processor, RAM (Random-Access Machine) model of computation)</p>
+
+<h2 id="analysis-of-insertion-sort">Analysis of Insertion Sort</h2>
+
+<p>We can say that the time taken by the Insertion Sort Algorithm must be proportional to the time taken, since sorting 1000 numbers is more tedious than sorting 3 numbers.</p>
+
+<p>Also, some implementations of insertion sort can be faster than the rest.</p>
+
+<blockquote>
+  <p>In general, since the time taken by an algorithm grows with the size of the input, it is traditional to describe the running time of a program as a function of the size of its input.</p>
+</blockquote>
+
+<blockquote>
+  <p>Therefore, we need to define “running time” and “size of input” more carefully.</p>
+</blockquote>
+
+<blockquote>
+  <p>The best notion for input size depends on the problem being studied. For many problems, such as sorting or computing discrete Fourier transforms, the most natural measure is the number of items in the input — for example, the array size n for sorting. For many other problems, such as multiplying two integers, the best measure of input size is the total number of bits needed to represent the input in ordinary binary notation. Sometimes, it is more appropriate to describe the size of the input with two numbers rather than one. For instance, if the input to an algorithm is a graph, the input size can be described by the numbers of vertices and edges in the graph. We shall indicate which input size measure is being used with
+each problem we study.</p>
+</blockquote>
+
+<blockquote>
+  <p>The running time of an algorithm on a particular input is the number of primitive operations or “steps” executed. It is convenient to define the notion of step so that it is as machine-independent as possible. For the moment, let us adopt the following view. A constant amount of time is required to execute each line of our
+pseudocode. One line may take a different amount of time than another line, but we shall assume that each execution of the <code class="MathJax_Preview">{i}^{th}</code><script type="math/tex">{i}^{th}</script> line takes time <code class="MathJax_Preview">c_i</code><script type="math/tex">c_i</script> , where <code class="MathJax_Preview">c_i</code><script type="math/tex">c_i</script> is a constant. This viewpoint is in keeping with the RAM model, and it also reflects how the pseudocode would be implemented on most actual computers.</p>
+</blockquote>
+
+<blockquote>
+  <p>In the following discussion, our expression for the running time of Insertion Sort will evolve from a messy formula that uses all the statement costs <code class="MathJax_Preview">c_i</code><script type="math/tex">c_i</script> to a
+much simpler notation that is more concise and more easily manipulated. This simpler notation will also make it easy to determine whether one algorithm is more
+efficient than another.</p>
+</blockquote>
+
+<blockquote>
+  <p>We start by presenting the Insertion Sort procedure with the time “cost” of each statement and the number of times each statement is executed. For each
+<code class="MathJax_Preview">j = 2,3,...,n</code><script type="math/tex">j = 2,3,...,n</script>, where n = <em>A:length</em>, we let <code class="MathJax_Preview">t_j</code><script type="math/tex">t_j</script> denote the number of times the while loop test in line 5 is executed for that value of j . When a for or while loop exits in the usual way (i.e., due to the test in the loop header), the test is executed
+one time more than the loop body. We assume that comments are not executable statements, and so they take no time.</p>
+</blockquote>
+
+<p><img src="/assets/Chap2Part2/1.png" alt="Insertion_sort_cost" /></p>
+
+<p>The total running time is the sum of running times for each statement executed. Therefore, the total time taken is:</p>
+
+<pre class="MathJax_Preview"><code>T(n) = c_1n + c_2(n-1) + c_4(n - 1) + c_5\sum_{j=2}^{n} (t_j-1) + c_7\sum_{j=2}^{n}(t_j-1) + c_8(n-1)</code></pre>
+<script type="math/tex; mode=display">T(n) = c_1n + c_2(n-1) + c_4(n - 1) + c_5\sum_{j=2}^{n} (t_j-1) + c_7\sum_{j=2}^{n}(t_j-1) + c_8(n-1)</script>
+
+<p>So let’s find the best and worst cases, using which we will gain some insight as to how this algorithm works.</p>
+
+<h3 id="finding-time-taken-in-best-case">Finding Time Taken In Best Case</h3>
+<p>The best case in Insertion Sort obviously happens when the array is already sorted.</p>
+
+<p>For all of <code class="MathJax_Preview">j = 2,3, \ldots,n</code><script type="math/tex">j = 2,3, \ldots,n</script>, we find that <code class="MathJax_Preview">A[i]\leq key $ in line 5 of the algorithm when i has an initial value of j - 1. Thus,</code><script type="math/tex">A[i]\leq key $ in line 5 of the algorithm when i has an initial value of j - 1. Thus,</script> t_j = 1 <code class="MathJax_Preview">for</code><script type="math/tex">for</script> j = 2,3,/ldots,n $$ and the best-case running time is:</p>
+
+<pre class="MathJax_Preview"><code>T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5(n-1) + c_8(n-1)
+     = (c_1 + c_2 + c_4 + c_5 + c_8)n - (c_2 + c_4 + c_5 + c_8)</code></pre>
+<script type="math/tex; mode=display">T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5(n-1) + c_8(n-1)
+     = (c_1 + c_2 + c_4 + c_5 + c_8)n - (c_2 + c_4 + c_5 + c_8)</script>
+
+<p>Since we can express it as <code class="MathJax_Preview">an + b</code><script type="math/tex">an + b</script> for constants a and b, it is a <strong>linear function</strong> of n.</p>
+
+<h3 id="finding-time-taken-in-worst-case">Finding Time Taken In Worst Case</h3>
+<p>The worst time happens when the summation terms are at their maximum.</p>
+
+<p>Remembering that the summation terms can be simplified to:</p>
+
+<pre class="MathJax_Preview"><code>\sum_{j=2}^{n} j = \dfrac{n(n+1)}{2} - 1</code></pre>
+<script type="math/tex; mode=display">\sum_{j=2}^{n} j = \dfrac{n(n+1)}{2} - 1</script>
+
+<p>and</p>
+
+<pre class="MathJax_Preview"><code>\sum_{j=2}^n (j-1) = \dfrac{n(n-1)}{2}</code></pre>
+<script type="math/tex; mode=display">\sum_{j=2}^n (j-1) = \dfrac{n(n-1)}{2}</script>
+
+<p>We get:</p>
+
+<pre class="MathJax_Preview"><code>T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5 \left(\dfrac{n(n+1)}{2} - 1\right) + c_6 \left(\dfrac{n(n-1)}{2}\right) + c_7 \left(\dfrac{n(n-1)}{2}\right) + c_8(n-1)</code></pre>
+<script type="math/tex; mode=display">T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5 \left(\dfrac{n(n+1)}{2} - 1\right) + c_6 \left(\dfrac{n(n-1)}{2}\right) + c_7 \left(\dfrac{n(n-1)}{2}\right) + c_8(n-1)</script>
+
+<pre class="MathJax_Preview"><code>T(n) = \left(\dfrac{c_5}{2} + \dfrac{c_6}{2} + \dfrac{c_7}{2}\right)n^2 + \left(c_1 + c_2 + c_4 + \dfrac{c_5}{2} - \dfrac{c_6}{2} - \dfrac{c_7}{2} + c_8\right)n - (c_2 + c_4 + c_5 + c_8)</code></pre>
+<script type="math/tex; mode=display">T(n) = \left(\dfrac{c_5}{2} + \dfrac{c_6}{2} + \dfrac{c_7}{2}\right)n^2 + \left(c_1 + c_2 + c_4 + \dfrac{c_5}{2} - \dfrac{c_6}{2} - \dfrac{c_7}{2} + c_8\right)n - (c_2 + c_4 + c_5 + c_8)</script>
+
+<p>We can express <em>this</em> time as <code class="MathJax_Preview">an^2 + bn + c</code><script type="math/tex">an^2 + bn + c</script> for constants a, b, and c.</p>
+
+<p>Therefore, it is a <strong>quadratic function</strong> of n.</p>
+
+<h2 id="divide-and-conquer-principle">Divide And Conquer Principle</h2>
+<p>This principle is used for problems which have subproblems that can be easily solved.</p>
+
+<p>For example, if this sorting algorithm were to be fed only two elements at a time, it would be easy, right?</p>
+
+<p>Therefore, if we can break down a problem to small, easily solvable chunks, solving the problem becomes easier. Just make the real problem by solving all the bits and pieces!</p>
+
+<p>This is a complex skill, worth it’s own page (which I will give), but let’s see it in action first.</p>
+
+<h3 id="merge-sort">Merge Sort</h3>
+<p>This is the code for <a href="http://cplusplus.happycodings.com/algorithms/code17.html">mergesort</a>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Merge Sort
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int a[50];
+void merge(int,int,int);
+void merge_sort(int low,int high)
+{
+ if(low&lt;high)
+ {
+  int mid = low + (high-low)/2; //This avoids overflow when low, high are too large
+  merge_sort(low,mid);
+  merge_sort(mid+1,high);
+  merge(low,mid,high);
+ }
+}
+void merge(int low,int mid,int high)
+{
+ int h,i,j,b[50],k;
+ h=low;
+ i=low;
+ j=mid+1;
+
+ while((h&lt;=mid)&amp;&amp;(j&lt;=high))
+ {
+  if(a[h]&lt;=a[j])
+  {
+   b[i]=a[h];
+   h++;
+  }
+  else
+  {
+   b[i]=a[j];
+   j++;
+  }
+  i++;
+ }
+ if(h&gt;mid)
+ {
+  for(k=j;k&lt;=high;k++)
+  {
+   b[i]=a[k];
+   i++;
+  }
+ }
+ else
+ {
+  for(k=h;k&lt;=mid;k++)
+  {
+   b[i]=a[k];
+   i++;
+  }
+ }
+ for(k=low;k&lt;=high;k++) a[k]=b[k];
+}
+int main()
+{
+ int num,i;
+ cout&lt;&lt;"Please Enter THE NUMBER OF ELEMENTS you want to sort [THEN 
+PRESS
+ENTER]:"&lt;&lt;endl;
+ cin&gt;&gt;num;
+ cout&lt;&lt;"\n Now, Please Enter the ( "&lt;&lt; num &lt;&lt;" ) numbers (ELEMENTS) [THEN
+PRESS ENTER]:"&lt;&lt;endl;
+ for(i=1;i&lt;=num;i++)
+ {
+  cin&gt;&gt;a[i] ;
+ }
+ merge_sort(1,num);
+ cout&lt;&lt;endl;
+ cout&lt;&lt;"So, the sorted list (using MERGE SORT) will be :"&lt;&lt;endl;
+ cout&lt;&lt;endl&lt;&lt;endl;
+
+ for(i=1;i&lt;=num;i++)
+ cout&lt;&lt;a[i]&lt;&lt;"  ";
+
+}
+</code></pre></div></div>
+<p>Try to understand it.
+I’ll explain it in the next post.</p>
+
+
+  
+
+</article>
+
+
+  <hr class="dingbat" />
+
+
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  
+    
+  
+
+  
+
+  <img
+    src="/assets/img/no_scale.jpg"
+    class="me"
+    alt="Nischay Hegde"
+    srcset="/assets/img/scaled.jpg 1x,/assets/img/scaledx256.jpg 2x"
+    
+  />
+
+
+  
+
+  <h2 class="page-title hr">
+    About
+  </h2>
+
+  <p>I’m just a student doing his 12th in NIOS (hence the name). My interests are mostly CS-related.</p>
+
+
+  
+    <div class="sidebar-social">
+      <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/<username>" title="GitHub">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="hegdenischay@gmail.com" title="Email">
+    <span class="icon-mail"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://<url>/feed.xml" title="RSS">
+    <span class="icon-rss2"></span>
+    <span class="sr-only">RSS</span>
+  </a>
+</li>
+
+  
+
+  
+
+  
+</ul>
+
+    </div>
+  
+</div>
+
+  </aside>
+
+
+
+
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+      
+      
+        
+          
+          
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/study/notes/2017/10/16/Chap2Sol/" data-flip="title">
+    <span>Introduction to Algorithms - Solutions - Chapter 2 (Part 1)</span>
+  </a>
+  <small><time datetime="2017-10-16T02:00:00+05:30">
+    16 Oct 2017
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/study/notes/2017/10/15/Chap2/" data-flip="title">
+    <span>Introduction to Algorithms - Chapter 2 (Part 1)</span>
+  </a>
+  <small><time datetime="2017-10-15T10:30:00+05:30">
+    15 Oct 2017
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/study/notes/2017/10/12/CLRSChap1/" data-flip="title">
+    <span>Introduction to Algorithms - Chapter 1</span>
+  </a>
+  <small><time datetime="2017-10-12T05:30:00+05:30">
+    12 Oct 2017
+  </time></small>
+</li>
+
+        
+      
+    
+  </ul>
+</aside>
+
+
+
+      
+
+      <footer>
+  <hr/>
+  
+  <p>
+    <code>Powered by <a href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">6.6.1</span></code>
+  </p>
+</footer>
+
+    </main>
+  </div>
+  <div id="_yDrawer">
+  <div id="_sidebar" class="sidebar">
+    <div class="sidebar-bg" style="background-color:#A85641;background-image:url(/dandelion.png)"></div>
+    <header class="sidebar-sticky" role="banner">
+      <div class="sidebar-about">
+        <h1><a id="_title" href="/">The C++ Student</a></h1>
+        <p>I’m just a student who wants to delve deeper into the world of Computing, with C++ as my base. I’ll be posting quite often from now on, so stay tuned!</p>
+
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+
+  
+
+  
+
+  
+    <li>
+      <a class="sidebar-nav-item" href="/ongoing/">Ongoing Projects</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/posts/">Posts</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/upcoming/">Upcoming Projects</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/about/">Hey, I'm Nischay.</a>
+    </li>
+  
+</ul>
+
+      </nav>
+
+      
+
+      
+        <div class="sidebar-social">
+          <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/<username>" title="GitHub">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="hegdenischay@gmail.com" title="Email">
+    <span class="icon-mail"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://<url>/feed.xml" title="RSS">
+    <span class="icon-rss2"></span>
+    <span class="sr-only">RSS</span>
+  </a>
+</li>
+
+  
+
+  
+
+  
+</ul>
+
+        </div>
+      
+    </header>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+  <!--[if gt IE 9]><!---->
+  
+  <script>loadJSDeferred('/assets/js/hydejack.js?v=6.6.1');</script>
+
+  
+
+  <!--<![endif]-->
+
+
+
+</body>
+
+</html>

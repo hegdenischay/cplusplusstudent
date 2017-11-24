@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
+-->
+
+
+
+
+
+
+
+
+
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+  <title>Control Statements &middot; The C++ Student</title>
+
+
+
+<meta name="description" content="Part 2 of “The Basics of Coding in C++”
+">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cpp-tutorial/2017/09/19/control-statements/">
+
+<link rel="alternate" type="application/atom+xml" title="The C++ Student Feed" href="http://localhost:4000/feed.xml">
+
+
+  <link rel="prev" href="http://localhost:4000/cpp-tutorial/2017/09/17/a-quick-detour/">
+
+
+
+  <link rel="next" href="http://localhost:4000/cpp-tutorial/2017/09/19/making-a-simple-program/">
+
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+
+<link id="_katexJS"  rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js">
+<link id="_katexCSS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css">
+
+
+<!--[if gt IE 8]><!---->
+
+
+<script>
+  WebFontConfig = {
+    
+    google: {
+      families: 'Roboto+Slab:700|Noto+Sans:400,400i,700,700i'.split('|')
+    },
+    
+
+    custom: {
+      families: ['icomoon'],
+      urls: ['/assets/icomoon/style.css']
+    }
+  };
+</script>
+<!--<![endif]-->
+
+<script>
+  !function(n,e){function t(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function o(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}n._loaded=!1,n.loadJSDeferred=function(a,d){function r(){n._loaded=!0;var r=e.createElement("script");r.src=a,d&&(("onload"in r?t:o)(r,d),r.onload||t(r,d));var l=e.getElementsByTagName("script")[0];l.parentNode.insertBefore(r,l)}n._loaded?r():n.addEventListener?n.addEventListener("load",r,!1):n.attachEvent?n.attachEvent("onload",r):n.onload=r}}(window,document);
+
+  !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+
+  !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+
+  window.disablePushState = false;
+  window.disableDrawer = false;
+</script>
+
+<!--[if lt IE 9]>
+<script src="/assets/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+
+
+<!--[if gt IE 8]><!---->
+<style>
+  
+  article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}*{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:#333;background-color:#fff;overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}img,.img{display:block;max-width:100%;margin-bottom:1rem;border:none}img.lead,.img.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-weight:bold;text-rendering:optimizeLegibility}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin:3rem 0 1rem;line-height:1.6}h1,.h1{font-size:2rem;line-height:1.25}h2,.h2{font-size:1.5rem}h3,.h3{font-size:1.17em}p{margin-top:0;margin-bottom:1rem}p.lead{font-size:1.25rem;font-weight:300;padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:1.5rem 0;border:0;border-top:1px solid #eee}.hr{padding-bottom:.5rem;border-bottom:1px solid #eee;margin-bottom:1.5rem}h4,h5,h6,.h4,.h5,.h6{margin-bottom:0.5rem;font-size:1rem}table{margin-bottom:1rem;width:100%;width:calc(100% + 2rem);margin-left:-1rem;border:1px solid #e5e5e5;border-collapse:collapse;border-spacing:0}td,th{padding:.25rem .5rem;border:1px solid #e5e5e5}td:first-child,th:first-child{padding-left:1rem}td:last-child,th:last-child{padding-right:1rem}thead+tbody,tbody+tbody,tfoot{border-top:3px double #e5e5e5}tbody tr:nth-child(odd) td,tbody tr:nth-child(odd) th{background-color:#f9f9f9}footer{margin-bottom:2rem}.page,.post{margin-bottom:3em}.page li+li,.post li+li{margin-top:.25rem}.page>header,.post>header{margin-bottom:2rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:#9a9a9a}.related-posts{padding-left:0;list-style:none}.related-posts>li,.related-posts>li+li{margin-top:1rem}.related-posts>li>small,.related-posts>li+li>small{font-size:75%;color:#9a9a9a}.message{margin-bottom:1rem;padding:1rem;color:#787878;background-color:#f9f9f9;margin-left:-1rem;margin-right:-1rem}body,main{position:relative;overflow-x:hidden}@media screen{body::before{content:'';width:.5rem;background:#e5e5e5;position:absolute;left:0;top:0;bottom:0}}@media screen and (min-width: 40em){html{font-size:17px}}@media screen and (min-width: 54em){html{font-size:16px}}@media screen and (min-width: 72em){html{font-size:17px}}@media screen and (min-width: 125em){html{font-size:18px}}.sr-only{display:none}.clearfix,.sidebar-social::after,.clearafter::after{content:"";display:table;clear:both}a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}.img{overflow:hidden;background-color:#f9f9f9}.img>img{margin:0;width:100%;height:100%}.sixteen-nine{position:relative}.sixteen-nine::before{display:block;content:"";width:100%;padding-top:56.25%}.sixteen-nine>*{position:absolute;top:0;left:0;right:0;bottom:0}h1+hr,h2+hr,h3+hr,h4+hr,h5+hr,h6+hr{margin-top:0}.fade-in{animation-duration:500ms;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-2rem);opacity:0}50%{transform:translateY(-2rem);opacity:0}to{transform:translateY(0);opacity:1}}.mb6{margin-bottom:6rem}.sidebar{color:rgba(255,255,255,0.75);text-align:left}.sidebar::before{content:"";position:absolute;z-index:2;top:0;left:0;bottom:0;right:0;background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%)}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}#_yDrawer{position:relative;padding:1rem 0}@media screen{#_yDrawer{padding:2rem 1rem;min-height:640px;min-height:100vh}}@media screen and (min-width: 54em){#_yDrawer{position:fixed;top:0;left:0;bottom:0;width:18rem;margin-left:0}}@media screen and (min-width: 97.5em){#_yDrawer{width:calc(50% - 28rem)}}@media screen{#_yDrawer.loaded{min-height:0;padding:0}}.sidebar-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:#202020 center / cover}.sidebar-sticky{position:relative;z-index:3}@media screen{.sidebar-sticky{position:absolute;right:2rem;bottom:1rem;left:auto;max-width:14rem}}@media print{.sidebar-sticky{padding:0 2rem}}.sidebar-about>h1{color:#fff;font-size:2rem}.sidebar-nav>ul{list-style:none;padding-left:0;margin-bottom:.5rem}a.sidebar-nav-item{font-weight:bold;display:block;line-height:1.75;padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,0.2)}@media screen{.y-drawer-scrim{z-index:2}.y-drawer-content{width:18rem;left:-17.5rem;z-index:3}}@media screen and (min-width: 97.5em){.y-drawer-content{width:calc(50% - 28rem)}}.sidebar-social{margin-bottom:.5rem}.sidebar-social>ul{list-style:none;padding-left:0;margin:0 -.25rem}.sidebar-social>ul>li{float:left;margin:0 .25rem}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.6rem;line-height:3rem;width:3.1249rem;height:4rem;padding:.5rem 0}.sidebar-social>ul li+li{margin-top:0}.fixed-top{position:fixed;top:0;left:0;width:100%;z-index:1}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;height:0}.menu{display:inline-block;padding:1.75rem 1.5rem;border-bottom:none;margin-left:-1.5rem;color:#9a9a9a !important}.menu::after{content:"\2630"}@media screen and (min-width: 54em){.menu{padding:1.25rem 1.5rem;position:absolute;left:-9999px}.menu:focus{position:static}}.animation-main{pointer-events:none}.loading{display:none}@media print{.menu{display:none}}.animation-main{opacity:0;will-change:opacity}.loading{position:absolute;top:0;right:0;padding:5.25rem 4.5rem;transform-origin:top right;transform:scale(0.33)}.content{position:relative;margin-left:auto;margin-right:auto;padding:5rem 1rem 12rem}@media screen{.content{max-width:38rem;padding-left:1.5rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem;padding:4rem 1rem 12rem;margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 72em){.content{margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 92em){.content{max-width:48rem}}@media screen and (min-width: 97.5em){.content{margin:auto}}.me{float:right;width:6.5rem;height:6.5rem;margin-left:1rem;margin-bottom:.5rem;border-radius:100%;position:relative}@media screen and (min-width: 40em){.me{width:7rem;height:7rem}}@media screen and (min-width: 54em){.me{width:6.5rem;height:6.5rem}}@media screen and (min-width: 60em){.me{width:7rem;height:7rem}}main>footer{position:absolute;bottom:0;left:0;right:0;padding:0 1rem;color:#9a9a9a;font-size:smaller;text-align:center}main>footer>p{margin-bottom:0}html{font-family:Helvetica, Arial, sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Helvetica, Arial, sans-serif}
+
+</style>
+
+
+<link id="_stylePreload" rel="preload" as="style" href="/assets/css/hydejack.css?v=6.6.1">
+<script>document.getElementById('_stylePreload').onload=function(){this.rel='stylesheet'}</script>
+
+<!-- NOTE: These styles interact with JavsScript, so they MUST NOT be changed -->
+<style id="_pageStyle">
+
+.content a{color:#A85641;border-color:rgba(168,86,65,0.2)}.content a:hover{border-color:#A85641}:focus{outline-color:#A85641}::selection{color:#fff;background:#A85641}::-moz-selection{color:#fff;background:#A85641}
+
+</style>
+
+
+<noscript>
+  <link rel="stylesheet" href="/assets/css/hydejack.css?v=6.6.1">
+
+  
+  
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Noto+Sans:400,400i,700,700i">
+    <style>
+      html { font-family: 'Noto Sans', Helvetica, Arial, sans-serif }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }
+    </style>
+  
+
+  
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+</noscript>
+<!--<![endif]-->
+
+
+
+
+
+
+<!--[if gt IE 8]><!---->
+<script async src="/assets/bower_components/webfontloader/webfontloader.js"></script>
+<!--<![endif]-->
+
+</head>
+
+<body>
+  
+<div class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <a id="_menu" class="menu no-hover" href="#_title">
+      <span class="sr-only">Menu</span>
+    </a>
+  </div>
+</div>
+
+
+<div id="_yPushState">
+  <div class="fade-in">
+    <main id="_main" class="content" role="main" data-color="#A85641" data-image="/dandelion.png">
+      
+
+<article id="post-cpp-tutorial/2017/09/19/control-statements" class="post" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Control Statements
+      
+    </h1>
+
+    <p class="post-date heading">
+      <time datetime="2017-09-19T00:30:00+05:30">19 Sep 2017</time>
+      
+
+
+
+
+
+
+
+
+
+in <span>Cpp-tutorial</span>
+
+      
+
+
+
+
+
+
+
+
+
+on <span>C++</span>
+
+    </p>
+
+    
+  
+  
+<p class="message">Part 2 of “The Basics of Coding in C++”</p>
+
+
+
+
+  </header>
+
+  
+    <ul id="markdown-toc">
+  <li><a href="#control-statements" id="markdown-toc-control-statements">Control Statements</a></li>
+  <li><a href="#types-of-control-statements" id="markdown-toc-types-of-control-statements">Types of Control Statements</a>    <ul>
+      <li><a href="#if-selection-statement" id="markdown-toc-if-selection-statement"><code class="highlighter-rouge">if</code> selection statement</a></li>
+      <li><a href="#nested-if-statement" id="markdown-toc-nested-if-statement">Nested <code class="highlighter-rouge">if</code> statement</a></li>
+      <li><a href="#if--else-statement" id="markdown-toc-if--else-statement"><code class="highlighter-rouge">if ... else</code> statement</a></li>
+      <li><a href="#if--else--if-statement" id="markdown-toc-if--else--if-statement"><code class="highlighter-rouge">if ... else ... if</code> statement</a></li>
+      <li><a href="#switch-statement" id="markdown-toc-switch-statement"><code class="highlighter-rouge">switch</code> statement</a></li>
+      <li><a href="#a-simple-program-with-selection-statements" id="markdown-toc-a-simple-program-with-selection-statements">A Simple Program with selection statements</a></li>
+      <li><a href="#the-final-program" id="markdown-toc-the-final-program">The Final Program</a></li>
+    </ul>
+  </li>
+  <li><a href="#iteration-statements" id="markdown-toc-iteration-statements">Iteration Statements</a>    <ul>
+      <li><a href="#while-loop" id="markdown-toc-while-loop"><code class="highlighter-rouge">while</code> loop</a></li>
+      <li><a href="#the-do--while-loop" id="markdown-toc-the-do--while-loop">The <code class="highlighter-rouge">do ... while</code> loop</a></li>
+      <li><a href="#the-for-loop" id="markdown-toc-the-for-loop">The <code class="highlighter-rouge">for</code> loop</a></li>
+    </ul>
+  </li>
+  <li><a href="#jump-statements" id="markdown-toc-jump-statements">Jump Statements</a>    <ul>
+      <li><a href="#break-statement" id="markdown-toc-break-statement"><code class="highlighter-rouge">break</code> statement</a></li>
+      <li><a href="#goto-statement" id="markdown-toc-goto-statement"><code class="highlighter-rouge">goto</code> statement</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="control-statements">Control Statements</h2>
+<p>Control statements control the <em>flow</em> of the program. What do you mean by flow, you ask?  Well, there’s a simple way to define it:</p>
+
+<p><img src="/assets/control_statements/mermaid.png" alt="Flow Chart" /></p>
+
+<p>In this chart, called a <em>flow chart</em>, the program is depicted as a series of instructions, all executed depending on the arrows shown. These arrows show the <em>direction</em> of <em>flow</em>.</p>
+
+<h2 id="types-of-control-statements">Types of Control Statements</h2>
+<p>There are actually three main types of control statements; namely:</p>
+<ul>
+  <li>Selection Statements</li>
+  <li>Iteration Statements (Loops)</li>
+  <li>Jump Statements</li>
+</ul>
+
+<p>We will be discussing each of them one by one.</p>
+
+<h3 id="if-selection-statement"><code class="highlighter-rouge">if</code> selection statement</h3>
+
+<p>As we have discussed this earlier, the <code class="highlighter-rouge">if</code> selection statement goes like this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(statement)
+{
+//some code
+}
+</code></pre></div></div>
+<p>It just checks if the statement is true or false, and then just runs the code inside the braces according to the condition (that we’ve called “statement” in this code block)</p>
+
+<h3 id="nested-if-statement">Nested <code class="highlighter-rouge">if</code> statement</h3>
+<p>As there is no rule to not do so, we can use two <code class="highlighter-rouge">if</code> statements inside one another.
+This is what’s called Nested <code class="highlighter-rouge">if</code> statement.</p>
+
+<p>So this goes like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(statement)
+{
+// some code
+	if(another_statement)
+	{
+		//some more code
+	}
+}
+</code></pre></div></div>
+<p>As you can see, there are two <code class="highlighter-rouge">if</code> statements, one <strong>nested</strong> inside the other. Therefore, this is called <strong>nested <code class="highlighter-rouge">if</code></strong></p>
+
+<h3 id="if--else-statement"><code class="highlighter-rouge">if ... else</code> statement</h3>
+<p>An <code class="highlighter-rouge">if ... else</code> statement is a statement that allows for two cases:</p>
+<ol>
+  <li>If the statement is true.</li>
+  <li>If the statement is <strong>anything but</strong>.</li>
+</ol>
+
+<p>Therefore, this is the syntax:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(statement)
+{
+	//some code
+}
+else
+{
+	//some more code
+}
+</code></pre></div></div>
+
+<h3 id="if--else--if-statement"><code class="highlighter-rouge">if ... else ... if</code> statement</h3>
+<p>An <code class="highlighter-rouge">if ... else ... if</code> statement is a statement, like <code class="highlighter-rouge">if ... else</code>, allows for more than one condition, but this allows  for as many conditions as you want.</p>
+
+<p>The syntax of this is:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if(statement_1)
+{
+	//some code
+}
+else if(statement_2)
+{
+	//some more code
+}
+else if(statement_3)
+{
+	//yet more code
+}
+else if(statement_4)
+{
+ 	//more code
+}
+// and so on
+else
+{
+	//last bit of code
+}
+</code></pre></div></div>
+<p>So this statement basically allows you to make shorter programs when there are loads of conditions to use.</p>
+
+<h3 id="switch-statement"><code class="highlighter-rouge">switch</code> statement</h3>
+<p>On the other hand, if there’s a <strong>variable</strong> that is changing in value, the <code class="highlighter-rouge">switch</code> statement can be pretty useful.</p>
+
+<p>Here’s the Syntax:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swtich ( variable)
+{
+	case case_name: //code_comes_here
+	case case_name_2: //code_comes_here
+	case case_name_3: //code_comes_here
+	//some more cases
+	case case_name_N: //code_here
+}
+</code></pre></div></div>
+<p>This may be pretty tough to understand, therefore I’ll be taking up a problem to make it clear.</p>
+<blockquote>
+  <p>Let us suppose that there is a variable <strong>var</strong> that can take up values from 1 to 3. We need to find different things in each case, namely:
+Case 1: if var is 1
+	Output the number to the mod 2.
+Case 2: if var is 2
+	Output the number to the power 5. (There’s a reason I’ve taken 2)
+Case 3: if var is 3
+	Output if the number is a power of two or not.</p>
+</blockquote>
+
+<p>First, let’s make the code for the individual cases:</p>
+
+<h3 id="a-simple-program-with-selection-statements">A Simple Program with selection statements</h3>
+
+<p>Case 1: 
+The modulus of a number (say, a) with respect to another number (say, b) is just the remainder that we happen to get when we divide one by the other (namely, the remainder of a/b).
+There’s an operator in C++ which does this very thing. It’s called the modulus operator (%).
+Therefore, we just need to find <code class="highlighter-rouge">var%2</code>!
+Simple stuff!</p>
+
+<p>Case 2: 
+The power of a number can be found in a variety of ways. You can either do <code class="highlighter-rouge">cout&lt;&lt;2*2*2*2*2;</code>, but hey, who wants the easy stuff? We are here to learn new things. Therefore, this is the new thing you’re gonna learn.</p>
+
+<p>The C++ stream insertion operator? Well, it also has another job!
+You might have heard of Binary. Or at least might have heard of computers only being able to understand 0’s and 1’s right?
+That’s Binary. 
+A computer can really only understand 0’s and 1’s.</p>
+<blockquote>
+  <p>How do we write two, then? 
+You might have read about the Number system in Elementary School. The idea of a tens place and a Hundreds place must have been interesting. You could suddenly write however large a number you wanted to write!
+Any ideas how 2 would be written in Binary with this simple idea?
+No?
+Okay, then!
+This is how it is written.
+Just as <code class="MathJax_Preview">10 = 1 * 10^0 + 1 * 10^1</code><script type="math/tex">10 = 1 * 10^0 + 1 * 10^1</script>, <code class="MathJax_Preview">2 = 0 * 2^0 + 1* 2^1</code><script type="math/tex">2 = 0 * 2^0 + 1* 2^1</script>. Or, for short, it is 10.
+Now, you might be asking:
+Why is this important to my C++ program?
+It does have importance.
+You see, the stream insertion operator («) can be used in this way too.
+Writing <code class="highlighter-rouge">cout&lt;&lt; 2&lt;&lt;1;</code> gives 4 as the answer. That’s because <code class="MathJax_Preview">4 = 0*2^0 + 0*2^1 + 1*2^2 = 100</code><script type="math/tex">4 = 0*2^0 + 0*2^1 + 1*2^2 = 100</script>
+That basically means that («), also called the <em>left shift</em> for this very reason, shifts the place value of the number by whatever number of places that you want it to be.
+This is going to prove to be useful later to calculate some (quite large) numbers.
+So the program for case 2 is just:
+<code class="highlighter-rouge">cout&lt;&lt; 2 &lt;&lt; 5;</code></p>
+</blockquote>
+
+<p>Case 3: 
+This one’s a pretty straightforward one.</p>
+
+<p>The program is just:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> /* The == is used to compare the equality of two variables or a variable and a constant. In contrast, = is used to assign one variable to another variable/constant */
+if(var%2==0)
+{
+	cout&lt;&lt;"This is a power of two!";
+}
+else cout&lt;&lt;"Not a power of two!";
+</code></pre></div></div>
+
+<h3 id="the-final-program">The Final Program</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+int var;
+cout&lt;&lt;"Enter the variable:"&lt;&lt;endl;
+cin&gt;&gt;var;
+switch(var)
+	{
+		case 1: cout&lt;&lt;var%2&lt;&lt;endl;
+			break; //This part is to ensure that the program doesn't continue into other cases.
+		case 2: cout&lt;&lt; 2 &lt;&lt; 5;
+			break;
+		case 3: if(var%2==0)
+			{
+				cout&lt;&lt;"This is a power of two!";
+			}
+			else cout&lt;&lt;"Not a power of two!"; //writing a break; in here is pretty much optional
+	}
+}
+</code></pre></div></div>
+<h2 id="iteration-statements">Iteration Statements</h2>
+<p>These are the “loops”, statements that keep on repeating until a particular condition is achieved.</p>
+
+<h3 id="while-loop"><code class="highlighter-rouge">while</code> loop</h3>
+<p>This probably could be called the <strong>mother</strong> of all loops, as, I will show you later, all loops can be written as a <code class="highlighter-rouge">while</code> loop. It is truly awesome.</p>
+
+<p>Syntax:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while (condition)
+{
+	//some code
+}
+</code></pre></div></div>
+<p>As you can see, the code will keep executing itself until the starting condition isn’t fulfilled (i.e., <em>condition</em> becomes false).</p>
+
+<h3 id="the-do--while-loop">The <code class="highlighter-rouge">do ... while</code> loop</h3>
+<p>This loop is a bit different from the while loop, in the sense that the code enclosed within braces will get executed at least once, even if the starting condition isn’t fulfilled.</p>
+
+<p>Syntax:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>do
+{
+	//some code
+}while(condition);
+</code></pre></div></div>
+<p>Keep the semicolon-at-the-end in mind.</p>
+
+<p>Equivalent Syntax using only while loops:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//code
+while(condition)
+{
+	//same code
+}
+</code></pre></div></div>
+<p>As you can see, the code would be executed at least once, regardless of the condition.</p>
+
+<h3 id="the-for-loop">The <code class="highlighter-rouge">for</code> loop</h3>
+<p>This is the loop that everyone that codes at any company likes, and it isn’t unwarranted. A <code class="highlighter-rouge">for</code> loop does three things in a single line, and people like it.</p>
+
+<p>Syntax:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for(initialisation; stopping_condition; extra_condition)
+{
+	//some code
+}
+</code></pre></div></div>
+<p>What’s so special about this loop is that it does three things at once, namely:</p>
+
+<p>Initialisation: It initialises a (normally declared) variable, like setting an <code class="highlighter-rouge">int</code> apple to zero
+Stopping condition: The loop will run until this condition is satisfied.
+Extra Condition: The loop will keep execute this condition at the end of each run through the loop, or as we call it, each <em>iteration</em>.</p>
+
+<p>Therefore, the equivalent while loop syntax would be:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while(stopping_condition)
+{
+	// initialisation
+	//some code
+	//extra_condition
+}
+</code></pre></div></div>
+
+<h2 id="jump-statements">Jump Statements</h2>
+
+<p>There are two jump statements, namely:</p>
+<ul>
+  <li><code class="highlighter-rouge">break</code> and</li>
+  <li><code class="highlighter-rouge">goto</code></li>
+</ul>
+
+<h3 id="break-statement"><code class="highlighter-rouge">break</code> statement</h3>
+<p>This statement basically breaks the program from the loop, as seen in the example.</p>
+
+<h3 id="goto-statement"><code class="highlighter-rouge">goto</code> statement</h3>
+<p>A <code class="highlighter-rouge">goto</code> statement is essentially used for going to a certain marked part of the program.
+It can essentially be used as an alternative for a while loop (although this isn’t encouraged).</p>
+
+<p>Syntax:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// In some early part of the program
+marked_area: //code
+//more code
+// some more code
+goto marked area;
+</code></pre></div></div>
+<p>This makes the program go back to the marked area.
+Usage as a <code class="highlighter-rouge">while</code> loop:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>marked_area:
+if(condition)
+{
+	//code
+	goto marked_area;
+}
+</code></pre></div></div>
+
+<p>This was my tutorial on Control Statements. Hope you enjoyed it!</p>
+
+
+  
+
+</article>
+
+
+  <hr class="dingbat" />
+
+
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  
+    
+  
+
+  
+
+  <img
+    src="/assets/img/no_scale.jpg"
+    class="me"
+    alt="Nischay Hegde"
+    srcset="/assets/img/scaled.jpg 1x,/assets/img/scaledx256.jpg 2x"
+    
+  />
+
+
+  
+
+  <h2 class="page-title hr">
+    About
+  </h2>
+
+  <p>I’m just a student doing his 12th in NIOS (hence the name). My interests are mostly CS-related.</p>
+
+
+  
+    <div class="sidebar-social">
+      <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/<username>" title="GitHub">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="hegdenischay@gmail.com" title="Email">
+    <span class="icon-mail"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://<url>/feed.xml" title="RSS">
+    <span class="icon-rss2"></span>
+    <span class="sr-only">RSS</span>
+  </a>
+</li>
+
+  
+
+  
+
+  
+</ul>
+
+    </div>
+  
+</div>
+
+  </aside>
+
+
+
+
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+      
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/22/operators/" data-flip="title">
+    <span>Operators and the end of this tutorial</span>
+  </a>
+  <small><time datetime="2017-09-22T05:30:00+05:30">
+    22 Sep 2017
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/21/vectors/" data-flip="title">
+    <span>Sneek Peek: Vectors</span>
+  </a>
+  <small><time datetime="2017-09-21T06:30:00+05:30">
+    21 Sep 2017
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/20/arrays/" data-flip="title">
+    <span>Arrays</span>
+  </a>
+  <small><time datetime="2017-09-20T03:30:00+05:30">
+    20 Sep 2017
+  </time></small>
+</li>
+
+        
+      
+        
+        
+      
+    
+  </ul>
+</aside>
+
+
+
+      
+
+      <footer>
+  <hr/>
+  
+  <p>
+    <code>Powered by <a href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">6.6.1</span></code>
+  </p>
+</footer>
+
+    </main>
+  </div>
+  <div id="_yDrawer">
+  <div id="_sidebar" class="sidebar">
+    <div class="sidebar-bg" style="background-color:#A85641;background-image:url(/dandelion.png)"></div>
+    <header class="sidebar-sticky" role="banner">
+      <div class="sidebar-about">
+        <h1><a id="_title" href="/">The C++ Student</a></h1>
+        <p>I’m just a student who wants to delve deeper into the world of Computing, with C++ as my base. I’ll be posting quite often from now on, so stay tuned!</p>
+
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+
+  
+
+  
+
+  
+    <li>
+      <a class="sidebar-nav-item" href="/ongoing/">Ongoing Projects</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/posts/">Posts</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/upcoming/">Upcoming Projects</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/about/">Hey, I'm Nischay.</a>
+    </li>
+  
+</ul>
+
+      </nav>
+
+      
+
+      
+        <div class="sidebar-social">
+          <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/<username>" title="GitHub">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="hegdenischay@gmail.com" title="Email">
+    <span class="icon-mail"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://<url>/feed.xml" title="RSS">
+    <span class="icon-rss2"></span>
+    <span class="sr-only">RSS</span>
+  </a>
+</li>
+
+  
+
+  
+
+  
+</ul>
+
+        </div>
+      
+    </header>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+  <!--[if gt IE 9]><!---->
+  
+  <script>loadJSDeferred('/assets/js/hydejack.js?v=6.6.1');</script>
+
+  
+
+  <!--<![endif]-->
+
+
+
+</body>
+
+</html>

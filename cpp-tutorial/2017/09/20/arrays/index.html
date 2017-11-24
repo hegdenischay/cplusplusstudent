@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
+-->
+
+
+
+
+
+
+
+
+
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+  <title>Arrays &middot; The C++ Student</title>
+
+
+
+<meta name="description" content="Exploring the world of Arrays, that affect your programs more than you might think.
+">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cpp-tutorial/2017/09/20/arrays/">
+
+<link rel="alternate" type="application/atom+xml" title="The C++ Student Feed" href="http://localhost:4000/feed.xml">
+
+
+  <link rel="prev" href="http://localhost:4000/cpp-tutorial/2017/09/19/making-a-simple-program/">
+
+
+
+  <link rel="next" href="http://localhost:4000/cpp-tutorial/2017/09/21/vectors/">
+
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+
+<link id="_katexJS"  rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js">
+<link id="_katexCSS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css">
+
+
+<!--[if gt IE 8]><!---->
+
+
+<script>
+  WebFontConfig = {
+    
+    google: {
+      families: 'Roboto+Slab:700|Noto+Sans:400,400i,700,700i'.split('|')
+    },
+    
+
+    custom: {
+      families: ['icomoon'],
+      urls: ['/assets/icomoon/style.css']
+    }
+  };
+</script>
+<!--<![endif]-->
+
+<script>
+  !function(n,e){function t(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function o(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}n._loaded=!1,n.loadJSDeferred=function(a,d){function r(){n._loaded=!0;var r=e.createElement("script");r.src=a,d&&(("onload"in r?t:o)(r,d),r.onload||t(r,d));var l=e.getElementsByTagName("script")[0];l.parentNode.insertBefore(r,l)}n._loaded?r():n.addEventListener?n.addEventListener("load",r,!1):n.attachEvent?n.attachEvent("onload",r):n.onload=r}}(window,document);
+
+  !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+
+  !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+
+  window.disablePushState = false;
+  window.disableDrawer = false;
+</script>
+
+<!--[if lt IE 9]>
+<script src="/assets/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+
+
+<!--[if gt IE 8]><!---->
+<style>
+  
+  article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}*{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:#333;background-color:#fff;overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}img,.img{display:block;max-width:100%;margin-bottom:1rem;border:none}img.lead,.img.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-weight:bold;text-rendering:optimizeLegibility}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin:3rem 0 1rem;line-height:1.6}h1,.h1{font-size:2rem;line-height:1.25}h2,.h2{font-size:1.5rem}h3,.h3{font-size:1.17em}p{margin-top:0;margin-bottom:1rem}p.lead{font-size:1.25rem;font-weight:300;padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:1.5rem 0;border:0;border-top:1px solid #eee}.hr{padding-bottom:.5rem;border-bottom:1px solid #eee;margin-bottom:1.5rem}h4,h5,h6,.h4,.h5,.h6{margin-bottom:0.5rem;font-size:1rem}table{margin-bottom:1rem;width:100%;width:calc(100% + 2rem);margin-left:-1rem;border:1px solid #e5e5e5;border-collapse:collapse;border-spacing:0}td,th{padding:.25rem .5rem;border:1px solid #e5e5e5}td:first-child,th:first-child{padding-left:1rem}td:last-child,th:last-child{padding-right:1rem}thead+tbody,tbody+tbody,tfoot{border-top:3px double #e5e5e5}tbody tr:nth-child(odd) td,tbody tr:nth-child(odd) th{background-color:#f9f9f9}footer{margin-bottom:2rem}.page,.post{margin-bottom:3em}.page li+li,.post li+li{margin-top:.25rem}.page>header,.post>header{margin-bottom:2rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:#9a9a9a}.related-posts{padding-left:0;list-style:none}.related-posts>li,.related-posts>li+li{margin-top:1rem}.related-posts>li>small,.related-posts>li+li>small{font-size:75%;color:#9a9a9a}.message{margin-bottom:1rem;padding:1rem;color:#787878;background-color:#f9f9f9;margin-left:-1rem;margin-right:-1rem}body,main{position:relative;overflow-x:hidden}@media screen{body::before{content:'';width:.5rem;background:#e5e5e5;position:absolute;left:0;top:0;bottom:0}}@media screen and (min-width: 40em){html{font-size:17px}}@media screen and (min-width: 54em){html{font-size:16px}}@media screen and (min-width: 72em){html{font-size:17px}}@media screen and (min-width: 125em){html{font-size:18px}}.sr-only{display:none}.clearfix,.sidebar-social::after,.clearafter::after{content:"";display:table;clear:both}a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}.img{overflow:hidden;background-color:#f9f9f9}.img>img{margin:0;width:100%;height:100%}.sixteen-nine{position:relative}.sixteen-nine::before{display:block;content:"";width:100%;padding-top:56.25%}.sixteen-nine>*{position:absolute;top:0;left:0;right:0;bottom:0}h1+hr,h2+hr,h3+hr,h4+hr,h5+hr,h6+hr{margin-top:0}.fade-in{animation-duration:500ms;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-2rem);opacity:0}50%{transform:translateY(-2rem);opacity:0}to{transform:translateY(0);opacity:1}}.mb6{margin-bottom:6rem}.sidebar{color:rgba(255,255,255,0.75);text-align:left}.sidebar::before{content:"";position:absolute;z-index:2;top:0;left:0;bottom:0;right:0;background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%)}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}#_yDrawer{position:relative;padding:1rem 0}@media screen{#_yDrawer{padding:2rem 1rem;min-height:640px;min-height:100vh}}@media screen and (min-width: 54em){#_yDrawer{position:fixed;top:0;left:0;bottom:0;width:18rem;margin-left:0}}@media screen and (min-width: 97.5em){#_yDrawer{width:calc(50% - 28rem)}}@media screen{#_yDrawer.loaded{min-height:0;padding:0}}.sidebar-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:#202020 center / cover}.sidebar-sticky{position:relative;z-index:3}@media screen{.sidebar-sticky{position:absolute;right:2rem;bottom:1rem;left:auto;max-width:14rem}}@media print{.sidebar-sticky{padding:0 2rem}}.sidebar-about>h1{color:#fff;font-size:2rem}.sidebar-nav>ul{list-style:none;padding-left:0;margin-bottom:.5rem}a.sidebar-nav-item{font-weight:bold;display:block;line-height:1.75;padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,0.2)}@media screen{.y-drawer-scrim{z-index:2}.y-drawer-content{width:18rem;left:-17.5rem;z-index:3}}@media screen and (min-width: 97.5em){.y-drawer-content{width:calc(50% - 28rem)}}.sidebar-social{margin-bottom:.5rem}.sidebar-social>ul{list-style:none;padding-left:0;margin:0 -.25rem}.sidebar-social>ul>li{float:left;margin:0 .25rem}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.6rem;line-height:3rem;width:3.1249rem;height:4rem;padding:.5rem 0}.sidebar-social>ul li+li{margin-top:0}.fixed-top{position:fixed;top:0;left:0;width:100%;z-index:1}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;height:0}.menu{display:inline-block;padding:1.75rem 1.5rem;border-bottom:none;margin-left:-1.5rem;color:#9a9a9a !important}.menu::after{content:"\2630"}@media screen and (min-width: 54em){.menu{padding:1.25rem 1.5rem;position:absolute;left:-9999px}.menu:focus{position:static}}.animation-main{pointer-events:none}.loading{display:none}@media print{.menu{display:none}}.animation-main{opacity:0;will-change:opacity}.loading{position:absolute;top:0;right:0;padding:5.25rem 4.5rem;transform-origin:top right;transform:scale(0.33)}.content{position:relative;margin-left:auto;margin-right:auto;padding:5rem 1rem 12rem}@media screen{.content{max-width:38rem;padding-left:1.5rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem;padding:4rem 1rem 12rem;margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 72em){.content{margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 92em){.content{max-width:48rem}}@media screen and (min-width: 97.5em){.content{margin:auto}}.me{float:right;width:6.5rem;height:6.5rem;margin-left:1rem;margin-bottom:.5rem;border-radius:100%;position:relative}@media screen and (min-width: 40em){.me{width:7rem;height:7rem}}@media screen and (min-width: 54em){.me{width:6.5rem;height:6.5rem}}@media screen and (min-width: 60em){.me{width:7rem;height:7rem}}main>footer{position:absolute;bottom:0;left:0;right:0;padding:0 1rem;color:#9a9a9a;font-size:smaller;text-align:center}main>footer>p{margin-bottom:0}html{font-family:Helvetica, Arial, sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Helvetica, Arial, sans-serif}
+
+</style>
+
+
+<link id="_stylePreload" rel="preload" as="style" href="/assets/css/hydejack.css?v=6.6.1">
+<script>document.getElementById('_stylePreload').onload=function(){this.rel='stylesheet'}</script>
+
+<!-- NOTE: These styles interact with JavsScript, so they MUST NOT be changed -->
+<style id="_pageStyle">
+
+.content a{color:#A85641;border-color:rgba(168,86,65,0.2)}.content a:hover{border-color:#A85641}:focus{outline-color:#A85641}::selection{color:#fff;background:#A85641}::-moz-selection{color:#fff;background:#A85641}
+
+</style>
+
+
+<noscript>
+  <link rel="stylesheet" href="/assets/css/hydejack.css?v=6.6.1">
+
+  
+  
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Noto+Sans:400,400i,700,700i">
+    <style>
+      html { font-family: 'Noto Sans', Helvetica, Arial, sans-serif }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }
+    </style>
+  
+
+  
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+</noscript>
+<!--<![endif]-->
+
+
+
+
+
+
+<!--[if gt IE 8]><!---->
+<script async src="/assets/bower_components/webfontloader/webfontloader.js"></script>
+<!--<![endif]-->
+
+</head>
+
+<body>
+  
+<div class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <a id="_menu" class="menu no-hover" href="#_title">
+      <span class="sr-only">Menu</span>
+    </a>
+  </div>
+</div>
+
+
+<div id="_yPushState">
+  <div class="fade-in">
+    <main id="_main" class="content" role="main" data-color="#A85641" data-image="/dandelion.png">
+      
+
+<article id="post-cpp-tutorial/2017/09/20/arrays" class="post" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Arrays
+      
+    </h1>
+
+    <p class="post-date heading">
+      <time datetime="2017-09-20T03:30:00+05:30">20 Sep 2017</time>
+      
+
+
+
+
+
+
+
+
+
+in <span>Cpp-tutorial</span>
+
+      
+
+
+
+
+
+
+
+
+
+on <span>C++</span>
+
+    </p>
+
+    
+  
+  
+<p class="message">Exploring the world of Arrays, that affect your programs more than you might think.</p>
+
+
+
+
+  </header>
+
+  
+    <ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>    <ul>
+      <li><a href="#compound-types" id="markdown-toc-compound-types">Compound Types</a></li>
+    </ul>
+  </li>
+  <li><a href="#how-to-declare-an-array" id="markdown-toc-how-to-declare-an-array">How to Declare an array</a>    <ul>
+      <li><a href="#what-is-a-type-specifier" id="markdown-toc-what-is-a-type-specifier">What is a Type Specifier?</a></li>
+      <li><a href="#what-is-an-identifier" id="markdown-toc-what-is-an-identifier">What is an identifier?</a></li>
+      <li><a href="#what-is-the-dimension" id="markdown-toc-what-is-the-dimension">What is the dimension?</a></li>
+    </ul>
+  </li>
+  <li><a href="#how-to-initialise-them" id="markdown-toc-how-to-initialise-them">How to initialise them</a>    <ul>
+      <li><a href="#for-int-arrays" id="markdown-toc-for-int-arrays">For <code class="highlighter-rouge">int</code> arrays</a></li>
+      <li><a href="#for-char-arrays-read-this-if-you-know-everything-so-far" id="markdown-toc-for-char-arrays-read-this-if-you-know-everything-so-far">For <code class="highlighter-rouge">char</code> Arrays (Read this if you know everything so far)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+<blockquote>
+  <p>Arrays are compound types which consist of a type specifier, an identifier, and a dimension.</p>
+  <ul>
+    <li>C++ Primer, 4th edition</li>
+  </ul>
+</blockquote>
+
+<p>Let’s start with what this means.</p>
+<h3 id="compound-types">Compound Types</h3>
+<p>A <strong>compund type</strong> is a type that is defined in terms of other types. 
+Since this is the first time in this tutorial that we have come across compound types, I will explain why an array is a compound type.</p>
+
+<p>An array is defined in terms of it’s elements. An array is essentially a collection of similar elements, so we can explain what an array is only if we know what the elements are.</p>
+
+<h2 id="how-to-declare-an-array">How to Declare an array</h2>
+<p>All arrays are declared in the same way:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type_specifier identifier[number_of_elements];
+</code></pre></div></div>
+<p>This shows the declaration of array of dimension 1.</p>
+
+<h3 id="what-is-a-type-specifier">What is a Type Specifier?</h3>
+<p>A type specifier is pretty self explanatory, really. It just <strong>specifies</strong> the <strong>type</strong> of the array.</p>
+
+<h3 id="what-is-an-identifier">What is an identifier?</h3>
+<p>It is a way of uniquely identifying an array, which you would have explicitly stated while declaring them. 
+Therefore, in <code class="highlighter-rouge">int array[20]</code>, <code class="highlighter-rouge">int</code> is the type specifier, and <code class="highlighter-rouge">array</code> is the identifier.</p>
+
+<h3 id="what-is-the-dimension">What is the dimension?</h3>
+<p>You can think of an array as a matrix, really, when it’s actually just a collection of data next to each other in the RAM. So think of an array with one <strong>subscript</strong> (The [20] part in the example) to be the dimension.
+Becuase it only has one pair of square brackets, it has dimension one and you can think of it to be a column/row matrix. 
+Therefore, an array with two subscripts (something like <code class="highlighter-rouge">int array [20][10]</code>) would be a two-dimensional matrix.</p>
+
+<h2 id="how-to-initialise-them">How to initialise them</h2>
+<p>In integer arrays (here, integer is the type specifier), the initialisation is pretty easy.
+There are two ways:</p>
+
+<ul>
+  <li>Declaring the array first (and then initialise it later)
+This is the same for all type secifiers:</li>
+</ul>
+
+<p>Example:<code class="highlighter-rouge">int array[20];</code> has space for 20 elements in it.</p>
+
+<ul>
+  <li>Declaring it and initialising the variables at the same time.
+Now, here are some important points.</li>
+</ul>
+
+<h3 id="for-int-arrays">For <code class="highlighter-rouge">int</code> arrays</h3>
+<p>What I’m giving as an example for <code class="highlighter-rouge">int</code> arrays can easily be used for any data type.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+/* The various ways of initializing while declaring are these*/
+int arr[2] = { 1 , 5 }; //Gives an array with two elements 1 and 5
+int a[2] { 1 , 2 }; //Also gives an array with two elements 1 and 2 
+int a2[5] { 1 , 3 }; 
+/*Gives an array with the first two elements initialized to 1 and 3 respectively,
+and the other three are unitialised*/
+int a3[] = { 1 , 3}; //Also possible, it just assumes the size of the array to be two
+//some code 
+return 0
+}
+</code></pre></div></div>
+<h3 id="for-char-arrays-read-this-if-you-know-everything-so-far">For <code class="highlighter-rouge">char</code> Arrays (Read this if you know everything so far)</h3>
+<p>Character arrays can be initialised in the same ways, but becuause character arrays in C always used to end with a null pointer (/0), character arrays with string literals end in the same way.</p>
+<blockquote>
+  <p>A value, such as 42, in a program is known as a literal constant: literal because we can speak of it only in terms of its value; constant because its value cannot be changed. Every literal has an associated type. For example, 0 is an int and 3.14159 is a double.</p>
+  <ul>
+    <li>C++ Primer</li>
+  </ul>
+</blockquote>
+
+<p>So, to initalise chracter arrays, we can do it in three ways, as shown in this program:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+char ca1[5] = { 'H' , 'e' , 'l' , 'l' , 'o' }; //Five characters, no problem
+char ca2[5] = { "H" , "e" , "l" , "l" , "o" }; //Five strings, hmm...
+char ca3[5] = { "H" , "e" , "l" , "l" , '\0'}; 
+//Null pointer explicitly added. should work (it doesn't, the compiler will add it)
+char ca4[] = "Hello"; //This will have six elements
+// some code
+return 0;
+}
+</code></pre></div></div>
+
+
+  
+
+</article>
+
+
+  <hr class="dingbat" />
+
+
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  
+    
+  
+
+  
+
+  <img
+    src="/assets/img/no_scale.jpg"
+    class="me"
+    alt="Nischay Hegde"
+    srcset="/assets/img/scaled.jpg 1x,/assets/img/scaledx256.jpg 2x"
+    
+  />
+
+
+  
+
+  <h2 class="page-title hr">
+    About
+  </h2>
+
+  <p>I’m just a student doing his 12th in NIOS (hence the name). My interests are mostly CS-related.</p>
+
+
+  
+    <div class="sidebar-social">
+      <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/<username>" title="GitHub">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="hegdenischay@gmail.com" title="Email">
+    <span class="icon-mail"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://<url>/feed.xml" title="RSS">
+    <span class="icon-rss2"></span>
+    <span class="sr-only">RSS</span>
+  </a>
+</li>
+
+  
+
+  
+
+  
+</ul>
+
+    </div>
+  
+</div>
+
+  </aside>
+
+
+
+
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+      
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/22/operators/" data-flip="title">
+    <span>Operators and the end of this tutorial</span>
+  </a>
+  <small><time datetime="2017-09-22T05:30:00+05:30">
+    22 Sep 2017
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/21/vectors/" data-flip="title">
+    <span>Sneek Peek: Vectors</span>
+  </a>
+  <small><time datetime="2017-09-21T06:30:00+05:30">
+    21 Sep 2017
+  </time></small>
+</li>
+
+        
+      
+        
+          
+          
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/19/making-a-simple-program/" data-flip="title">
+    <span>Making a Simple Program</span>
+  </a>
+  <small><time datetime="2017-09-19T05:30:00+05:30">
+    19 Sep 2017
+  </time></small>
+</li>
+
+        
+      
+    
+  </ul>
+</aside>
+
+
+
+      
+
+      <footer>
+  <hr/>
+  
+  <p>
+    <code>Powered by <a href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">6.6.1</span></code>
+  </p>
+</footer>
+
+    </main>
+  </div>
+  <div id="_yDrawer">
+  <div id="_sidebar" class="sidebar">
+    <div class="sidebar-bg" style="background-color:#A85641;background-image:url(/dandelion.png)"></div>
+    <header class="sidebar-sticky" role="banner">
+      <div class="sidebar-about">
+        <h1><a id="_title" href="/">The C++ Student</a></h1>
+        <p>I’m just a student who wants to delve deeper into the world of Computing, with C++ as my base. I’ll be posting quite often from now on, so stay tuned!</p>
+
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+
+  
+
+  
+
+  
+    <li>
+      <a class="sidebar-nav-item" href="/ongoing/">Ongoing Projects</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/posts/">Posts</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/upcoming/">Upcoming Projects</a>
+    </li>
+  
+    <li>
+      <a class="sidebar-nav-item" href="/about/">Hey, I'm Nischay.</a>
+    </li>
+  
+</ul>
+
+      </nav>
+
+      
+
+      
+        <div class="sidebar-social">
+          <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/<username>" title="GitHub">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="hegdenischay@gmail.com" title="Email">
+    <span class="icon-mail"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://<url>/feed.xml" title="RSS">
+    <span class="icon-rss2"></span>
+    <span class="sr-only">RSS</span>
+  </a>
+</li>
+
+  
+
+  
+
+  
+</ul>
+
+        </div>
+      
+    </header>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+  <!--[if gt IE 9]><!---->
+  
+  <script>loadJSDeferred('/assets/js/hydejack.js?v=6.6.1');</script>
+
+  
+
+  <!--<![endif]-->
+
+
+
+</body>
+
+</html>

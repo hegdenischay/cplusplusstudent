@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-11-24T16:37:26+05:30</updated><id>http://localhost:4000/</id><title type="html">The C++ Student</title><subtitle>I'm just a student who wants to delve deeper into the world of Computing, with C++ as my base. I'll be posting quite often from now on, so stay tuned!
+</subtitle><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><entry><title type="html">IOCCC (1984) Part 2</title><link href="http://localhost:4000/c/2017/11/16/IOCCC2/" rel="alternate" type="text/html" title="IOCCC (1984) Part 2" /><published>2017-11-16T00:30:00+05:30</published><updated>2017-11-16T00:30:00+05:30</updated><id>http://localhost:4000/c/2017/11/16/IOCCC2</id><content type="html" xml:base="http://localhost:4000/c/2017/11/16/IOCCC2/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#work-in-progress&quot; id=&quot;markdown-toc-work-in-progress&quot;&gt;Work in Progress&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lamanc&quot; id=&quot;markdown-toc-lamanc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;laman.c&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-copyright&quot; id=&quot;markdown-toc-the-copyright&quot;&gt;The copyright&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;work-in-progress&quot;&gt;Work in Progress&lt;/h2&gt;
+&lt;p&gt;This page is a work in progress, that is, I will try to explain stuff, but I have not (yet) understood everything myself.&lt;/p&gt;
+
+&lt;h2 id=&quot;lamanc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;laman.c&lt;/code&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;atoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;++&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;		&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;		&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;	&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%-4d&quot;&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;    &quot;&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);}&lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;putchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;	&lt;span class=&quot;sc&quot;&gt;'\n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}}&lt;/span&gt;	&lt;span class=&quot;cm&quot;&gt;/*Mike		Laman*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Would ya look at this beauty.
+It is absolutely awesome!
+Okay, enough talking. Let’s get to work.&lt;/p&gt;
+
+&lt;p&gt;After going through some beautification, this is what it looks like:&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;atoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%-4d&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;    &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;putchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'\n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/*Mike Laman*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Okay, still not very comprehensible.&lt;/p&gt;
+
+&lt;p&gt;A few points:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;This style of writing &lt;code class=&quot;highlighter-rouge&quot;&gt;main (int k, char* *l)&lt;/code&gt; as &lt;code class=&quot;highlighter-rouge&quot;&gt;main(k , l) char* * l;&lt;/code&gt; came around because of &lt;a href=&quot;https://en.wikipedia.org/wiki/The_C_Programming_Language&quot;&gt;this book&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;faded&quot;&gt;Yes, this book and C, for that matter, is that old.&lt;/p&gt;
+
+&lt;p&gt;Anyways, we need to modernize it.&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;atoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%-4d&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;    &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;putchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'\n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/*Mike Laman*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I do not know what else to do.
+Discuss about it in the comments! Hopefully, I’ll gain some insight (I very well understand this code, but I don’t think there is anything else that I can do to simplify it).&lt;/p&gt;
+
+&lt;p&gt;This might be one of those &lt;em&gt;very interesting&lt;/em&gt; tricks you can do with code.&lt;/p&gt;
+
+&lt;p&gt;Anyways, the comment section is open for discussion.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-copyright&quot;&gt;The copyright&lt;/h2&gt;
+
+&lt;p&gt;Copyright © 1984, Landon Curt Noll. All Rights Reserved. Permission for personal, educational or non-profit use is granted provided this this copyright and notice are included in its entirety and remains unaltered. All other uses must receive prior permission in writing from both Landon Curt Noll and Larry Bassel.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="IOCCC" /><summary type="html"></summary></entry><entry><title type="html">IOCCC Problems - Anonymous.c (1984)</title><link href="http://localhost:4000/c/2017/11/14/IOCCC-Anonymous/" rel="alternate" type="text/html" title="IOCCC Problems - Anonymous.c (1984)" /><published>2017-11-14T00:30:00+05:30</published><updated>2017-11-14T00:30:00+05:30</updated><id>http://localhost:4000/c/2017/11/14/IOCCC-Anonymous</id><content type="html" xml:base="http://localhost:4000/c/2017/11/14/IOCCC-Anonymous/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-original-code&quot; id=&quot;markdown-toc-the-original-code&quot;&gt;The Original Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#finished-code&quot; id=&quot;markdown-toc-finished-code&quot;&gt;Finished Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-copyright&quot; id=&quot;markdown-toc-the-copyright&quot;&gt;The copyright&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;IOCCC is a contest where you get to see exactly the opposite of what you’re expected to do in your day to day life: write clear code. 
+The code submitted here is sometimes overwhelming, and I’ll try to make sense of it.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-original-code&quot;&gt;The Original Code&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int i;
+main()
+{
+for(;i[&quot;]&amp;lt;i;++i)
+{--i;}&quot;];read('-'-'-',i+++&quot;hell\
+o, world!\n&quot;,'/'/'/'));}read(j,i,p){write(j/p+p,i---j,i/i);}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A couple of things here:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;using just &lt;code class=&quot;highlighter-rouge&quot;&gt;main()&lt;/code&gt; was a valid thing until standardization came along. You can still use it: it is automatically assumed to be int.&lt;/li&gt;
+  &lt;li&gt;int i is globally declared, and henceforth is equal to zero.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also, that &lt;code class=&quot;highlighter-rouge&quot;&gt;read()&lt;/code&gt; function which has three parameters looks like it could be easily simplified:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;'-' - '-'&lt;/code&gt; is equal to zero, since we’re actually doing a subtraction of two &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt;s, and it is implicitly assigned to &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;.
+Similarly &lt;code class=&quot;highlighter-rouge&quot;&gt;'/'/'/'&lt;/code&gt; is 1.&lt;/p&gt;
+
+&lt;p&gt;So, if we rewrite it and introduce proper formatting, we have:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int i;
+int main()
+{
+for(;i[&quot;]&amp;lt;i;++i){--i;}&quot;];
+read(0,i+++&quot;hell\o, world!\n&quot;,1));
+} 
+read(j,i,p)
+{
+write(j/p+p,i---j,i/i);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Also note that &lt;code class=&quot;highlighter-rouge&quot;&gt;i[&quot;]&amp;lt;i;++i){--i;}&quot;]&lt;/code&gt; is actually a array of characters initialized as a string.&lt;/p&gt;
+
+&lt;p&gt;Now, &lt;code class=&quot;highlighter-rouge&quot;&gt;write()&lt;/code&gt; is a Unix system call, and what it does is similar to the &lt;a href=&quot;http://www.cplusplus.com/reference/cstring/memset/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;memset&lt;/code&gt;&lt;/a&gt; function, i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;memset(0,i,1)&lt;/code&gt; and since &lt;em&gt;that’s&lt;/em&gt; in a &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop, it basically takes &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; (the array of characters mentioned before) and assigns each element of &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; with data from the &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop, i.e. the hello world code.&lt;/p&gt;
+
+&lt;p&gt;More explanations will come as soon as I understand them. 
+A person on discord helped a lot to understand this code. I thank him here..&lt;/p&gt;
+
+&lt;h2 id=&quot;finished-code&quot;&gt;Finished Code&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;unistd.h&amp;gt;
+int i;
+int main()
+{
+for(;i[&quot;]&amp;lt;i;++i){--i;}&quot;];
+write(0,i+++&quot;hell\o, world!\n&quot;,1));
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-copyright&quot;&gt;The copyright&lt;/h2&gt;
+&lt;p&gt;Copyright (c) 1984, Landon Curt Noll.
+All Rights Reserved.  Permission for personal, educational or non-profit use is
+granted provided this this copyright and notice are included in its entirety
+and remains unaltered.  All other uses must receive prior permission in writing
+from both Landon Curt Noll and Larry Bassel.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="IOCCC" /><summary type="html"></summary></entry><entry><title type="html">Introduction to Algorithms - Chapter 2 (Part 2)</title><link href="http://localhost:4000/study/notes/2017/10/17/Chap2Part2/" rel="alternate" type="text/html" title="Introduction to Algorithms - Chapter 2 (Part 2)" /><published>2017-10-17T00:30:00+05:30</published><updated>2017-10-17T00:30:00+05:30</updated><id>http://localhost:4000/study/notes/2017/10/17/Chap2Part2</id><content type="html" xml:base="http://localhost:4000/study/notes/2017/10/17/Chap2Part2/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#analysis-of-algorithms&quot; id=&quot;markdown-toc-analysis-of-algorithms&quot;&gt;Analysis of Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#analysis-of-insertion-sort&quot; id=&quot;markdown-toc-analysis-of-insertion-sort&quot;&gt;Analysis of Insertion Sort&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#finding-time-taken-in-best-case&quot; id=&quot;markdown-toc-finding-time-taken-in-best-case&quot;&gt;Finding Time Taken In Best Case&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#finding-time-taken-in-worst-case&quot; id=&quot;markdown-toc-finding-time-taken-in-worst-case&quot;&gt;Finding Time Taken In Worst Case&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#divide-and-conquer-principle&quot; id=&quot;markdown-toc-divide-and-conquer-principle&quot;&gt;Divide And Conquer Principle&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#merge-sort&quot; id=&quot;markdown-toc-merge-sort&quot;&gt;Merge Sort&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;analysis-of-algorithms&quot;&gt;Analysis of Algorithms&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Analyzing&lt;/em&gt; an algorithm normally means predicting the &lt;em&gt;resources&lt;/em&gt; that the algorithm requires.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Occasionally, resources such as memory, communication band-
+width, or computer hardware are of primary concern, but most often it is compu-
+tational time that we want to measure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Okay, let’s do this!&lt;/p&gt;
+
+&lt;p&gt;(We assume here that the technology used for these algorithms here utilizes a generic one-processor, RAM (Random-Access Machine) model of computation)&lt;/p&gt;
+
+&lt;h2 id=&quot;analysis-of-insertion-sort&quot;&gt;Analysis of Insertion Sort&lt;/h2&gt;
+
+&lt;p&gt;We can say that the time taken by the Insertion Sort Algorithm must be proportional to the time taken, since sorting 1000 numbers is more tedious than sorting 3 numbers.&lt;/p&gt;
+
+&lt;p&gt;Also, some implementations of insertion sort can be faster than the rest.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In general, since the time taken by an algorithm grows with the size of the input, it is traditional to describe the running time of a program as a function of the size of its input.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Therefore, we need to define “running time” and “size of input” more carefully.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The best notion for input size depends on the problem being studied. For many problems, such as sorting or computing discrete Fourier transforms, the most natural measure is the number of items in the input — for example, the array size n for sorting. For many other problems, such as multiplying two integers, the best measure of input size is the total number of bits needed to represent the input in ordinary binary notation. Sometimes, it is more appropriate to describe the size of the input with two numbers rather than one. For instance, if the input to an algorithm is a graph, the input size can be described by the numbers of vertices and edges in the graph. We shall indicate which input size measure is being used with
+each problem we study.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The running time of an algorithm on a particular input is the number of primitive operations or “steps” executed. It is convenient to define the notion of step so that it is as machine-independent as possible. For the moment, let us adopt the following view. A constant amount of time is required to execute each line of our
+pseudocode. One line may take a different amount of time than another line, but we shall assume that each execution of the &lt;code class=&quot;MathJax_Preview&quot;&gt;{i}^{th}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{i}^{th}&lt;/script&gt; line takes time &lt;code class=&quot;MathJax_Preview&quot;&gt;c_i&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;c_i&lt;/script&gt; , where &lt;code class=&quot;MathJax_Preview&quot;&gt;c_i&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;c_i&lt;/script&gt; is a constant. This viewpoint is in keeping with the RAM model, and it also reflects how the pseudocode would be implemented on most actual computers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In the following discussion, our expression for the running time of Insertion Sort will evolve from a messy formula that uses all the statement costs &lt;code class=&quot;MathJax_Preview&quot;&gt;c_i&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;c_i&lt;/script&gt; to a
+much simpler notation that is more concise and more easily manipulated. This simpler notation will also make it easy to determine whether one algorithm is more
+efficient than another.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We start by presenting the Insertion Sort procedure with the time “cost” of each statement and the number of times each statement is executed. For each
+&lt;code class=&quot;MathJax_Preview&quot;&gt;j = 2,3,...,n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;j = 2,3,...,n&lt;/script&gt;, where n = &lt;em&gt;A:length&lt;/em&gt;, we let &lt;code class=&quot;MathJax_Preview&quot;&gt;t_j&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;t_j&lt;/script&gt; denote the number of times the while loop test in line 5 is executed for that value of j . When a for or while loop exits in the usual way (i.e., due to the test in the loop header), the test is executed
+one time more than the loop body. We assume that comments are not executable statements, and so they take no time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Chap2Part2/1.png&quot; alt=&quot;Insertion_sort_cost&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The total running time is the sum of running times for each statement executed. Therefore, the total time taken is:&lt;/p&gt;
+
+&lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;T(n) = c_1n + c_2(n-1) + c_4(n - 1) + c_5\sum_{j=2}^{n} (t_j-1) + c_7\sum_{j=2}^{n}(t_j-1) + c_8(n-1)&lt;/code&gt;&lt;/pre&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;T(n) = c_1n + c_2(n-1) + c_4(n - 1) + c_5\sum_{j=2}^{n} (t_j-1) + c_7\sum_{j=2}^{n}(t_j-1) + c_8(n-1)&lt;/script&gt;
+
+&lt;p&gt;So let’s find the best and worst cases, using which we will gain some insight as to how this algorithm works.&lt;/p&gt;
+
+&lt;h3 id=&quot;finding-time-taken-in-best-case&quot;&gt;Finding Time Taken In Best Case&lt;/h3&gt;
+&lt;p&gt;The best case in Insertion Sort obviously happens when the array is already sorted.&lt;/p&gt;
+
+&lt;p&gt;For all of &lt;code class=&quot;MathJax_Preview&quot;&gt;j = 2,3, \ldots,n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;j = 2,3, \ldots,n&lt;/script&gt;, we find that &lt;code class=&quot;MathJax_Preview&quot;&gt;A[i]\leq key $ in line 5 of the algorithm when i has an initial value of j - 1. Thus,&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;A[i]\leq key $ in line 5 of the algorithm when i has an initial value of j - 1. Thus,&lt;/script&gt; t_j = 1 &lt;code class=&quot;MathJax_Preview&quot;&gt;for&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;for&lt;/script&gt; j = 2,3,/ldots,n $$ and the best-case running time is:&lt;/p&gt;
+
+&lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5(n-1) + c_8(n-1)
+     = (c_1 + c_2 + c_4 + c_5 + c_8)n - (c_2 + c_4 + c_5 + c_8)&lt;/code&gt;&lt;/pre&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5(n-1) + c_8(n-1)
+     = (c_1 + c_2 + c_4 + c_5 + c_8)n - (c_2 + c_4 + c_5 + c_8)&lt;/script&gt;
+
+&lt;p&gt;Since we can express it as &lt;code class=&quot;MathJax_Preview&quot;&gt;an + b&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;an + b&lt;/script&gt; for constants a and b, it is a &lt;strong&gt;linear function&lt;/strong&gt; of n.&lt;/p&gt;
+
+&lt;h3 id=&quot;finding-time-taken-in-worst-case&quot;&gt;Finding Time Taken In Worst Case&lt;/h3&gt;
+&lt;p&gt;The worst time happens when the summation terms are at their maximum.&lt;/p&gt;
+
+&lt;p&gt;Remembering that the summation terms can be simplified to:&lt;/p&gt;
+
+&lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;\sum_{j=2}^{n} j = \dfrac{n(n+1)}{2} - 1&lt;/code&gt;&lt;/pre&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum_{j=2}^{n} j = \dfrac{n(n+1)}{2} - 1&lt;/script&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;\sum_{j=2}^n (j-1) = \dfrac{n(n-1)}{2}&lt;/code&gt;&lt;/pre&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum_{j=2}^n (j-1) = \dfrac{n(n-1)}{2}&lt;/script&gt;
+
+&lt;p&gt;We get:&lt;/p&gt;
+
+&lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5 \left(\dfrac{n(n+1)}{2} - 1\right) + c_6 \left(\dfrac{n(n-1)}{2}\right) + c_7 \left(\dfrac{n(n-1)}{2}\right) + c_8(n-1)&lt;/code&gt;&lt;/pre&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;T(n) = c_1n + c_2(n-1) + c_4(n-1) + c_5 \left(\dfrac{n(n+1)}{2} - 1\right) + c_6 \left(\dfrac{n(n-1)}{2}\right) + c_7 \left(\dfrac{n(n-1)}{2}\right) + c_8(n-1)&lt;/script&gt;
+
+&lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;T(n) = \left(\dfrac{c_5}{2} + \dfrac{c_6}{2} + \dfrac{c_7}{2}\right)n^2 + \left(c_1 + c_2 + c_4 + \dfrac{c_5}{2} - \dfrac{c_6}{2} - \dfrac{c_7}{2} + c_8\right)n - (c_2 + c_4 + c_5 + c_8)&lt;/code&gt;&lt;/pre&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;T(n) = \left(\dfrac{c_5}{2} + \dfrac{c_6}{2} + \dfrac{c_7}{2}\right)n^2 + \left(c_1 + c_2 + c_4 + \dfrac{c_5}{2} - \dfrac{c_6}{2} - \dfrac{c_7}{2} + c_8\right)n - (c_2 + c_4 + c_5 + c_8)&lt;/script&gt;
+
+&lt;p&gt;We can express &lt;em&gt;this&lt;/em&gt; time as &lt;code class=&quot;MathJax_Preview&quot;&gt;an^2 + bn + c&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;an^2 + bn + c&lt;/script&gt; for constants a, b, and c.&lt;/p&gt;
+
+&lt;p&gt;Therefore, it is a &lt;strong&gt;quadratic function&lt;/strong&gt; of n.&lt;/p&gt;
+
+&lt;h2 id=&quot;divide-and-conquer-principle&quot;&gt;Divide And Conquer Principle&lt;/h2&gt;
+&lt;p&gt;This principle is used for problems which have subproblems that can be easily solved.&lt;/p&gt;
+
+&lt;p&gt;For example, if this sorting algorithm were to be fed only two elements at a time, it would be easy, right?&lt;/p&gt;
+
+&lt;p&gt;Therefore, if we can break down a problem to small, easily solvable chunks, solving the problem becomes easier. Just make the real problem by solving all the bits and pieces!&lt;/p&gt;
+
+&lt;p&gt;This is a complex skill, worth it’s own page (which I will give), but let’s see it in action first.&lt;/p&gt;
+
+&lt;h3 id=&quot;merge-sort&quot;&gt;Merge Sort&lt;/h3&gt;
+&lt;p&gt;This is the code for &lt;a href=&quot;http://cplusplus.happycodings.com/algorithms/code17.html&quot;&gt;mergesort&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Merge Sort
+
+#include &amp;lt;iostream&amp;gt;
+using namespace std;
+
+int a[50];
+void merge(int,int,int);
+void merge_sort(int low,int high)
+{
+ if(low&amp;lt;high)
+ {
+  int mid = low + (high-low)/2; //This avoids overflow when low, high are too large
+  merge_sort(low,mid);
+  merge_sort(mid+1,high);
+  merge(low,mid,high);
+ }
+}
+void merge(int low,int mid,int high)
+{
+ int h,i,j,b[50],k;
+ h=low;
+ i=low;
+ j=mid+1;
+
+ while((h&amp;lt;=mid)&amp;amp;&amp;amp;(j&amp;lt;=high))
+ {
+  if(a[h]&amp;lt;=a[j])
+  {
+   b[i]=a[h];
+   h++;
+  }
+  else
+  {
+   b[i]=a[j];
+   j++;
+  }
+  i++;
+ }
+ if(h&amp;gt;mid)
+ {
+  for(k=j;k&amp;lt;=high;k++)
+  {
+   b[i]=a[k];
+   i++;
+  }
+ }
+ else
+ {
+  for(k=h;k&amp;lt;=mid;k++)
+  {
+   b[i]=a[k];
+   i++;
+  }
+ }
+ for(k=low;k&amp;lt;=high;k++) a[k]=b[k];
+}
+int main()
+{
+ int num,i;
+ cout&amp;lt;&amp;lt;&quot;Please Enter THE NUMBER OF ELEMENTS you want to sort [THEN 
+PRESS
+ENTER]:&quot;&amp;lt;&amp;lt;endl;
+ cin&amp;gt;&amp;gt;num;
+ cout&amp;lt;&amp;lt;&quot;\n Now, Please Enter the ( &quot;&amp;lt;&amp;lt; num &amp;lt;&amp;lt;&quot; ) numbers (ELEMENTS) [THEN
+PRESS ENTER]:&quot;&amp;lt;&amp;lt;endl;
+ for(i=1;i&amp;lt;=num;i++)
+ {
+  cin&amp;gt;&amp;gt;a[i] ;
+ }
+ merge_sort(1,num);
+ cout&amp;lt;&amp;lt;endl;
+ cout&amp;lt;&amp;lt;&quot;So, the sorted list (using MERGE SORT) will be :&quot;&amp;lt;&amp;lt;endl;
+ cout&amp;lt;&amp;lt;endl&amp;lt;&amp;lt;endl;
+
+ for(i=1;i&amp;lt;=num;i++)
+ cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&quot;  &quot;;
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Try to understand it.
+I’ll explain it in the next post.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="Algorithms" /><summary type="html"></summary></entry><entry><title type="html">Introduction to Algorithms - Solutions - Chapter 2 (Part 1)</title><link href="http://localhost:4000/study/notes/2017/10/16/Chap2Sol/" rel="alternate" type="text/html" title="Introduction to Algorithms - Solutions - Chapter 2 (Part 1)" /><published>2017-10-16T02:00:00+05:30</published><updated>2017-10-16T02:00:00+05:30</updated><id>http://localhost:4000/study/notes/2017/10/16/Chap2Sol</id><content type="html" xml:base="http://localhost:4000/study/notes/2017/10/16/Chap2Sol/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-insertion-sort-c-program&quot; id=&quot;markdown-toc-the-insertion-sort-c-program&quot;&gt;The Insertion Sort C++ Program&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-bubble-sort-problem&quot; id=&quot;markdown-toc-the-bubble-sort-problem&quot;&gt;The Bubble Sort Problem&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#proving-the-correctness-of-bubble-sort&quot; id=&quot;markdown-toc-proving-the-correctness-of-bubble-sort&quot;&gt;Proving the Correctness of Bubble Sort&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-insertion-sort-c-program&quot;&gt;The Insertion Sort C++ Program&lt;/h2&gt;
+
+&lt;p&gt;This is the program:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+using namespace std;
+
+
+int main()
+{
+    int N; //Here, N is the size of the array
+	
+    int input_arr[N]; //input_arr is the array we use to store the input
+
+        for(int i=0; i&amp;lt;N;i++)
+        cin&amp;gt;&amp;gt;input_arr[i];
+
+    for(int j=1;j&amp;lt;N;j++)
+    {
+
+     int key=input_arr[j];
+     int i=j-1;
+
+     while(i!&amp;lt;0&amp;amp;&amp;amp;input_arr[i]&amp;gt;key) //Here, we have to include the case when i becomes zero, becuase it does
+    {
+        input_arr[i+1]=input_arr[i];
+        i--;
+    }
+
+      input_arr[i+1]=key;
+
+    }
+
+    for(int i=0;i&amp;lt;N;i++)
+    cout&amp;lt;&amp;lt;input_arr[i]&amp;lt;&amp;lt;&quot;\n&quot;;
+
+    return 0;
+
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-bubble-sort-problem&quot;&gt;The Bubble Sort Problem&lt;/h2&gt;
+
+&lt;p&gt;I wrote the program for bubble sort, so that it’d be easier to understand. Here it is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include&amp;lt;iostream&amp;gt;
+#include&amp;lt;algorithm&amp;gt;
+using namespace std;
+int main()
+{
+
+    int N; //Same as the earlier one
+    cin&amp;gt;&amp;gt;N;
+    int input_arr[N];
+
+    for(int i=0; i&amp;lt;N;i++)
+        cin&amp;gt;&amp;gt;input_arr[i];
+
+    for(int j=1;j&amp;lt;N;j++)
+    {
+
+        for(int i=0;i&amp;lt;N;i++)
+        {
+
+        if(input_arr[i]&amp;gt;input_arr[j])
+            swap(input_arr[i],input_arr[j]);
+
+        }
+    }
+    for(int i=0;i&amp;lt;N;i++)
+    cout&amp;lt;&amp;lt;input_arr[i]&amp;lt;&amp;lt;&quot;\n&quot;;
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;proving-the-correctness-of-bubble-sort&quot;&gt;Proving the Correctness of Bubble Sort&lt;/h3&gt;
+
+&lt;p&gt;Initialisation: At the start, &lt;code class=&quot;highlighter-rouge&quot;&gt;j=1&lt;/code&gt;, which means &lt;code class=&quot;highlighter-rouge&quot;&gt;input_arr[1...j+1-1]&lt;/code&gt; contains 1 element. Therefore, it is necessarily sorted.&lt;/p&gt;
+
+&lt;p&gt;Maintenance: At each loop of j, we get a sorted array from &lt;code class=&quot;highlighter-rouge&quot;&gt;input_arr[1...j+1-1]&lt;/code&gt;. Therefore, it is sorted.&lt;/p&gt;
+
+&lt;p&gt;Termination: In the final loop of j, we get a sorted array from &lt;code class=&quot;highlighter-rouge&quot;&gt;input_arr[1...N+1-1]&lt;/code&gt;. Therefore, it is sorted. (Remember that &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt; in the code implies &lt;code class=&quot;highlighter-rouge&quot;&gt;N+1&lt;/code&gt; in the pseudocode, when you are dealing with array indices).&lt;/p&gt;
+
+&lt;p&gt;Hence, the given algorithm is correct.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="Algorithms" /><summary type="html"></summary></entry><entry><title type="html">Introduction to Algorithms - Chapter 2 (Part 1)</title><link href="http://localhost:4000/study/notes/2017/10/15/Chap2/" rel="alternate" type="text/html" title="Introduction to Algorithms - Chapter 2 (Part 1)" /><published>2017-10-15T10:30:00+05:30</published><updated>2017-10-15T10:30:00+05:30</updated><id>http://localhost:4000/study/notes/2017/10/15/Chap2</id><content type="html" xml:base="http://localhost:4000/study/notes/2017/10/15/Chap2/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#pseudocode&quot; id=&quot;markdown-toc-pseudocode&quot;&gt;Pseudocode&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#insertion-sort&quot; id=&quot;markdown-toc-insertion-sort&quot;&gt;Insertion Sort&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#correctness-of-insertion-sort&quot; id=&quot;markdown-toc-correctness-of-insertion-sort&quot;&gt;Correctness of Insertion Sort&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#interesting-problemsalgorithms&quot; id=&quot;markdown-toc-interesting-problemsalgorithms&quot;&gt;Interesting Problems/Algorithms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#more-to-come&quot; id=&quot;markdown-toc-more-to-come&quot;&gt;More to come!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Let’s focus on the first problem introduced in the previous chapter, the sorting problem.&lt;/p&gt;
+
+&lt;p&gt;Let us examine an algorithm to solve this problem, called insertion sort. We then take the help of this algorithm to lay the framework of analysis of other algorithms.&lt;/p&gt;
+
+&lt;p&gt;But before that, we need to know what &lt;em&gt;pseudocode&lt;/em&gt; is.&lt;/p&gt;
+
+&lt;h3 id=&quot;pseudocode&quot;&gt;Pseudocode&lt;/h3&gt;
+&lt;p&gt;All algorithms in this book are expressed in something called &lt;em&gt;pseudocode&lt;/em&gt;. It is similar in many respects to C++ (Or C/Pascal if you’ve seen them, all of these language share similar syntax), the only difference being that sometimes the authors might swap actual code with English sentences to be more concise.&lt;/p&gt;
+
+&lt;p&gt;One exception (that you will probably find in the pseudocode for insertion sort) is that when you write &lt;code class=&quot;highlighter-rouge&quot;&gt;A[j]&lt;/code&gt; in this language, it means “The &lt;code class=&quot;MathJax_Preview&quot;&gt;j^{th}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;j^{th}&lt;/script&gt; element of the array A”, when in C/C++ it means “The &lt;code class=&quot;MathJax_Preview&quot;&gt;{j-1}^{th}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{j-1}^{th}&lt;/script&gt; element of the array A”.&lt;/p&gt;
+
+&lt;p&gt;Since now we have the utmost basic stuff down, let’s get to the first algorithm.&lt;/p&gt;
+
+&lt;h3 id=&quot;insertion-sort&quot;&gt;Insertion Sort&lt;/h3&gt;
+
+&lt;p&gt;Input: A sequence of n numbers &lt;code class=&quot;MathJax_Preview&quot;&gt;\langle a_1, a_2, a_3, \ldots, a_n \rangle&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\langle a_1, a_2, a_3, \ldots, a_n \rangle&lt;/script&gt;
+Output: A permutation (reordering) &lt;code class=&quot;MathJax_Preview&quot;&gt;\langle a'_1, a'_2, a'_3, \ldots, a'_n \rangle&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\langle a'_1, a'_2, a'_3, \ldots, a'_n \rangle&lt;/script&gt; of the input sequence such that &lt;code class=&quot;MathJax_Preview&quot;&gt;\langle a'_1 \leqslant a'_2 \leqslant a'_3 \leqslant \ldots a'_n \rangle&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\langle a'_1 \leqslant a'_2 \leqslant a'_3 \leqslant \ldots a'_n \rangle&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, you have an array of n elements, and an algorithm that takes an array of n elements.&lt;/p&gt;
+
+&lt;p&gt;Before checking what the pseudocode is, let’s check the wikipedia page for what it does. &lt;a href=&quot;https://en.wikipedia.org/wiki/Insertion_sort&quot;&gt;Insertion Sort&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So it takes an element, and puts it in its place by checking it with other elements of the array. This is done for every element in the array.&lt;/p&gt;
+
+&lt;p&gt;The way it finds the place is by comparing the selected element of the array (called a key) with all the elements in the array.&lt;/p&gt;
+
+&lt;p&gt;Let’s check the pseudocode of the Insertion Sort algorithm:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/CLRS2/insertion.png&quot; alt=&quot;inserton&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this pseudocode, &lt;code class=&quot;MathJax_Preview&quot;&gt;A[j]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;A[j]&lt;/script&gt; is the &lt;code class=&quot;MathJax_Preview&quot;&gt;{j}^{th}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{j}^{th}&lt;/script&gt; element of the array &lt;code class=&quot;MathJax_Preview&quot;&gt;A&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s break the algorithm down:&lt;/p&gt;
+
+&lt;p&gt;The first line introduces a &lt;strong&gt;for&lt;/strong&gt; loop, implying that the algorithm is gonna hold from elements 2 to the length of A.&lt;/p&gt;
+
+&lt;p&gt;The second line initialises key to &lt;code class=&quot;highlighter-rouge&quot;&gt;A[j]&lt;/code&gt;, which is initialsed to &lt;code class=&quot;highlighter-rouge&quot;&gt;A[2]&lt;/code&gt; (again, keep in mind that &lt;code class=&quot;highlighter-rouge&quot;&gt;A[2]&lt;/code&gt; in pseudocode is equivalent to &lt;code class=&quot;highlighter-rouge&quot;&gt;A[1]&lt;/code&gt; in C/C++ code).&lt;/p&gt;
+
+&lt;p&gt;You might ask this question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;But dude, wait, doesn’t that &lt;em&gt;mean&lt;/em&gt; that this algorithm doesn’t look for the first element?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Not exactly. The next few lines should convince you of it.&lt;/p&gt;
+
+&lt;p&gt;I’ll take the rest of this algorithm as one chunk of code (you’ll understand soon)&lt;/p&gt;
+
+&lt;p&gt;So, on the first try (or rather, &lt;em&gt;iteration&lt;/em&gt;) of the algorithm, &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; becomes equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;j-1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The next three lines just talk about how it is going to find the place for the key.&lt;/p&gt;
+
+&lt;p&gt;Once the place for it is found, &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; is placed in the element next to the place found, i.e., &lt;code class=&quot;highlighter-rouge&quot;&gt;i+1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exercise&lt;/strong&gt;: Find out why key is placed head of &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; by one element.&lt;/p&gt;
+
+&lt;p&gt;To have a more-or-less informal analysis of an algorithm, we need to know about loop invariants.&lt;/p&gt;
+
+&lt;h2 id=&quot;correctness-of-insertion-sort&quot;&gt;Correctness of Insertion Sort&lt;/h2&gt;
+
+&lt;p&gt;For a quick-and-dirty version of its meaning, a loop invariant is something that retains its value over one iteration of the program, that is used for continuing the algorithm smoothly.&lt;/p&gt;
+
+&lt;p&gt;(Spoiler alert: The loop invariant for our implementation of insertion sort was &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt;) 
+The loop invariant helps to find if an algorithm is correct, or not.&lt;/p&gt;
+
+&lt;p&gt;We must show three things about a loop invariant:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Initialization:&lt;/strong&gt; It is true prior to the first iteration of the loop.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Maintenance:&lt;/strong&gt; If it is true before an iteration of the loop, it remains true before the
+next iteration.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Termination:&lt;/strong&gt; When the loop terminates, the invariant gives us a useful property
+that helps show that the algorithm is correct.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see how this holds for insertion sort:&lt;/p&gt;
+
+&lt;p&gt;Initialization: Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;j=2&lt;/code&gt;, so the subarray &lt;code class=&quot;highlighter-rouge&quot;&gt;A[1...j-1]&lt;/code&gt;, therefore consists of A[1], and therefore, it is sorted.&lt;/p&gt;
+
+&lt;p&gt;Therefore, the loop invariant holds good at initialization.&lt;/p&gt;
+
+&lt;p&gt;Maintenance: This algorithm involves taking elements like &lt;code class=&quot;highlighter-rouge&quot;&gt;A[j-1]&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;A[j-2]&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;A[j-3]&lt;/code&gt; etc. and moving them one by one till the element behind it is smaller than it. Therefore, &lt;code class=&quot;highlighter-rouge&quot;&gt;A[1...j]&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt; is the place it the element gets placed is sorted.&lt;/p&gt;
+
+&lt;p&gt;(This part normally requires a good amount of math, but I am going to skip it, since this is an informal way to show correctness).&lt;/p&gt;
+
+&lt;p&gt;Termination: The condition that makes this algorithm exit is &lt;code class=&quot;highlighter-rouge&quot;&gt;j=A.length&lt;/code&gt;, which means that &lt;code class=&quot;highlighter-rouge&quot;&gt;A[1...A.length]&lt;/code&gt; is sorted by the time this algorithm is over. &lt;em&gt;That&lt;/em&gt; is the whole algortihm.&lt;/p&gt;
+
+&lt;h2 id=&quot;interesting-problemsalgorithms&quot;&gt;Interesting Problems/Algorithms&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Prove the same for &lt;a href=&quot;https://en.wikipedia.org/wiki/Bubble_sort&quot;&gt;Bubblesort&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;more-to-come&quot;&gt;More to come!&lt;/h2&gt;
+
+&lt;p&gt;I will be posting the code of insertion sort, as well as the exercise solutions in a separate post tomorrow. Till then, try them and keep tuned!&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="Algorithms" /><summary type="html"></summary></entry><entry><title type="html">Introduction to Algorithms - Chapter 1</title><link href="http://localhost:4000/study/notes/2017/10/12/CLRSChap1/" rel="alternate" type="text/html" title="Introduction to Algorithms - Chapter 1" /><published>2017-10-12T05:30:00+05:30</published><updated>2017-10-12T05:30:00+05:30</updated><id>http://localhost:4000/study/notes/2017/10/12/CLRSChap1</id><content type="html" xml:base="http://localhost:4000/study/notes/2017/10/12/CLRSChap1/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#so-what-are-algorithms&quot; id=&quot;markdown-toc-so-what-are-algorithms&quot;&gt;So, What are Algorithms?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#interesting-algorithms--problems&quot; id=&quot;markdown-toc-interesting-algorithms--problems&quot;&gt;Interesting Algorithms / Problems&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#shortest-paths&quot; id=&quot;markdown-toc-shortest-paths&quot;&gt;Shortest Paths&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I will be posting my study notes that I made while reading the book &lt;a href=&quot;https://mitpress.mit.edu/books/introduction-algorithms&quot;&gt;Introduction to Algorithms&lt;/a&gt;. I hope it’ll be just as good as reading the original book. There’ll be quotations from the book, but more often than not, I’ll be leaving some ideas of my own, as blatantly copying parts of a book doesn’t make good notes.&lt;/p&gt;
+
+&lt;p&gt;If there is any question you would want to ask, just comment about it in the comments section below.&lt;/p&gt;
+
+&lt;h2 id=&quot;so-what-are-algorithms&quot;&gt;So, What are Algorithms?&lt;/h2&gt;
+&lt;p&gt;We have seen programs. They take input, do some work on it, and then give out output. We could call the program that does this an &lt;em&gt;algorithm&lt;/em&gt;, if it does the same thing for all inputs given, and gives the right output.&lt;/p&gt;
+
+&lt;p&gt;Or, in the words of the authors themselves:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An algorithm is any well-defined computational procedure that takes
+some value, or set of values, as input and produces some value, or set of values, as
+output. An algorithm is thus a sequence of computational steps that transform the
+input into the output.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s take a sorting algorithm as an example, as the authors themselves have:&lt;/p&gt;
+
+&lt;p&gt;The input would be a set of numbers &lt;code class=&quot;MathJax_Preview&quot;&gt;\langle a_1 , a_2 , a_3 , \ldots , a_n \rangle&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\langle a_1 , a_2 , a_3 , \ldots , a_n \rangle&lt;/script&gt; and the output is some permutation of the same, i.e., another set of the same n numbers &lt;code class=&quot;MathJax_Preview&quot;&gt;\langle a'_1 , a'_2 , a'_3 , \ldots a_n \rangle&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\langle a'_1 , a'_2 , a'_3 , \ldots a_n \rangle&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;An algorithm, in this case would be the steps required to get the output from the input.&lt;/p&gt;
+
+&lt;h2 id=&quot;interesting-algorithms--problems&quot;&gt;Interesting Algorithms / Problems&lt;/h2&gt;
+&lt;p&gt;Interesting Algorithms will be a section that will occur frequently in this series, and it will list all the Algorithms listed in this chapter that I found interesting,&lt;/p&gt;
+
+&lt;p&gt;In this chapter, we have the Shortest Paths problem.&lt;/p&gt;
+
+&lt;h3 id=&quot;shortest-paths&quot;&gt;Shortest Paths&lt;/h3&gt;
+&lt;p&gt;This Problem, as the title says, is to find the shortest path from a place A,  to another place B. I’m sure you would be able to think of lots of applications of this. In case you aren’t sure, you can think of the problem where there are multiple ways to get to a destination and you don’t really know how to get there in the least amount of distance. Since, on road, least distance usually means least time, you will be able to get there faster.&lt;/p&gt;
+
+&lt;p&gt;So, you go to &lt;a href=&quot;https://www.google.com/maps&quot;&gt;Google Maps&lt;/a&gt;, or some other mapping software and find the shortest route. The way these maps find the distance is proprietary, but it is usually some form of a shortest paths algorithm, and is usually a form of Dijkstra, or the A* algorithm (both of which will be discussed later).&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="Algorithms" /><summary type="html"></summary></entry><entry><title type="html">An anti-spam service called Boxbe</title><link href="http://localhost:4000/interesting/2017/10/11/boxbe/" rel="alternate" type="text/html" title="An anti-spam service called Boxbe" /><published>2017-10-11T00:30:00+05:30</published><updated>2017-10-11T00:30:00+05:30</updated><id>http://localhost:4000/interesting/2017/10/11/boxbe</id><content type="html" xml:base="http://localhost:4000/interesting/2017/10/11/boxbe/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-it-all-started&quot; id=&quot;markdown-toc-how-it-all-started&quot;&gt;How it all started&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-i-did&quot; id=&quot;markdown-toc-what-i-did&quot;&gt;What I did&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-it-all-started&quot;&gt;How it all started&lt;/h2&gt;
+&lt;p&gt;So I found an email in my Dad’s inbox. My mom wanted me to check it out. I found this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/boxbe/1.png&quot; alt=&quot;boxbe&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I just thought that an anti-spam service at this day and age was unnecessary, as almost all email providers have anti-spam features.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell, the way this anti-spam filter works is pretty simple. You include a bunch of contacts to a “Waiting List”, and if any emails come to your inbox, your email client will notify you. If any other email comes to your inbox, it will be transferred to another folder, called “Boxbe Waiting List”, and if you want to see how much spam it has blocked, you can check that folder.&lt;/p&gt;
+
+&lt;p&gt;So it isn’t much of an anti-spam service, it just lets you select the emails you prioritize, and shows you those emails accordingly.&lt;/p&gt;
+
+&lt;p&gt;I checked the &lt;a href=&quot;https://en.wikipedia.org/wiki/Boxbe&quot;&gt;Wikipedia page&lt;/a&gt;, and it seems that this service ended in 2012. That’s odd. How am I getting these emails, if the service itself ended in 2012?&lt;/p&gt;
+
+&lt;p&gt;Just out of curiosity, I looked at its Twitter Feed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/boxbe/2.png&quot; alt=&quot;boxbe-twitter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, the last time it tweeted was in 2009.&lt;/p&gt;
+
+&lt;p&gt;And, according to its &lt;a href=&quot;https://en.wikipedia.org/wiki/Boxbe&quot;&gt;Wikipedia page&lt;/a&gt;, it is supposed to have been acquired by another company.&lt;/p&gt;
+
+&lt;p&gt;But then, I can’t say how much of that is true.&lt;/p&gt;
+
+&lt;p&gt;I have seen this service to be working (as of 10th October, 2017) and I hope this article will sort it out for anybody wanting to use this as a source (the Wikipedia page has multiple problems with it).&lt;/p&gt;
+
+&lt;p&gt;Anyways, I only made this article because some people on Twitter complained to &lt;a href=&quot;https://twitter.com/boxbe&quot;&gt;boxbe&lt;/a&gt; that they couldn’t delete their Boxbe account.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-i-did&quot;&gt;What I did&lt;/h2&gt;
+&lt;p&gt;Therefore, I made a dummy AOL Mail account and a dummy ProtonMail account in order to perform a check on whether this was true.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/boxbe/3.png&quot; alt=&quot;boxbe_invites&quot; /&gt; 
+A part of the webapp no one likes (at least according to twitter).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/boxbe/3_2.png&quot; alt=&quot;boxbe_signup&quot; /&gt;
+The sign-up notification.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Before&lt;/th&gt;
+      &lt;th&gt;After&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/boxbe/4.png&quot; alt=&quot;boxbe_dashboard&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/boxbe/5.png&quot; alt=&quot;boxbe_after&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The Main dashboard before and after disabling it.&lt;/p&gt;
+
+&lt;p&gt;And to check that it is truly not working anymore, I sent a test message through ProtonMail to the AOL Mail account I had registered boxbe with.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/boxbe/6.png&quot; alt=&quot;proton_mail&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/boxbe/7.png&quot; alt=&quot;where_it_came&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, it has appeared in the Spam Folder, something that all ProtonMail emails appear in AOL Mail. So we know for sure that Boxbe was truly removed.&lt;/p&gt;
+
+&lt;p&gt;And now, I can finally go back to learning CS.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="unrelated" /><summary type="html"></summary></entry><entry><title type="html">Operators and the end of this tutorial</title><link href="http://localhost:4000/cpp-tutorial/2017/09/22/operators/" rel="alternate" type="text/html" title="Operators and the end of this tutorial" /><published>2017-09-22T05:30:00+05:30</published><updated>2017-09-22T05:30:00+05:30</updated><id>http://localhost:4000/cpp-tutorial/2017/09/22/operators</id><content type="html" xml:base="http://localhost:4000/cpp-tutorial/2017/09/22/operators/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#operators&quot; id=&quot;markdown-toc-operators&quot;&gt;Operators&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#constants&quot; id=&quot;markdown-toc-constants&quot;&gt;Constants&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#library&quot; id=&quot;markdown-toc-library&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;operators&quot;&gt;Operators&lt;/h2&gt;
+&lt;p&gt;Operators are used to do various types of operations with expressions. An &lt;strong&gt;expression&lt;/strong&gt; can be thought of as being manipulations of variables.
+Check out more on operators in &lt;a href=&quot;https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Table&quot;&gt;this&lt;/a&gt; Wikipedia page.&lt;/p&gt;
+
+&lt;h2 id=&quot;constants&quot;&gt;Constants&lt;/h2&gt;
+&lt;p&gt;Constants are variables whose value when once initialised, cannot be changed afterwards. 
+They can be written like this: &lt;code class=&quot;highlighter-rouge&quot;&gt;const &amp;lt;data_type&amp;gt; &amp;lt;variable_name&amp;gt; = &amp;lt;initialised_value&amp;gt;;&lt;/code&gt;
+They can be used almost everywhere a normal constant is used. (But you have to be very careful about it and there is a proper syntax. I might do it in a later tutorial series.&lt;/p&gt;
+
+&lt;h2 id=&quot;library&quot;&gt;Library&lt;/h2&gt;
+&lt;p&gt;A library is a collection of classes and functions which can be used to make programs faster, something like the modules of Python. The main library of C++ is called the STL, or the Standard Template Library. It contains a lot of classes and functions, and almost all C++ learners will eventually learn it. It is also a work in progrss, constantly updating itself (The latest update was in 2017).&lt;/p&gt;
+
+&lt;p&gt;This is the end of “A Beginner’s Guide to C++”. I will still try to post new information every day, but it will probably be problems, becuase that’s what I have been doing now.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="c++" /><summary type="html"></summary></entry><entry><title type="html">Sneek Peek: Vectors</title><link href="http://localhost:4000/cpp-tutorial/2017/09/21/vectors/" rel="alternate" type="text/html" title="Sneek Peek: Vectors" /><published>2017-09-21T06:30:00+05:30</published><updated>2017-09-21T06:30:00+05:30</updated><id>http://localhost:4000/cpp-tutorial/2017/09/21/vectors</id><content type="html" xml:base="http://localhost:4000/cpp-tutorial/2017/09/21/vectors/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#declaring-and-initialisation&quot; id=&quot;markdown-toc-declaring-and-initialisation&quot;&gt;Declaring and Initialisation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#key-concept-vectors-grow-dynamically&quot; id=&quot;markdown-toc-key-concept-vectors-grow-dynamically&quot;&gt;Key Concept: &lt;code class=&quot;highlighter-rouge&quot;&gt;vector&lt;/code&gt;s Grow Dynamically&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#footnotes&quot; id=&quot;markdown-toc-footnotes&quot;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the past few days, I have been trying to finish the 11th grade portion of C++ in my tutorials and move onto some, more interesting (or rather, more advanced) topics. Here’s one: &lt;strong&gt;Vectors&lt;/strong&gt;.
+I thought that it’d be best to bring the concept of vectors right after arrays, when the mind is fresh about that idea.
+The main thing to think about a vector is that the size of a vector is &lt;strong&gt;variable&lt;/strong&gt;. Most books (or, at least the one I refer to, an old version of C++ Primer) already teach vectors &lt;em&gt;before&lt;/em&gt; teaching about arrays, which I feel isn’t for the best. 
+Arrays are more down-to-earth than vectors, and I believe that it would be in the best interest of everyone to learn it first and then come this way.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A vector is a collection of objects of a single type, each of which has an associated integer index. As with strings, the library takes care of managing the memory associated with storing the elements. We speak of a vector as a container because it contains other objects. All of the objects in a container must have the same type. - C++ Primer, 4th Edition.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As I have said before and as you can see from that definition, a vector is a collection of objects (much like an array), but the main difference is that the vector data type (I’m really regretting this post) is &lt;strong&gt;variable&lt;/strong&gt;. Which is to mean, that you have an array, but with variable size.&lt;/p&gt;
+
+&lt;h2 id=&quot;declaring-and-initialisation&quot;&gt;Declaring and Initialisation&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Syntax&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v1;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;vector that holds objects of type T;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Default constructor v1 is empty&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v2(v1);&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;v2 is a copy of v1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v3(n, i);&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;v3 has n elements with value i&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v4(n);&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;v4 has n copies of a value-initialized object&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;key-concept-vectors-grow-dynamically&quot;&gt;Key Concept: &lt;code class=&quot;highlighter-rouge&quot;&gt;vector&lt;/code&gt;s Grow Dynamically&lt;/h2&gt;
+&lt;p&gt;A central property of vectors is that they are required to be implemented so that it is efficient to add elements to them at run time. Because vectors grow efficiently, it is usually best to let the vector grow by adding elements to it dynamically as the element values are known.&lt;a href=&quot;http://www.cppstudent.in/cpp-tutorial/2017/09/21/vectors/#Footnotes&quot;&gt;¹&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;p&gt;This tutorial has excerpts from a book that I personally like very much, and it is &lt;a href=&quot;https://www.amazon.com/Primer-4th-Stanley-B-Lippman/dp/0201721481/&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="c++" /><summary type="html"></summary></entry><entry><title type="html">Arrays</title><link href="http://localhost:4000/cpp-tutorial/2017/09/20/arrays/" rel="alternate" type="text/html" title="Arrays" /><published>2017-09-20T03:30:00+05:30</published><updated>2017-09-20T03:30:00+05:30</updated><id>http://localhost:4000/cpp-tutorial/2017/09/20/arrays</id><content type="html" xml:base="http://localhost:4000/cpp-tutorial/2017/09/20/arrays/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#compound-types&quot; id=&quot;markdown-toc-compound-types&quot;&gt;Compound Types&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-declare-an-array&quot; id=&quot;markdown-toc-how-to-declare-an-array&quot;&gt;How to Declare an array&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#what-is-a-type-specifier&quot; id=&quot;markdown-toc-what-is-a-type-specifier&quot;&gt;What is a Type Specifier?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#what-is-an-identifier&quot; id=&quot;markdown-toc-what-is-an-identifier&quot;&gt;What is an identifier?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#what-is-the-dimension&quot; id=&quot;markdown-toc-what-is-the-dimension&quot;&gt;What is the dimension?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-initialise-them&quot; id=&quot;markdown-toc-how-to-initialise-them&quot;&gt;How to initialise them&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#for-int-arrays&quot; id=&quot;markdown-toc-for-int-arrays&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; arrays&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#for-char-arrays-read-this-if-you-know-everything-so-far&quot; id=&quot;markdown-toc-for-char-arrays-read-this-if-you-know-everything-so-far&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt; Arrays (Read this if you know everything so far)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Arrays are compound types which consist of a type specifier, an identifier, and a dimension.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;C++ Primer, 4th edition&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s start with what this means.&lt;/p&gt;
+&lt;h3 id=&quot;compound-types&quot;&gt;Compound Types&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;compund type&lt;/strong&gt; is a type that is defined in terms of other types. 
+Since this is the first time in this tutorial that we have come across compound types, I will explain why an array is a compound type.&lt;/p&gt;
+
+&lt;p&gt;An array is defined in terms of it’s elements. An array is essentially a collection of similar elements, so we can explain what an array is only if we know what the elements are.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-declare-an-array&quot;&gt;How to Declare an array&lt;/h2&gt;
+&lt;p&gt;All arrays are declared in the same way:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;type_specifier identifier[number_of_elements];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This shows the declaration of array of dimension 1.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-a-type-specifier&quot;&gt;What is a Type Specifier?&lt;/h3&gt;
+&lt;p&gt;A type specifier is pretty self explanatory, really. It just &lt;strong&gt;specifies&lt;/strong&gt; the &lt;strong&gt;type&lt;/strong&gt; of the array.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-an-identifier&quot;&gt;What is an identifier?&lt;/h3&gt;
+&lt;p&gt;It is a way of uniquely identifying an array, which you would have explicitly stated while declaring them. 
+Therefore, in &lt;code class=&quot;highlighter-rouge&quot;&gt;int array[20]&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; is the type specifier, and &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt; is the identifier.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-the-dimension&quot;&gt;What is the dimension?&lt;/h3&gt;
+&lt;p&gt;You can think of an array as a matrix, really, when it’s actually just a collection of data next to each other in the RAM. So think of an array with one &lt;strong&gt;subscript&lt;/strong&gt; (The [20] part in the example) to be the dimension.
+Becuase it only has one pair of square brackets, it has dimension one and you can think of it to be a column/row matrix. 
+Therefore, an array with two subscripts (something like &lt;code class=&quot;highlighter-rouge&quot;&gt;int array [20][10]&lt;/code&gt;) would be a two-dimensional matrix.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-initialise-them&quot;&gt;How to initialise them&lt;/h2&gt;
+&lt;p&gt;In integer arrays (here, integer is the type specifier), the initialisation is pretty easy.
+There are two ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Declaring the array first (and then initialise it later)
+This is the same for all type secifiers:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example:&lt;code class=&quot;highlighter-rouge&quot;&gt;int array[20];&lt;/code&gt; has space for 20 elements in it.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Declaring it and initialising the variables at the same time.
+Now, here are some important points.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;for-int-arrays&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; arrays&lt;/h3&gt;
+&lt;p&gt;What I’m giving as an example for &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; arrays can easily be used for any data type.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include&amp;lt;iostream&amp;gt;
+using namespace std;
+int main()
+{
+/* The various ways of initializing while declaring are these*/
+int arr[2] = { 1 , 5 }; //Gives an array with two elements 1 and 5
+int a[2] { 1 , 2 }; //Also gives an array with two elements 1 and 2 
+int a2[5] { 1 , 3 }; 
+/*Gives an array with the first two elements initialized to 1 and 3 respectively,
+and the other three are unitialised*/
+int a3[] = { 1 , 3}; //Also possible, it just assumes the size of the array to be two
+//some code 
+return 0
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;for-char-arrays-read-this-if-you-know-everything-so-far&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt; Arrays (Read this if you know everything so far)&lt;/h3&gt;
+&lt;p&gt;Character arrays can be initialised in the same ways, but becuause character arrays in C always used to end with a null pointer (/0), character arrays with string literals end in the same way.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A value, such as 42, in a program is known as a literal constant: literal because we can speak of it only in terms of its value; constant because its value cannot be changed. Every literal has an associated type. For example, 0 is an int and 3.14159 is a double.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;C++ Primer&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, to initalise chracter arrays, we can do it in three ways, as shown in this program:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+using namespace std;
+int main()
+{
+char ca1[5] = { 'H' , 'e' , 'l' , 'l' , 'o' }; //Five characters, no problem
+char ca2[5] = { &quot;H&quot; , &quot;e&quot; , &quot;l&quot; , &quot;l&quot; , &quot;o&quot; }; //Five strings, hmm...
+char ca3[5] = { &quot;H&quot; , &quot;e&quot; , &quot;l&quot; , &quot;l&quot; , '\0'}; 
+//Null pointer explicitly added. should work (it doesn't, the compiler will add it)
+char ca4[] = &quot;Hello&quot;; //This will have six elements
+// some code
+return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="c++" /><summary type="html"></summary></entry></feed>
