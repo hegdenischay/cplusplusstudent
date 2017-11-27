@@ -31,26 +31,24 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
 
 
 
-  <title>Sneek Peek: Vectors &middot; The C++ Student</title>
+  <title>C++ &middot; The C++ Student</title>
 
 
 
-<meta name="description" content="We take a sneek peek into something that really should come later.
+<meta name="description" content="All the articles on C++ that I have written.
 ">
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/cpp-tutorial/2017/09/21/vectors/">
+<link rel="canonical" href="http://localhost:4000/tag/cpp/">
 
 <link rel="alternate" type="application/atom+xml" title="The C++ Student Feed" href="http://localhost:4000/feed.xml">
 
 
-  <link rel="prev" href="http://localhost:4000/cpp-tutorial/2017/09/20/arrays/">
 
 
-
-  <link rel="next" href="http://localhost:4000/cpp-tutorial/2017/09/22/operators/">
+  <link rel="next" href="http://localhost:4000/tag/ethical/">
 
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -163,248 +161,31 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
     <main id="_main" class="content" role="main" data-color="#A85641" data-image="/dandelion.png">
       
 
-<article id="post-cpp-tutorial/2017/09/21/vectors" class="post" role="article">
+
+
   <header>
-    <h1 class="post-title">
-      
-        Sneek Peek: Vectors
-      
-    </h1>
-
-    <p class="post-date heading">
-      <time datetime="2017-09-21T06:30:00+05:30">21 Sep 2017</time>
-      
-
-
-
-
-
-
-
-
-
-in <span>Cpp-tutorial</span>
-
-      
-
-
-
-
-
-
-
-
-
-on <a href="/tag/cpp/" data-flip="title">C++</a>
-
-    </p>
-
+    <h1 class="page-title">C++</h1>
     
   
   
-<p class="message">We take a sneek peek into something that <strong>really</strong> should come later.</p>
+<p class="message">All the articles on C++ that I have written.</p>
 
 
 
 
   </header>
+  <hr class="sr-only"/>
 
-  
-    <ul id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#declaring-and-initialisation" id="markdown-toc-declaring-and-initialisation">Declaring and Initialisation</a></li>
-  <li><a href="#key-concept-vectors-grow-dynamically" id="markdown-toc-key-concept-vectors-grow-dynamically">Key Concept: <code class="highlighter-rouge">vector</code>s Grow Dynamically</a></li>
-  <li><a href="#footnotes" id="markdown-toc-footnotes">Footnotes</a></li>
-</ul>
-
-<p>For the past few days, I have been trying to finish the 11th grade portion of C++ in my tutorials and move onto some, more interesting (or rather, more advanced) topics. Here’s one: <strong>Vectors</strong>.
-I thought that it’d be best to bring the concept of vectors right after arrays, when the mind is fresh about that idea.
-The main thing to think about a vector is that the size of a vector is <strong>variable</strong>. Most books (or, at least the one I refer to, an old version of C++ Primer) already teach vectors <em>before</em> teaching about arrays, which I feel isn’t for the best. 
-Arrays are more down-to-earth than vectors, and I believe that it would be in the best interest of everyone to learn it first and then come this way.</p>
-
-<h2 id="introduction">Introduction</h2>
-<blockquote>
-  <p>A vector is a collection of objects of a single type, each of which has an associated integer index. As with strings, the library takes care of managing the memory associated with storing the elements. We speak of a vector as a container because it contains other objects. All of the objects in a container must have the same type. - C++ Primer, 4th Edition.</p>
-</blockquote>
-
-<p>As I have said before and as you can see from that definition, a vector is a collection of objects (much like an array), but the main difference is that the vector data type (I’m really regretting this post) is <strong>variable</strong>. Which is to mean, that you have an array, but with variable size.</p>
-
-<h2 id="declaring-and-initialisation">Declaring and Initialisation</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Syntax</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">vector&lt;T&gt; v1;</code></td>
-      <td>vector that holds objects of type T;</td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>Default constructor v1 is empty</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">vector&lt;T&gt; v2(v1);</code></td>
-      <td>v2 is a copy of v1</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">vector&lt;T&gt; v3(n, i);</code></td>
-      <td>v3 has n elements with value i</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">vector&lt;T&gt; v4(n);</code></td>
-      <td>v4 has n copies of a value-initialized object</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="key-concept-vectors-grow-dynamically">Key Concept: <code class="highlighter-rouge">vector</code>s Grow Dynamically</h2>
-<p>A central property of vectors is that they are required to be implemented so that it is efficient to add elements to them at run time. Because vectors grow efficiently, it is usually best to let the vector grow by adding elements to it dynamically as the element values are known.<a href="http://www.cppstudent.in/cpp-tutorial/2017/09/21/vectors/#Footnotes">¹</a></p>
-
-<h2 id="footnotes">Footnotes</h2>
-<p>This tutorial has excerpts from a book that I personally like very much, and it is <a href="https://www.amazon.com/Primer-4th-Stanley-B-Lippman/dp/0201721481/">this</a>.</p>
 
 
   
-
-</article>
-
-
-  <hr class="dingbat" />
-
-
-
-
-
-
-  <aside class="author" role="complementary">
-    <div class="author">
   
     
-  
-
-  
-
-  <img
-    src="/assets/img/no_scale.jpg"
-    class="me"
-    alt="Nischay Hegde"
-    srcset="/assets/img/scaled.jpg 1x,/assets/img/scaledx256.jpg 2x"
+    <h2 id="y2017" class="hr">2017</h2>
+    <ul class="related-posts">
     
-  />
-
-
   
-
-  <h2 class="page-title hr">
-    About
-  </h2>
-
-  <p>I’m just a student doing his 12th in NIOS (hence the name). My interests are mostly CS-related.</p>
-
-
   
-    <div class="sidebar-social">
-      <span class="sr-only">Social:</span>
-<ul>
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li>
-  <a href="https://github.com/hegdenischay" title="GitHub">
-    <span class="icon-github"></span>
-    <span class="sr-only">GitHub</span>
-  </a>
-</li>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li>
-  <a href="hegdenischay@gmail.com" title="Email">
-    <span class="icon-mail"></span>
-    <span class="sr-only">Email</span>
-  </a>
-</li>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li>
-  <a href="https://<url>/feed.xml" title="RSS">
-    <span class="icon-rss2"></span>
-    <span class="sr-only">RSS</span>
-  </a>
-</li>
-
-  
-
-  
-
-  
-</ul>
-
-    </div>
-  
-</div>
-
-  </aside>
-
-
-
-
-
-<aside class="related" role="complementary">
-  <h2 class="hr">Related Posts</h2>
-
-  <ul class="related-posts">
-    
-      
-      
-      
-        
-        
-          
 
 
 <li class="h4">
@@ -412,18 +193,31 @@ Arrays are more down-to-earth than vectors, and I believe that it would be in th
     <span>Operators and the end of this tutorial</span>
   </a>
   <small><time datetime="2017-09-22T05:30:00+05:30">
-    22 Sep 2017
+    22 Sep
   </time></small>
 </li>
 
-        
-      
-        
-          
-          
-        
-        
-          
+  
+
+  
+  
+  
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/21/vectors/" data-flip="title">
+    <span>Sneek Peek: Vectors</span>
+  </a>
+  <small><time datetime="2017-09-21T06:30:00+05:30">
+    21 Sep
+  </time></small>
+</li>
+
+  
+
+  
+  
+  
 
 
 <li class="h4">
@@ -431,15 +225,15 @@ Arrays are more down-to-earth than vectors, and I believe that it would be in th
     <span>Arrays</span>
   </a>
   <small><time datetime="2017-09-20T03:30:00+05:30">
-    20 Sep 2017
+    20 Sep
   </time></small>
 </li>
 
-        
-      
-        
-        
-          
+  
+
+  
+  
+  
 
 
 <li class="h4">
@@ -447,15 +241,91 @@ Arrays are more down-to-earth than vectors, and I believe that it would be in th
     <span>Making a Simple Program</span>
   </a>
   <small><time datetime="2017-09-19T05:30:00+05:30">
-    19 Sep 2017
+    19 Sep
   </time></small>
 </li>
 
-        
-      
-    
+  
+
+  
+  
+  
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/19/control-statements/" data-flip="title">
+    <span>Control Statements</span>
+  </a>
+  <small><time datetime="2017-09-19T00:30:00+05:30">
+    19 Sep
+  </time></small>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/17/a-quick-detour/" data-flip="title">
+    <span>A quick detour - Data Types</span>
+  </a>
+  <small><time datetime="2017-09-17T17:30:00+05:30">
+    17 Sep
+  </time></small>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/16/basics/" data-flip="title">
+    <span>The Basics of Coding in C++ - Part 1</span>
+  </a>
+  <small><time datetime="2017-09-16T05:30:00+05:30">
+    16 Sep
+  </time></small>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/09/15/get-started/" data-flip="title">
+    <span>Getting Started with C/C++</span>
+  </a>
+  <small><time datetime="2017-09-15T05:02:25+05:30">
+    15 Sep
+  </time></small>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li class="h4">
+  <a href="/cpp-tutorial/2017/08/20/cpp-beginner/" data-flip="title">
+    <span>A Beginner's Introduction to C++</span>
+  </a>
+  <small><time datetime="2017-08-20T12:14:23+05:30">
+    20 Aug
+  </time></small>
+</li>
+
   </ul>
-</aside>
 
 
 
@@ -504,7 +374,7 @@ Arrays are more down-to-earth than vectors, and I believe that it would be in th
     </li>
   
     <li>
-      <a class="sidebar-nav-item" href="/tag/cpp/">C++</a>
+      <a class="sidebar-nav-item active" href="/tag/cpp/">C++</a>
     </li>
   
     <li>
