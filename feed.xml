@@ -1,5 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-11-27T19:20:42+05:30</updated><id>http://localhost:4000/</id><title type="html">The C++ Student</title><subtitle>I'm just a student who wants to delve deeper into the world of Computing, with C++ as my base. I'll be posting quite often from now on, so stay tuned!
-</subtitle><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><entry><title type="html">IOCCC (1984) Part 2</title><link href="http://localhost:4000/c/2017/11/16/IOCCC2/" rel="alternate" type="text/html" title="IOCCC (1984) Part 2" /><published>2017-11-16T00:30:00+05:30</published><updated>2017-11-16T00:30:00+05:30</updated><id>http://localhost:4000/c/2017/11/16/IOCCC2</id><content type="html" xml:base="http://localhost:4000/c/2017/11/16/IOCCC2/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-11-28T21:10:21+05:30</updated><id>http://localhost:4000/</id><title type="html">The C++ Student</title><subtitle>I'm just a student who wants to delve deeper into the world of Computing, with C++ as my base. I'll be posting quite often from now on, so stay tuned!
+</subtitle><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><entry><title type="html">Introduction to forensics</title><link href="http://localhost:4000/image-manipulation/2017/11/28/forensics/" rel="alternate" type="text/html" title="Introduction to forensics" /><published>2017-11-28T00:30:00+05:30</published><updated>2017-11-28T00:30:00+05:30</updated><id>http://localhost:4000/image-manipulation/2017/11/28/forensics</id><content type="html" xml:base="http://localhost:4000/image-manipulation/2017/11/28/forensics/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#so-what-is-forensics&quot; id=&quot;markdown-toc-so-what-is-forensics&quot;&gt;So, What is Forensics?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;so-what-is-forensics&quot;&gt;So, What is Forensics?&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Computer forensics (also known as computer forensic science) is a branch of digital forensic science pertaining to evidence found in computers and digital storage media. The goal of computer forensics is to examine digital media in a forensically sound manner with the aim of identifying, preserving, recovering, analyzing and presenting facts and opinions about the digital information. - Wikipedia&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So basically, you try to find information that wasn’t found before by anyone else but other people would most definitely have tried to find information. Therefore, we need to closely examine what the bad guys might be doing. Most people who do forensics need to have a lot of information about a lot of subjects, and that’s particularly what makes it interesting to me.&lt;/p&gt;
+
+&lt;p&gt;Let’s start with a simple enough example. 
+&lt;a href=&quot;/assets/forensics-1/problem.pdf&quot;&gt;This&lt;/a&gt; is a file you have to crack.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/forensics-1/problem.png&quot; alt=&quot;this&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is what you’re supposed to get.&lt;/p&gt;
+
+&lt;p&gt;You have a day to do this.&lt;/p&gt;
+
+&lt;p&gt;Some resources that you’ll probably need:
+Hex Editors:
+&lt;a href=&quot;http://hexedit.com/&quot;&gt;HexEdit - For Windows&lt;/a&gt;
+&lt;a href=&quot;https://apps.ubuntu.com/cat/applications/precise/bless/&quot;&gt;Bless - For Ubuntu (and equivalent)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;File signatures (these help you understand what file format you’re dealing with)
+https://www.garykessler.net/library/file_sigs.html
+https://en.wikipedia.org/wiki/List_of_file_signatures&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="ethical-hacking" /><summary type="html"></summary></entry><entry><title type="html">IOCCC (1985)</title><link href="http://localhost:4000/c/2017/11/17/IOCCC3/" rel="alternate" type="text/html" title="IOCCC (1985)" /><published>2017-11-17T00:30:00+05:30</published><updated>2017-11-17T00:30:00+05:30</updated><id>http://localhost:4000/c/2017/11/17/IOCCC3</id><content type="html" xml:base="http://localhost:4000/c/2017/11/17/IOCCC3/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#lycklamac&quot; id=&quot;markdown-toc-lycklamac&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lycklama.c&lt;/code&gt;&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#analysing-the-code-and-removing-some-obfuscation&quot; id=&quot;markdown-toc-analysing-the-code-and-removing-some-obfuscation&quot;&gt;Analysing the code, and removing some obfuscation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#decoding-the-mess&quot; id=&quot;markdown-toc-decoding-the-mess&quot;&gt;Decoding the mess&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lycklamac&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lycklama.c&lt;/code&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#define o define
+#o ___o write
+#o ooo (unsigned)
+#o o_o_ 1
+#o _o_ char
+#o _oo goto
+#o _oo_ read
+#o o_o for
+#o o_ main
+#o o__ if
+#o oo_ 0
+#o _o(_,__,___)(void)___o(_,__,ooo(___))
+#o __o (o_o_&amp;lt;&amp;lt;((o_o_&amp;lt;&amp;lt;(o_o_&amp;lt;&amp;lt;o_o_))+(o_o_&amp;lt;&amp;lt;o_o_)))+(o_o_&amp;lt;&amp;lt;(o_o_&amp;lt;&amp;lt;(o_o_&amp;lt;&amp;lt;o_o_)))
+o_(){_o_ _=oo_,__,___,____[__o];_oo ______;_____:___=__o-o_o_; _______:
+_o(o_o_,____,__=(_-o_o_&amp;lt;___?_-o_o_:___));o_o(;__;_o(o_o_,&quot;\b&quot;,o_o_),__--);
+_o(o_o_,&quot; &quot;,o_o_);o__(--___)_oo _______;_o(o_o_,&quot;\n&quot;,o_o_);______:o__(_=_oo_(
+oo_,____,__o))_oo _____;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is the code.&lt;/p&gt;
+
+&lt;h3 id=&quot;analysing-the-code-and-removing-some-obfuscation&quot;&gt;Analysing the code, and removing some obfuscation&lt;/h3&gt;
+
+&lt;p&gt;Let’s analyse some of the &lt;code class=&quot;highlighter-rouge&quot;&gt;#define&lt;/code&gt;s made.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#o __o (o_o_&amp;lt;&amp;lt;((o_o_&amp;lt;&amp;lt;(o_o_&amp;lt;&amp;lt;o_o_))+(o_o_&amp;lt;&amp;lt;o_o_)))+(o_o_&amp;lt;&amp;lt;(o_o_&amp;lt;&amp;lt;(o_o_&amp;lt;&amp;lt;o_o_)))&lt;/code&gt;
+ Let’s simplfiy this a bit more. Becuase of the &lt;code class=&quot;highlighter-rouge&quot;&gt;#define&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;o_o_&lt;/code&gt; is just &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; and the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; operator is the left shift operator. So this basically becomes:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#define __o (1&amp;lt;&amp;lt;((1&amp;lt;&amp;lt;(1&amp;lt;&amp;lt;1))+(1&amp;lt;&amp;lt;1)))+(1&amp;lt;&amp;lt;(1&amp;lt;&amp;lt;(1&amp;lt;&amp;lt;1)))&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, because all the right shifts are just multiplying by two here, we can further simplify it as:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#define __o (1&amp;lt;&amp;lt;((1&amp;lt;&amp;lt;2)+2))+(1&amp;lt;&amp;lt;(1&amp;lt;&amp;lt;2))&lt;/code&gt;, which is the same as &lt;code class=&quot;highlighter-rouge&quot;&gt;#define __o (1&amp;lt;&amp;lt;(4+2))+(1&amp;lt;&amp;lt;4)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, this simplifies to &lt;code class=&quot;highlighter-rouge&quot;&gt;#define __o (1&amp;lt;&amp;lt;6)+8&lt;/code&gt;, which becomes &lt;code class=&quot;highlighter-rouge&quot;&gt;#define __o 20&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We can remove all the crazy defines and make it look a bit simpler, after which it looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#define _o(_,__,___)(void)write(_,__,(unsigned)(___))
+main()
+{
+char _=0,__,___,____[20];
+goto ______;
+_____:___=20-1; 
+_______:_o(1,____,__=(_-1&amp;lt;___?_-1:___));
+
+for(;__;_o(1,&quot;\b&quot;,1),__--);
+_o(1,&quot; &quot;,1);
+
+if(--___)goto _______;
+_o(1,&quot;\n&quot;,1);
+
+______:
+
+if(_=read(0,____,20))
+_oo _____;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If you have a keen eye, you will notice that there are three characters here, one array, and one &lt;code class=&quot;highlighter-rouge&quot;&gt;goto&lt;/code&gt;.
+Now, time for me to rename some values. I’ll just call them &lt;code class=&quot;highlighter-rouge&quot;&gt;char1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;char2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;char3&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;arr&lt;/code&gt;. I’ll call the &lt;code class=&quot;highlighter-rouge&quot;&gt;goto&lt;/code&gt; label &lt;code class=&quot;highlighter-rouge&quot;&gt;label&lt;/code&gt;. Becuase I have zero creatvity, like whatever I had done until now.&lt;/p&gt;
+
+&lt;h3 id=&quot;decoding-the-mess&quot;&gt;Decoding the mess&lt;/h3&gt;
+
+&lt;p&gt;This uses &lt;code class=&quot;highlighter-rouge&quot;&gt;write&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;read&lt;/code&gt;, both UNIX system commands, to print out a hello world. At least, that’s what it’s supposed to do.&lt;/p&gt;
+
+&lt;p&gt;The “fixed” (read: changed some names) code:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;sys/syscall.h&amp;gt;
+#include &amp;lt;unistd.h&amp;gt;
+#define _o(_,__,___)(void)write(_,__,(unsigned)(___))
+int main()
+{
+char char1=0,char2,char3,arr[20];
+goto label;
+label2:char3=19;
+label3:_o(1,arr,char2=(char1--&amp;lt;char3?char1--:char3));
+
+for(;char2;_o(1,&quot;\b&quot;,1),char2--);
+_o(1,&quot; &quot;,1);
+
+if(--char3)goto label3;
+_o(1,&quot;\n&quot;,1);
+
+label:
+
+if(char1=read(0,arr,20))
+goto label2;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Apparently, you have to give it very long lines as arguments. But based on what I can see, it will basically write the whole line again, but will be &lt;em&gt;very&lt;/em&gt; inefficient in doing so.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="IOCCC" /><summary type="html"></summary></entry><entry><title type="html">IOCCC (1984) Part 2</title><link href="http://localhost:4000/c/2017/11/16/IOCCC2/" rel="alternate" type="text/html" title="IOCCC (1984) Part 2" /><published>2017-11-16T00:30:00+05:30</published><updated>2017-11-16T00:30:00+05:30</updated><id>http://localhost:4000/c/2017/11/16/IOCCC2</id><content type="html" xml:base="http://localhost:4000/c/2017/11/16/IOCCC2/">&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#work-in-progress&quot; id=&quot;markdown-toc-work-in-progress&quot;&gt;Work in Progress&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#lamanc&quot; id=&quot;markdown-toc-lamanc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;laman.c&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#the-copyright&quot; id=&quot;markdown-toc-the-copyright&quot;&gt;The copyright&lt;/a&gt;&lt;/li&gt;
@@ -704,167 +830,4 @@ They can be used almost everywhere a normal constant is used. (But you have to b
 &lt;h2 id=&quot;library&quot;&gt;Library&lt;/h2&gt;
 &lt;p&gt;A library is a collection of classes and functions which can be used to make programs faster, something like the modules of Python. The main library of C++ is called the STL, or the Standard Template Library. It contains a lot of classes and functions, and almost all C++ learners will eventually learn it. It is also a work in progrss, constantly updating itself (The latest update was in 2017).&lt;/p&gt;
 
-&lt;p&gt;This is the end of “A Beginner’s Guide to C++”. I will still try to post new information every day, but it will probably be problems, becuase that’s what I have been doing now.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="C++" /><summary type="html"></summary></entry><entry><title type="html">Sneek Peek: Vectors</title><link href="http://localhost:4000/cpp-tutorial/2017/09/21/vectors/" rel="alternate" type="text/html" title="Sneek Peek: Vectors" /><published>2017-09-21T06:30:00+05:30</published><updated>2017-09-21T06:30:00+05:30</updated><id>http://localhost:4000/cpp-tutorial/2017/09/21/vectors</id><content type="html" xml:base="http://localhost:4000/cpp-tutorial/2017/09/21/vectors/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#declaring-and-initialisation&quot; id=&quot;markdown-toc-declaring-and-initialisation&quot;&gt;Declaring and Initialisation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#key-concept-vectors-grow-dynamically&quot; id=&quot;markdown-toc-key-concept-vectors-grow-dynamically&quot;&gt;Key Concept: &lt;code class=&quot;highlighter-rouge&quot;&gt;vector&lt;/code&gt;s Grow Dynamically&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#footnotes&quot; id=&quot;markdown-toc-footnotes&quot;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For the past few days, I have been trying to finish the 11th grade portion of C++ in my tutorials and move onto some, more interesting (or rather, more advanced) topics. Here’s one: &lt;strong&gt;Vectors&lt;/strong&gt;.
-I thought that it’d be best to bring the concept of vectors right after arrays, when the mind is fresh about that idea.
-The main thing to think about a vector is that the size of a vector is &lt;strong&gt;variable&lt;/strong&gt;. Most books (or, at least the one I refer to, an old version of C++ Primer) already teach vectors &lt;em&gt;before&lt;/em&gt; teaching about arrays, which I feel isn’t for the best. 
-Arrays are more down-to-earth than vectors, and I believe that it would be in the best interest of everyone to learn it first and then come this way.&lt;/p&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;A vector is a collection of objects of a single type, each of which has an associated integer index. As with strings, the library takes care of managing the memory associated with storing the elements. We speak of a vector as a container because it contains other objects. All of the objects in a container must have the same type. - C++ Primer, 4th Edition.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As I have said before and as you can see from that definition, a vector is a collection of objects (much like an array), but the main difference is that the vector data type (I’m really regretting this post) is &lt;strong&gt;variable&lt;/strong&gt;. Which is to mean, that you have an array, but with variable size.&lt;/p&gt;
-
-&lt;h2 id=&quot;declaring-and-initialisation&quot;&gt;Declaring and Initialisation&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Syntax&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v1;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;vector that holds objects of type T;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;Default constructor v1 is empty&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v2(v1);&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;v2 is a copy of v1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v3(n, i);&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;v3 has n elements with value i&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vector&amp;lt;T&amp;gt; v4(n);&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;v4 has n copies of a value-initialized object&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;key-concept-vectors-grow-dynamically&quot;&gt;Key Concept: &lt;code class=&quot;highlighter-rouge&quot;&gt;vector&lt;/code&gt;s Grow Dynamically&lt;/h2&gt;
-&lt;p&gt;A central property of vectors is that they are required to be implemented so that it is efficient to add elements to them at run time. Because vectors grow efficiently, it is usually best to let the vector grow by adding elements to it dynamically as the element values are known.&lt;a href=&quot;http://www.cppstudent.in/cpp-tutorial/2017/09/21/vectors/#Footnotes&quot;&gt;¹&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-&lt;p&gt;This tutorial has excerpts from a book that I personally like very much, and it is &lt;a href=&quot;https://www.amazon.com/Primer-4th-Stanley-B-Lippman/dp/0201721481/&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="C++" /><summary type="html"></summary></entry><entry><title type="html">Arrays</title><link href="http://localhost:4000/cpp-tutorial/2017/09/20/arrays/" rel="alternate" type="text/html" title="Arrays" /><published>2017-09-20T03:30:00+05:30</published><updated>2017-09-20T03:30:00+05:30</updated><id>http://localhost:4000/cpp-tutorial/2017/09/20/arrays</id><content type="html" xml:base="http://localhost:4000/cpp-tutorial/2017/09/20/arrays/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#compound-types&quot; id=&quot;markdown-toc-compound-types&quot;&gt;Compound Types&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#how-to-declare-an-array&quot; id=&quot;markdown-toc-how-to-declare-an-array&quot;&gt;How to Declare an array&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#what-is-a-type-specifier&quot; id=&quot;markdown-toc-what-is-a-type-specifier&quot;&gt;What is a Type Specifier?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#what-is-an-identifier&quot; id=&quot;markdown-toc-what-is-an-identifier&quot;&gt;What is an identifier?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#what-is-the-dimension&quot; id=&quot;markdown-toc-what-is-the-dimension&quot;&gt;What is the dimension?&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#how-to-initialise-them&quot; id=&quot;markdown-toc-how-to-initialise-them&quot;&gt;How to initialise them&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#for-int-arrays&quot; id=&quot;markdown-toc-for-int-arrays&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; arrays&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#for-char-arrays-read-this-if-you-know-everything-so-far&quot; id=&quot;markdown-toc-for-char-arrays-read-this-if-you-know-everything-so-far&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt; Arrays (Read this if you know everything so far)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Arrays are compound types which consist of a type specifier, an identifier, and a dimension.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;C++ Primer, 4th edition&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Let’s start with what this means.&lt;/p&gt;
-&lt;h3 id=&quot;compound-types&quot;&gt;Compound Types&lt;/h3&gt;
-&lt;p&gt;A &lt;strong&gt;compund type&lt;/strong&gt; is a type that is defined in terms of other types. 
-Since this is the first time in this tutorial that we have come across compound types, I will explain why an array is a compound type.&lt;/p&gt;
-
-&lt;p&gt;An array is defined in terms of it’s elements. An array is essentially a collection of similar elements, so we can explain what an array is only if we know what the elements are.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-declare-an-array&quot;&gt;How to Declare an array&lt;/h2&gt;
-&lt;p&gt;All arrays are declared in the same way:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;type_specifier identifier[number_of_elements];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This shows the declaration of array of dimension 1.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-is-a-type-specifier&quot;&gt;What is a Type Specifier?&lt;/h3&gt;
-&lt;p&gt;A type specifier is pretty self explanatory, really. It just &lt;strong&gt;specifies&lt;/strong&gt; the &lt;strong&gt;type&lt;/strong&gt; of the array.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-is-an-identifier&quot;&gt;What is an identifier?&lt;/h3&gt;
-&lt;p&gt;It is a way of uniquely identifying an array, which you would have explicitly stated while declaring them. 
-Therefore, in &lt;code class=&quot;highlighter-rouge&quot;&gt;int array[20]&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; is the type specifier, and &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt; is the identifier.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-is-the-dimension&quot;&gt;What is the dimension?&lt;/h3&gt;
-&lt;p&gt;You can think of an array as a matrix, really, when it’s actually just a collection of data next to each other in the RAM. So think of an array with one &lt;strong&gt;subscript&lt;/strong&gt; (The [20] part in the example) to be the dimension.
-Becuase it only has one pair of square brackets, it has dimension one and you can think of it to be a column/row matrix. 
-Therefore, an array with two subscripts (something like &lt;code class=&quot;highlighter-rouge&quot;&gt;int array [20][10]&lt;/code&gt;) would be a two-dimensional matrix.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-initialise-them&quot;&gt;How to initialise them&lt;/h2&gt;
-&lt;p&gt;In integer arrays (here, integer is the type specifier), the initialisation is pretty easy.
-There are two ways:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Declaring the array first (and then initialise it later)
-This is the same for all type secifiers:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Example:&lt;code class=&quot;highlighter-rouge&quot;&gt;int array[20];&lt;/code&gt; has space for 20 elements in it.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Declaring it and initialising the variables at the same time.
-Now, here are some important points.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;for-int-arrays&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; arrays&lt;/h3&gt;
-&lt;p&gt;What I’m giving as an example for &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; arrays can easily be used for any data type.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include&amp;lt;iostream&amp;gt;
-using namespace std;
-int main()
-{
-/* The various ways of initializing while declaring are these*/
-int arr[2] = { 1 , 5 }; //Gives an array with two elements 1 and 5
-int a[2] { 1 , 2 }; //Also gives an array with two elements 1 and 2 
-int a2[5] { 1 , 3 }; 
-/*Gives an array with the first two elements initialized to 1 and 3 respectively,
-and the other three are unitialised*/
-int a3[] = { 1 , 3}; //Also possible, it just assumes the size of the array to be two
-//some code 
-return 0
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;for-char-arrays-read-this-if-you-know-everything-so-far&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;char&lt;/code&gt; Arrays (Read this if you know everything so far)&lt;/h3&gt;
-&lt;p&gt;Character arrays can be initialised in the same ways, but becuause character arrays in C always used to end with a null pointer (/0), character arrays with string literals end in the same way.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;A value, such as 42, in a program is known as a literal constant: literal because we can speak of it only in terms of its value; constant because its value cannot be changed. Every literal has an associated type. For example, 0 is an int and 3.14159 is a double.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;C++ Primer&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So, to initalise chracter arrays, we can do it in three ways, as shown in this program:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
-using namespace std;
-int main()
-{
-char ca1[5] = { 'H' , 'e' , 'l' , 'l' , 'o' }; //Five characters, no problem
-char ca2[5] = { &quot;H&quot; , &quot;e&quot; , &quot;l&quot; , &quot;l&quot; , &quot;o&quot; }; //Five strings, hmm...
-char ca3[5] = { &quot;H&quot; , &quot;e&quot; , &quot;l&quot; , &quot;l&quot; , '\0'}; 
-//Null pointer explicitly added. should work (it doesn't, the compiler will add it)
-char ca4[] = &quot;Hello&quot;; //This will have six elements
-// some code
-return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="C++" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;This is the end of “A Beginner’s Guide to C++”. I will still try to post new information every day, but it will probably be problems, becuase that’s what I have been doing now.&lt;/p&gt;</content><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><category term="C++" /><summary type="html"></summary></entry></feed>

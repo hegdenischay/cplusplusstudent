@@ -31,24 +31,26 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
 
 
 
-  <title>IOCCC &middot; The C++ Student</title>
+  <title>IOCCC (1985) &middot; The C++ Student</title>
 
 
 
-<meta name="description" content="All those weird C programs.
+<meta name="description" content="On to 1985
 ">
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/tag/ioccc/">
+<link rel="canonical" href="http://localhost:4000/c/2017/11/17/IOCCC3/">
 
 <link rel="alternate" type="application/atom+xml" title="The C++ Student Feed" href="http://localhost:4000/feed.xml">
 
 
-  <link rel="prev" href="http://localhost:4000/tag/ethical/">
+  <link rel="prev" href="http://localhost:4000/c/2017/11/16/IOCCC2/">
 
 
+
+  <link rel="next" href="http://localhost:4000/image-manipulation/2017/11/28/forensics/">
 
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -161,47 +163,294 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
     <main id="_main" class="content" role="main" data-color="#A85641" data-image="/dandelion.png">
       
 
-
-
+<article id="post-c/2017/11/17/IOCCC3" class="post" role="article">
   <header>
-    <h1 class="page-title">IOCCC</h1>
+    <h1 class="post-title">
+      
+        IOCCC (1985)
+      
+    </h1>
+
+    <p class="post-date heading">
+      <time datetime="2017-11-17T00:30:00+05:30">17 Nov 2017</time>
+      
+
+
+
+
+
+
+
+
+
+in <span>C</span>
+
+      
+
+
+
+
+
+
+
+
+
+on <a href="/tag/ioccc/" data-flip="title">IOCCC</a>
+
+    </p>
+
     
   
   
-<p class="message">All those weird C programs.</p>
+<p class="message">On to 1985</p>
 
 
 
 
   </header>
-  <hr class="sr-only"/>
 
+  
+    <ul id="markdown-toc">
+  <li><a href="#lycklamac" id="markdown-toc-lycklamac"><code class="highlighter-rouge">lycklama.c</code></a>    <ul>
+      <li><a href="#analysing-the-code-and-removing-some-obfuscation" id="markdown-toc-analysing-the-code-and-removing-some-obfuscation">Analysing the code, and removing some obfuscation</a></li>
+      <li><a href="#decoding-the-mess" id="markdown-toc-decoding-the-mess">Decoding the mess</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="lycklamac"><code class="highlighter-rouge">lycklama.c</code></h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#define o define
+#o ___o write
+#o ooo (unsigned)
+#o o_o_ 1
+#o _o_ char
+#o _oo goto
+#o _oo_ read
+#o o_o for
+#o o_ main
+#o o__ if
+#o oo_ 0
+#o _o(_,__,___)(void)___o(_,__,ooo(___))
+#o __o (o_o_&lt;&lt;((o_o_&lt;&lt;(o_o_&lt;&lt;o_o_))+(o_o_&lt;&lt;o_o_)))+(o_o_&lt;&lt;(o_o_&lt;&lt;(o_o_&lt;&lt;o_o_)))
+o_(){_o_ _=oo_,__,___,____[__o];_oo ______;_____:___=__o-o_o_; _______:
+_o(o_o_,____,__=(_-o_o_&lt;___?_-o_o_:___));o_o(;__;_o(o_o_,"\b",o_o_),__--);
+_o(o_o_," ",o_o_);o__(--___)_oo _______;_o(o_o_,"\n",o_o_);______:o__(_=_oo_(
+oo_,____,__o))_oo _____;}
+</code></pre></div></div>
+
+<p>This is the code.</p>
+
+<h3 id="analysing-the-code-and-removing-some-obfuscation">Analysing the code, and removing some obfuscation</h3>
+
+<p>Let’s analyse some of the <code class="highlighter-rouge">#define</code>s made.</p>
+
+<ol>
+  <li><code class="highlighter-rouge">#o __o (o_o_&lt;&lt;((o_o_&lt;&lt;(o_o_&lt;&lt;o_o_))+(o_o_&lt;&lt;o_o_)))+(o_o_&lt;&lt;(o_o_&lt;&lt;(o_o_&lt;&lt;o_o_)))</code>
+ Let’s simplfiy this a bit more. Becuase of the <code class="highlighter-rouge">#define</code>, <code class="highlighter-rouge">o_o_</code> is just <code class="highlighter-rouge">1</code> and the <code class="highlighter-rouge">&lt;&lt;</code> operator is the left shift operator. So this basically becomes:</li>
+</ol>
+
+<p><code class="highlighter-rouge">#define __o (1&lt;&lt;((1&lt;&lt;(1&lt;&lt;1))+(1&lt;&lt;1)))+(1&lt;&lt;(1&lt;&lt;(1&lt;&lt;1)))</code></p>
+
+<p>Now, because all the right shifts are just multiplying by two here, we can further simplify it as:</p>
+
+<p><code class="highlighter-rouge">#define __o (1&lt;&lt;((1&lt;&lt;2)+2))+(1&lt;&lt;(1&lt;&lt;2))</code>, which is the same as <code class="highlighter-rouge">#define __o (1&lt;&lt;(4+2))+(1&lt;&lt;4)</code>.</p>
+
+<p>Now, this simplifies to <code class="highlighter-rouge">#define __o (1&lt;&lt;6)+8</code>, which becomes <code class="highlighter-rouge">#define __o 20</code></p>
+
+<p>We can remove all the crazy defines and make it look a bit simpler, after which it looks like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#define _o(_,__,___)(void)write(_,__,(unsigned)(___))
+main()
+{
+char _=0,__,___,____[20];
+goto ______;
+_____:___=20-1; 
+_______:_o(1,____,__=(_-1&lt;___?_-1:___));
+
+for(;__;_o(1,"\b",1),__--);
+_o(1," ",1);
+
+if(--___)goto _______;
+_o(1,"\n",1);
+
+______:
+
+if(_=read(0,____,20))
+_oo _____;}
+</code></pre></div></div>
+<p>If you have a keen eye, you will notice that there are three characters here, one array, and one <code class="highlighter-rouge">goto</code>.
+Now, time for me to rename some values. I’ll just call them <code class="highlighter-rouge">char1</code>, <code class="highlighter-rouge">char2</code>, <code class="highlighter-rouge">char3</code>, and <code class="highlighter-rouge">arr</code>. I’ll call the <code class="highlighter-rouge">goto</code> label <code class="highlighter-rouge">label</code>. Becuase I have zero creatvity, like whatever I had done until now.</p>
+
+<h3 id="decoding-the-mess">Decoding the mess</h3>
+
+<p>This uses <code class="highlighter-rouge">write</code> and <code class="highlighter-rouge">read</code>, both UNIX system commands, to print out a hello world. At least, that’s what it’s supposed to do.</p>
+
+<p>The “fixed” (read: changed some names) code:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;sys/syscall.h&gt;
+#include &lt;unistd.h&gt;
+#define _o(_,__,___)(void)write(_,__,(unsigned)(___))
+int main()
+{
+char char1=0,char2,char3,arr[20];
+goto label;
+label2:char3=19;
+label3:_o(1,arr,char2=(char1--&lt;char3?char1--:char3));
+
+for(;char2;_o(1,"\b",1),char2--);
+_o(1," ",1);
+
+if(--char3)goto label3;
+_o(1,"\n",1);
+
+label:
+
+if(char1=read(0,arr,20))
+goto label2;
+}
+</code></pre></div></div>
+<p>Apparently, you have to give it very long lines as arguments. But based on what I can see, it will basically write the whole line again, but will be <em>very</em> inefficient in doing so.</p>
 
 
   
+
+</article>
+
+
+  <hr class="dingbat" />
+
+
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
   
     
-    <h2 id="y2017" class="hr">2017</h2>
-    <ul class="related-posts">
+  
+
+  
+
+  <img
+    src="/assets/img/no_scale.jpg"
+    class="me"
+    alt="Nischay Hegde"
+    srcset="/assets/img/scaled.jpg 1x,/assets/img/scaledx256.jpg 2x"
     
-  
-  
+  />
 
 
-<li class="h4">
-  <a href="/c/2017/11/17/IOCCC3/" data-flip="title">
-    <span>IOCCC (1985)</span>
+  
+
+  <h2 class="page-title hr">
+    About
+  </h2>
+
+  <p>I’m just a student doing his 12th in NIOS (hence the name). My interests are mostly CS-related.</p>
+
+
+  
+    <div class="sidebar-social">
+      <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/hegdenischay" title="GitHub">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
   </a>
-  <small><time datetime="2017-11-17T00:30:00+05:30">
-    17 Nov
-  </time></small>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="hegdenischay@gmail.com" title="Email">
+    <span class="icon-mail"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://<url>/feed.xml" title="RSS">
+    <span class="icon-rss2"></span>
+    <span class="sr-only">RSS</span>
+  </a>
 </li>
 
   
 
   
+
   
+</ul>
+
+    </div>
   
+</div>
+
+  </aside>
+
+
+
+
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+      
+      
+        
+          
+          
+        
+        
+          
 
 
 <li class="h4">
@@ -209,15 +458,15 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
     <span>IOCCC (1984) Part 2</span>
   </a>
   <small><time datetime="2017-11-16T00:30:00+05:30">
-    16 Nov
+    16 Nov 2017
   </time></small>
 </li>
 
-  
-
-  
-  
-  
+        
+      
+        
+        
+          
 
 
 <li class="h4">
@@ -225,13 +474,31 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
     <span>IOCCC Problems - Anonymous.c (1984)</span>
   </a>
   <small><time datetime="2017-11-14T00:30:00+05:30">
-    14 Nov
+    14 Nov 2017
   </time></small>
 </li>
 
+        
+      
+    
   </ul>
+</aside>
 
 
+
+      
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr/>
+
+  <div id="disqus_thread"></div>
+
+  <script>
+    !function(s,i){function e(e){var t=s.pageYOffset||i.body.scrollTop;s.DISQUS&&!s._disqusThis&&!s._disqusFirst&&t+s.innerHeight>=s._disqusThreadOffsetTop&&(s._disqusThis=!0,s.DISQUS.reset({reload:!0,config:d}))}var d=function(){this.page.title="IOCCC (1985)",this.page.identifier="/c/2017/11/17/IOCCC3",this.page.url="http://localhost:4000/c/2017/11/17/IOCCC3/"};s._disqusFirst=void 0===s._disqusFirst||s._disqusFirst,s._disqusLoading=void 0!==s._disqusLoading&&s._disqusLoading,s._disqusThis=!1,s._disqusThreadOffsetTop=i.getElementById("disqus_thread").offsetTop,s._disqusLoading?s._disqusFirst=!1:(s._disqusLoading=!0,loadJSDeferred("//hegdenischay.disqus.com/embed.js"),s.addEventListener?s.addEventListener("scroll",e,{passive:!0}):s.attachEvent?s.attachEvent("onscroll",e):s.onscroll=e)}(window,document);
+
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
 
       
 
@@ -286,7 +553,7 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
     </li>
   
     <li>
-      <a class="sidebar-nav-item active" href="/tag/ioccc/">IOCCC</a>
+      <a class="sidebar-nav-item" href="/tag/ioccc/">IOCCC</a>
     </li>
   
     <li>
