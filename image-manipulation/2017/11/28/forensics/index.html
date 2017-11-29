@@ -31,11 +31,11 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
 
 
 
-  <title>Introduction to forensics &middot; The C++ Student</title>
+  <title>Introduction to forensics - 2 &middot; The C++ Student</title>
 
 
 
-<meta name="description" content="The field in ethical hacking that I like the most.
+<meta name="description" content="Today, we’ll talk about tools that can be used to automate some stuff.
 ">
 
 
@@ -46,7 +46,7 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
 <link rel="alternate" type="application/atom+xml" title="The C++ Student Feed" href="http://localhost:4000/feed.xml">
 
 
-  <link rel="prev" href="http://localhost:4000/c/2017/11/17/IOCCC3/">
+  <link rel="prev" href="http://localhost:4000/image-manipulation/2017/11/28/forensics/">
 
 
 
@@ -165,7 +165,7 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
   <header>
     <h1 class="post-title">
       
-        Introduction to forensics
+        Introduction to forensics - 2
       
     </h1>
 
@@ -200,7 +200,7 @@ on <a href="/tag/ethical/" data-flip="title">Ethical Hacking</a>
     
   
   
-<p class="message">The field in ethical hacking that I like the most.</p>
+<p class="message">Today, we’ll talk about tools that can be used to automate some stuff.</p>
 
 
 
@@ -209,33 +209,48 @@ on <a href="/tag/ethical/" data-flip="title">Ethical Hacking</a>
 
   
     <ul id="markdown-toc">
-  <li><a href="#so-what-is-forensics" id="markdown-toc-so-what-is-forensics">So, What is Forensics?</a></li>
+  <li><a href="#yesterdays-answer" id="markdown-toc-yesterdays-answer">Yesterday’s Answer</a></li>
+  <li><a href="#todays-question" id="markdown-toc-todays-question">Today’s Question:</a>    <ul>
+      <li><a href="#introducing-binwalk" id="markdown-toc-introducing-binwalk">Introducing Binwalk</a></li>
+    </ul>
+  </li>
+  <li><a href="#steganography" id="markdown-toc-steganography">Steganography</a></li>
 </ul>
 
-<h2 id="so-what-is-forensics">So, What is Forensics?</h2>
-<blockquote>
-  <p>Computer forensics (also known as computer forensic science) is a branch of digital forensic science pertaining to evidence found in computers and digital storage media. The goal of computer forensics is to examine digital media in a forensically sound manner with the aim of identifying, preserving, recovering, analyzing and presenting facts and opinions about the digital information. - Wikipedia</p>
-</blockquote>
+<h2 id="yesterdays-answer">Yesterday’s Answer</h2>
+<p>If you had used any hex editor to peek into the hexadecimal code behind yesterday’s “pdf” file, you’d have noticed that it isn’t an actual PDF, just a PNG file renamed and called PDF.</p>
 
-<p>So basically, you try to find information that wasn’t found before by anyone else but other people would most definitely have tried to find information. Therefore, we need to closely examine what the bad guys might be doing. Most people who do forensics need to have a lot of information about a lot of subjects, and that’s particularly what makes it interesting to me.</p>
+<h2 id="todays-question">Today’s Question:</h2>
 
-<p>Let’s start with a simple enough example. 
-<a href="/assets/forensics-1/problem.pdf">This</a> is a file you have to crack.</p>
+<p><a href="/assets/forensics-2/abcd.pdf">This</a> is the problem file.</p>
 
-<p><img src="/assets/forensics-1/problem.png" alt="this" /></p>
+<p>You need to find the same old <a href="/assets/forensics-1/problem.png">problem.png</a> again.</p>
 
-<p>This is what you’re supposed to get.</p>
+<p>You might already know that I’d have tinkered with the file name in some way, so you’d probably name it <code class="highlighter-rouge">abcd.png</code> or something.</p>
 
-<p>You have a day to do this.</p>
+<p>What now? You can’t find <code class="highlighter-rouge">problem.png</code> anywhere, and the file size is actually BIGGER than the <code class="highlighter-rouge">dandelion.png</code> that I use on my site.</p>
 
-<p>Some resources that you’ll probably need:
-Hex Editors:
-<a href="http://hexedit.com/">HexEdit - For Windows</a>
-<a href="https://apps.ubuntu.com/cat/applications/precise/bless/">Bless - For Ubuntu (and equivalent)</a></p>
+<h3 id="introducing-binwalk">Introducing Binwalk</h3>
 
-<p>File signatures (these help you understand what file format you’re dealing with)
-https://www.garykessler.net/library/file_sigs.html
-https://en.wikipedia.org/wiki/List_of_file_signatures</p>
+<p>Binwalk is a UNIX-based application (sorry, Windows users!) that tries to find relevant file signatures in files. For example, on <code class="highlighter-rouge">abcd.pdf</code>, this is what it gives:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>binwalk abcd.pdf
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 558 x 496, 8-bit/color RGB, non-interlaced
+81            0x51            Zlib compressed data, best compression
+194072        0x2F618         PNG image, 640 x 400, 8-bit/color RGBA, non-interlaced
+
+</code></pre></div></div>
+
+<p>So you now know that there are two PNG images, you can use <code class="highlighter-rouge">binwalk -e</code> and extract them. There, you have your <code class="highlighter-rouge">problem.png</code>.</p>
+
+<h2 id="steganography">Steganography</h2>
+
+<p>Steganography is (arguably) what I have been doing right now. It is the art of hiding information in files, where you’ll only get it if you search hard for it.</p>
+
+<p>Here’s a <a href="/assets/forensics-2/the_nod.gif">GIF</a> from sCTF 2015 that is actually very easy, you just have to find a text string that has “flag” in it (this is a common recurrence in all CTFs).</p>
 
 
   
@@ -374,6 +389,9 @@ https://en.wikipedia.org/wiki/List_of_file_signatures</p>
         
           
           
+        
+          
+          
     
   </ul>
 </aside>
@@ -388,7 +406,7 @@ https://en.wikipedia.org/wiki/List_of_file_signatures</p>
   <div id="disqus_thread"></div>
 
   <script>
-    !function(s,i){function e(e){var t=s.pageYOffset||i.body.scrollTop;s.DISQUS&&!s._disqusThis&&!s._disqusFirst&&t+s.innerHeight>=s._disqusThreadOffsetTop&&(s._disqusThis=!0,s.DISQUS.reset({reload:!0,config:d}))}var d=function(){this.page.title="Introduction to forensics",this.page.identifier="/image-manipulation/2017/11/28/forensics",this.page.url="http://localhost:4000/image-manipulation/2017/11/28/forensics/"};s._disqusFirst=void 0===s._disqusFirst||s._disqusFirst,s._disqusLoading=void 0!==s._disqusLoading&&s._disqusLoading,s._disqusThis=!1,s._disqusThreadOffsetTop=i.getElementById("disqus_thread").offsetTop,s._disqusLoading?s._disqusFirst=!1:(s._disqusLoading=!0,loadJSDeferred("//hegdenischay.disqus.com/embed.js"),s.addEventListener?s.addEventListener("scroll",e,{passive:!0}):s.attachEvent?s.attachEvent("onscroll",e):s.onscroll=e)}(window,document);
+    !function(s,i){function e(e){var t=s.pageYOffset||i.body.scrollTop;s.DISQUS&&!s._disqusThis&&!s._disqusFirst&&t+s.innerHeight>=s._disqusThreadOffsetTop&&(s._disqusThis=!0,s.DISQUS.reset({reload:!0,config:d}))}var d=function(){this.page.title="Introduction to forensics - 2",this.page.identifier="/image-manipulation/2017/11/28/forensics",this.page.url="http://localhost:4000/image-manipulation/2017/11/28/forensics/"};s._disqusFirst=void 0===s._disqusFirst||s._disqusFirst,s._disqusLoading=void 0!==s._disqusLoading&&s._disqusLoading,s._disqusThis=!1,s._disqusThreadOffsetTop=i.getElementById("disqus_thread").offsetTop,s._disqusLoading?s._disqusFirst=!1:(s._disqusLoading=!0,loadJSDeferred("//hegdenischay.disqus.com/embed.js"),s.addEventListener?s.addEventListener("scroll",e,{passive:!0}):s.attachEvent?s.attachEvent("onscroll",e):s.onscroll=e)}(window,document);
 
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
