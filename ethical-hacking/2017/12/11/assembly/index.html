@@ -170,7 +170,7 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2017-12-11T00:30:00+05:30">11 Dec 2017</time>
+      <time datetime="2017-12-11T05:30:00+05:30">11 Dec 2017</time>
       
 
 
@@ -193,7 +193,7 @@ in <span>Ethical-hacking</span>
 
 
 
-on <span>Cpp</span>
+on <span>C</span>
 
     </p>
 
@@ -222,7 +222,10 @@ on <span>Cpp</span>
     </ul>
   </li>
   <li><a href="#further-reading" id="markdown-toc-further-reading">Further Reading</a></li>
+  <li><a href="#resources" id="markdown-toc-resources">Resources</a></li>
 </ul>
+
+<p>Update: Dec 11, 2017: I felt that some topics are better covered in this very post, therefore I have expanded them.</p>
 
 <h2 id="reversing">Reversing</h2>
 
@@ -314,8 +317,6 @@ memory.</li>
 
 <p>The one thing that I like about the AT&amp;T Syntax is that they always show what data types you’re working on, and the differences between registers and memory locations are clearly demarcated.</p>
 
-<p>Since I am not too good at explaining it, I will be linking this here: <a href="http://www.c-jump.com/CIS77/ASM/DataTypes/lecture.html">Lecture Notes</a></p>
-
 <h4 id="how-privelege-separation-works">How Privelege Separation Works</h4>
 <p>In x86 (The most used processor), Privelege Separation is abstracted through what’s called <em>ring level</em>. The processor supports four ring levels, numbered 0 to 3. Here, Ring 0 is the highest previlege and the system runs on that mode. Ring 3 is the lowest one, and normal users run in there.</p>
 
@@ -336,9 +337,59 @@ They are:</p>
 
 <p>Keep in mind that Registers are actually case-insensitive, so the <code class="highlighter-rouge">EAX</code> you saw just now is the same as the <code class="highlighter-rouge">eax</code> that was in the code I showed you at the start.</p>
 
-<h2 id="further-reading">Further Reading</h2>
-<p><a href="http://insecure.org/stf/smashstack.html">Smashing The Stack For Fun And Profit</a> - A classic from the e-zine Phrack, this was apparently the prime motivation to get into reversing for one of my mentors when I was at Amrita, in a workshop.</p>
+<p>Some GPRs can be divided into smaller Registers, like EAX can be divided into AX (a 16-bit Register), which can be divided into AH, and AL (which are 8-bit registers).</p>
 
+<p>Here’s a short explanation of what each of them do:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Register</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ESI</code></td>
+      <td>Source in string/memory operations</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">EDI</code></td>
+      <td>Destination in string/memory operations</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">EBP</code></td>
+      <td>Base frame pointer</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ESP</code></td>
+      <td>Stack pointer</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The common data types are given below:</p>
+
+<ul>
+  <li>Bytes: 8 bits</li>
+  <li>Word : 16 bits</li>
+  <li>Double Word (also called  dword): 32 bits (This is the most used data type btw)</li>
+  <li>Quad word: 64 bits. (Now, while x86 doesn’t have 64-bit GPRs, it can combine two registers, and treat them as 64-bit values in some scenarios. (Source: Practical Reverse Engineering)</li>
+</ul>
+
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+  <li><a href="http://insecure.org/stf/smashstack.html">Smashing The Stack For Fun And Profit</a> - A classic from the e-zine Phrack, this was apparently the prime motivation to get into reversing for one of my mentors when I was at Amrita, in a workshop.</li>
+  <li><a href="http://www.c-jump.com/CIS77/ASM/DataTypes/lecture.html">Lecture Notes</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/X86_assembly_language#Registers">More on Registers</a></li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li>Bruce Dang, Alexandre Gazet, Elias Bachaalany, Sébastien Josse -  Practical reverse engineering</li>
+  <li>Intel® 64 and IA-32 Architectures
+Software Developer’s Manual</li>
+</ul>
 
   
 
