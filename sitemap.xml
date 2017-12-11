@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/tag/cpp/</loc>
-<lastmod>2017-12-06T19:13:04+05:30</lastmod>
+<lastmod>2017-12-11T06:21:59+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/tag/ethical/</loc>
-<lastmod>2017-12-06T19:13:04+05:30</lastmod>
+<lastmod>2017-12-11T06:21:59+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/tag/ioccc/</loc>
-<lastmod>2017-12-06T19:13:04+05:30</lastmod>
+<lastmod>2017-12-11T06:21:59+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/cpp-tutorial/2017/08/20/cpp-beginner/</loc>
@@ -93,6 +93,10 @@
 <lastmod>2017-12-06T00:30:00+05:30</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/ethical-hacking/2017/12/11/assembly/</loc>
+<lastmod>2017-12-11T00:30:00+05:30</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -127,6 +131,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/page-4/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page-5/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/assets/forensics-1/problem.pdf</loc>
