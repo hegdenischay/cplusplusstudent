@@ -10,52 +10,78 @@
                 /\___/                \ \____/
                 \/__/                  \/___/
 
-Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
+Powered by Hydejack v7.5.1 <https://qwtel.com/hydejack/>
 -->
 
 
 
 
-
-
-
-
-
 <head>
-  
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="format-detection" content="telephone=no">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 
+  
 
-
-  <title>Home &middot; The C++ Student</title>
-
-
-
+<title>Home | The C++ Student</title>
 <meta name="description" content="Welcome to my Blog, where I post all my study notes and other interesting trivia that I found on the Clearnet, or TOR. Feel free to use any of the content that I write for your benefit, it’s okay as long as you source it back to this website.
 ">
-
-
-
-
 <link rel="canonical" href="http://localhost:4000/page-3/">
 
-<link rel="alternate" type="application/atom+xml" title="The C++ Student Feed" href="http://localhost:4000/feed.xml">
+
+  
+
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="The C++ Student">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="application-name" content="The C++ Student">
+<meta name="msapplication-config" content="/assets/ieconfig.xml">
+
+
+<meta name="theme-color" content="#A85641">
+
+
+<meta name="generator" content="Hydejack v7.5.1">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="The C++ Student" />
+
+
+
+<link rel="alternate" href="http://localhost:4000/page-3/" hreflang="en">
+
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon.png">
+
+<link rel="manifest" href="/assets/manifest.json">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
 
 
 
 
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<!-- Place favicon.ico in the root directory -->
+<link id="_disqusJS" rel="dns-prefetch" href="https://hegdenischay.disqus.com/embed.js">
+
 
 
 <link id="_katexJS"  rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js">
 <link id="_katexCSS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css">
 
+<script>
+  function stdOnEnd(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function ieOnEnd(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}window.setRelStylesheet=function(n){function e(){this.rel="stylesheet"}var o=document.getElementById(n);o.addEventListener?o.addEventListener("load",e,!1):o.onload=e},window._loaded=!1,window.loadJSDeferred=function(n,e){function o(){window._loaded=!0;var o=document.createElement("script");o.src=n,e&&(("onload"in o?stdOnEnd:ieOnEnd)(o,e),o.onload||stdOnEnd(o,e));var t=document.scripts[0];t.parentNode.insertBefore(o,t)}window._loaded?o():window.addEventListener?window.addEventListener("load",o,!1):window.onload=o};
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+
+  window._noPushState = false;
+  window._noDrawer = false;
+</script>
 
 <!--[if gt IE 8]><!---->
 
@@ -64,7 +90,7 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
   WebFontConfig = {
     
     google: {
-      families: 'Roboto+Slab:700|Noto+Sans:400,400i,700,700i'.split('|')
+      families: ['Roboto+Slab:700','Noto+Sans:400,400i,700,700i']
     },
     
 
@@ -73,280 +99,97 @@ Powered by Hydejack v6.6.1 <https://qwtel.com/hydejack/>
       urls: ['/assets/icomoon/style.css']
     }
   };
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = "/assets/bower_components/webfontloader/webfontloader.js";
+    s.parentNode.insertBefore(wf, s);
+  }(document));
 </script>
 <!--<![endif]-->
 
-<script>
-  !function(n,e){function t(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function o(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}n._loaded=!1,n.loadJSDeferred=function(a,d){function r(){n._loaded=!0;var r=e.createElement("script");r.src=a,d&&(("onload"in r?t:o)(r,d),r.onload||t(r,d));var l=e.getElementsByTagName("script")[0];l.parentNode.insertBefore(r,l)}n._loaded?r():n.addEventListener?n.addEventListener("load",r,!1):n.attachEvent?n.attachEvent("onload",r):n.onload=r}}(window,document);
-
-  !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
-
-  !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
-
-  window.disablePushState = false;
-  window.disableDrawer = false;
-</script>
-
-<!--[if lt IE 9]>
-<script src="/assets/bower_components/html5shiv/dist/html5shiv.min.js"></script>
-<![endif]-->
-
-
-<!--[if gt IE 8]><!---->
-<style>
-  
-  article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}*{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:#333;background-color:#fff;overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}img,.img{display:block;max-width:100%;margin-bottom:1rem;border:none}img.lead,.img.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-weight:bold;text-rendering:optimizeLegibility}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin:3rem 0 1rem;line-height:1.6}h1,.h1{font-size:2rem;line-height:1.25}h2,.h2{font-size:1.5rem}h3,.h3{font-size:1.17em}p{margin-top:0;margin-bottom:1rem}p.lead{font-size:1.25rem;font-weight:300;padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:1.5rem 0;border:0;border-top:1px solid #eee}.hr{padding-bottom:.5rem;border-bottom:1px solid #eee;margin-bottom:1.5rem}h4,h5,h6,.h4,.h5,.h6{margin-bottom:0.5rem;font-size:1rem}table{margin-bottom:1rem;width:100%;width:calc(100% + 2rem);margin-left:-1rem;border:1px solid #e5e5e5;border-collapse:collapse;border-spacing:0}td,th{padding:.25rem .5rem;border:1px solid #e5e5e5}td:first-child,th:first-child{padding-left:1rem}td:last-child,th:last-child{padding-right:1rem}thead+tbody,tbody+tbody,tfoot{border-top:3px double #e5e5e5}tbody tr:nth-child(odd) td,tbody tr:nth-child(odd) th{background-color:#f9f9f9}footer{margin-bottom:2rem}.page,.post{margin-bottom:3em}.page li+li,.post li+li{margin-top:.25rem}.page>header,.post>header{margin-bottom:2rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:#9a9a9a}.related-posts{padding-left:0;list-style:none}.related-posts>li,.related-posts>li+li{margin-top:1rem}.related-posts>li>small,.related-posts>li+li>small{font-size:75%;color:#9a9a9a}.message{margin-bottom:1rem;padding:1rem;color:#787878;background-color:#f9f9f9;margin-left:-1rem;margin-right:-1rem}body,main{position:relative;overflow-x:hidden}@media screen{body::before{content:'';width:.5rem;background:#e5e5e5;position:absolute;left:0;top:0;bottom:0}}@media screen and (min-width: 40em){html{font-size:17px}}@media screen and (min-width: 54em){html{font-size:16px}}@media screen and (min-width: 72em){html{font-size:17px}}@media screen and (min-width: 125em){html{font-size:18px}}.sr-only{display:none}.clearfix,.sidebar-social::after,.clearafter::after{content:"";display:table;clear:both}a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}.img{overflow:hidden;background-color:#f9f9f9}.img>img{margin:0;width:100%;height:100%}.sixteen-nine{position:relative}.sixteen-nine::before{display:block;content:"";width:100%;padding-top:56.25%}.sixteen-nine>*{position:absolute;top:0;left:0;right:0;bottom:0}h1+hr,h2+hr,h3+hr,h4+hr,h5+hr,h6+hr{margin-top:0}.fade-in{animation-duration:500ms;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-2rem);opacity:0}50%{transform:translateY(-2rem);opacity:0}to{transform:translateY(0);opacity:1}}.mb6{margin-bottom:6rem}.sidebar{color:rgba(255,255,255,0.75);text-align:left}.sidebar::before{content:"";position:absolute;z-index:2;top:0;left:0;bottom:0;right:0;background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%)}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}#_yDrawer{position:relative;padding:1rem 0}@media screen{#_yDrawer{padding:2rem 1rem;min-height:640px;min-height:100vh}}@media screen and (min-width: 54em){#_yDrawer{position:fixed;top:0;left:0;bottom:0;width:18rem;margin-left:0}}@media screen and (min-width: 97.5em){#_yDrawer{width:calc(50% - 28rem)}}@media screen{#_yDrawer.loaded{min-height:0;padding:0}}.sidebar-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:#202020 center / cover}.sidebar-sticky{position:relative;z-index:3}@media screen{.sidebar-sticky{position:absolute;right:2rem;bottom:1rem;left:auto;max-width:14rem}}@media print{.sidebar-sticky{padding:0 2rem}}.sidebar-about>h1{color:#fff;font-size:2rem}.sidebar-nav>ul{list-style:none;padding-left:0;margin-bottom:.5rem}a.sidebar-nav-item{font-weight:bold;display:block;line-height:1.75;padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,0.2)}@media screen{.y-drawer-scrim{z-index:2}.y-drawer-content{width:18rem;left:-17.5rem;z-index:3}}@media screen and (min-width: 97.5em){.y-drawer-content{width:calc(50% - 28rem)}}.sidebar-social{margin-bottom:.5rem}.sidebar-social>ul{list-style:none;padding-left:0;margin:0 -.25rem}.sidebar-social>ul>li{float:left;margin:0 .25rem}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.6rem;line-height:3rem;width:3.1249rem;height:4rem;padding:.5rem 0}.sidebar-social>ul li+li{margin-top:0}.fixed-top{position:fixed;top:0;left:0;width:100%;z-index:1}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;height:0}.menu{display:inline-block;padding:1.75rem 1.5rem;border-bottom:none;margin-left:-1.5rem;color:#9a9a9a !important}.menu::after{content:"\2630"}@media screen and (min-width: 54em){.menu{padding:1.25rem 1.5rem;position:absolute;left:-9999px}.menu:focus{position:static}}.animation-main{pointer-events:none}.loading{display:none}@media print{.menu{display:none}}.animation-main{opacity:0;will-change:opacity}.loading{position:absolute;top:0;right:0;padding:5.25rem 4.5rem;transform-origin:top right;transform:scale(0.33)}.content{position:relative;margin-left:auto;margin-right:auto;padding:5rem 1rem 12rem}@media screen{.content{max-width:38rem;padding-left:1.5rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem;padding:4rem 1rem 12rem;margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 72em){.content{margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 92em){.content{max-width:48rem}}@media screen and (min-width: 97.5em){.content{margin:auto}}.me{float:right;width:6.5rem;height:6.5rem;margin-left:1rem;margin-bottom:.5rem;border-radius:100%;position:relative}@media screen and (min-width: 40em){.me{width:7rem;height:7rem}}@media screen and (min-width: 54em){.me{width:6.5rem;height:6.5rem}}@media screen and (min-width: 60em){.me{width:7rem;height:7rem}}main>footer{position:absolute;bottom:0;left:0;right:0;padding:0 1rem;color:#9a9a9a;font-size:smaller;text-align:center}main>footer>p{margin-bottom:0}html{font-family:Helvetica, Arial, sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Helvetica, Arial, sans-serif}
-
-</style>
-
-
-<link id="_stylePreload" rel="preload" as="style" href="/assets/css/hydejack.css?v=6.6.1">
-<script>document.getElementById('_stylePreload').onload=function(){this.rel='stylesheet'}</script>
-
-<!-- NOTE: These styles interact with JavsScript, so they MUST NOT be changed -->
-<style id="_pageStyle">
-
-.content a{color:#A85641;border-color:rgba(168,86,65,0.2)}.content a:hover{border-color:#A85641}:focus{outline-color:#A85641}::selection{color:#fff;background:#A85641}::-moz-selection{color:#fff;background:#A85641}
-
-</style>
-
-
 <noscript>
-  <link rel="stylesheet" href="/assets/css/hydejack.css?v=6.6.1">
-
-  
   
   
 
   
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Noto+Sans:400,400i,700,700i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i">
     <style>
       html { font-family: 'Noto Sans', Helvetica, Arial, sans-serif }
       h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }
     </style>
   
 
-  
   <link rel="stylesheet" href="/assets/icomoon/style.css">
 </noscript>
-<!--<![endif]-->
-
-
-
-
-
 
 <!--[if gt IE 8]><!---->
-<script async src="/assets/bower_components/webfontloader/webfontloader.js"></script>
+
+
+
+  <link rel="stylesheet" href="/assets/css/hydejack-7.5.1.css">
+
+
+
+<style id="_pageStyle">
+
+.content a:not(.btn){color:#A85641;border-color:rgba(168,86,65,0.2)}.content a:not(.btn):hover{border-color:#A85641}:focus{outline-color:#A85641}.btn-primary{color:#fff;background-color:#A85641;border-color:#A85641}.btn-primary:focus,.btn-primary.focus{box-shadow:0 0 0 3px rgba(168,86,65,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#8c4836;border-color:#8c4836}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#A85641;border-color:#A85641}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#8c4836;border-color:#8c4836}::selection{color:#fff;background:#A85641}::-moz-selection{color:#fff;background:#A85641}
+
+</style>
+
 <!--<![endif]-->
+
+
+
 
 </head>
 
 <body>
-  
-<div class="navbar fixed-top">
+  <div class="navbar fixed-top">
   <div class="content">
-    <span class="sr-only">Jump to:</span>
-    <a id="_menu" class="menu no-hover" href="#_title">
-      <span class="sr-only">Menu</span>
-    </a>
+    <div class="nav-btn-bar">
+      <span class="sr-only">Jump to:</span>
+      <a id="_menu" class="nav-btn no-hover" href="#_navigation">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+    </div>
   </div>
 </div>
 
 
-<div id="_yPushState">
-  <div class="fade-in">
-    <main id="_main" class="content" role="main" data-color="#A85641" data-image="/dandelion.png">
-      
+<hy-push-state>
+  <main
+    id="_main"
+    class="content fade-in layout-blog"
+    role="main"
+    data-color="#A85641"
+    data-theme-color=""
+    
+      data-image="/dandelion.png"
+      data-overlay
+    
+    >
+    
+
+  
   
 
-<article id="post-study/notes/2017/10/12/CLRSChap1" class="post mb6" role="article">
+
+<article id="post-cpp-tutorial-2017-09-21-vectors" class="page post mb6" role="article">
   <header>
     <h1 class="post-title">
-      <a href="/study/notes/2017/10/12/CLRSChap1/" data-flip="title">
-        Introduction to Algorithms - Chapter 1
-      </a>
-    </h1>
-
-    <p class="post-date heading">
-      <time datetime="2017-10-12T05:30:00+05:30">12 Oct 2017</time>
-      
-
-
-
-
-
-
-
-
-
-in <span>Study</span> / <span>Notes</span>
-
-      
-
-
-
-
-
-
-
-
-
-on <span>Algorithms</span>
-
-    </p>
-
-    
-  
-  
-<p class="message">These are the study notes I made for reading CLRS.</p>
-
-
-
-
-  </header>
-
-  
-    
-
-    <p class="read-more">Continue reading <a class="heading" href="/study/notes/2017/10/12/CLRSChap1/" data-flip="title">Introduction to Algorithms - Chapter 1</a></p>
-  
-
-</article>
-
-
-
-
-  
-
-<article id="post-interesting/2017/10/11/boxbe" class="post mb6" role="article">
-  <header>
-    <h1 class="post-title">
-      <a href="/interesting/2017/10/11/boxbe/" data-flip="title">
-        An anti-spam service called Boxbe
-      </a>
-    </h1>
-
-    <p class="post-date heading">
-      <time datetime="2017-10-11T00:30:00+05:30">11 Oct 2017</time>
-      
-
-
-
-
-
-
-
-
-
-in <span>Interesting</span>
-
-      
-
-
-
-
-
-
-
-
-
-on <span>Unrelated</span>
-
-    </p>
-
-    
-  
-  
-<p class="message">Follow ups of an email that came to my dad’s inbox.</p>
-
-
-
-
-  </header>
-
-  
-    
-
-    <p class="read-more">Continue reading <a class="heading" href="/interesting/2017/10/11/boxbe/" data-flip="title">An anti-spam service called Boxbe</a></p>
-  
-
-</article>
-
-
-
-
-  
-
-<article id="post-cpp-tutorial/2017/09/22/operators" class="post mb6" role="article">
-  <header>
-    <h1 class="post-title">
-      <a href="/cpp-tutorial/2017/09/22/operators/" data-flip="title">
-        Operators and the end of this tutorial
-      </a>
-    </h1>
-
-    <p class="post-date heading">
-      <time datetime="2017-09-22T05:30:00+05:30">22 Sep 2017</time>
-      
-
-
-
-
-
-
-
-
-
-in <span>Cpp-tutorial</span>
-
-      
-
-
-
-
-
-
-
-
-
-on <a href="/tag/cpp/" data-flip="title">C++</a>
-
-    </p>
-
-    
-  
-  
-<p class="message">The last of “A Beginner’s guide of C++”</p>
-
-
-
-
-  </header>
-
-  
-    
-
-    <p class="read-more">Continue reading <a class="heading" href="/cpp-tutorial/2017/09/22/operators/" data-flip="title">Operators and the end of this tutorial</a></p>
-  
-
-</article>
-
-
-
-
-  
-
-<article id="post-cpp-tutorial/2017/09/21/vectors" class="post mb6" role="article">
-  <header>
-    <h1 class="post-title">
-      <a href="/cpp-tutorial/2017/09/21/vectors/" data-flip="title">
+      <a href="/cpp-tutorial/2017/09/21/vectors/" class="flip-title">
         Sneek Peek: Vectors
       </a>
     </h1>
 
     <p class="post-date heading">
+      
       <time datetime="2017-09-21T06:30:00+05:30">21 Sep 2017</time>
+      
+      
+      
+      
       
 
 
@@ -369,16 +212,20 @@ in <span>Cpp-tutorial</span>
 
 
 
-on <a href="/tag/cpp/" data-flip="title">C++</a>
+on <a href="/tag/cpp/" class="flip-title">C++</a>
 
     </p>
 
     
-  
-  
-<p class="message">We take a sneek peek into something that <strong>really</strong> should come later.</p>
 
 
+
+  
+    <p class="message" >
+      We take a sneek peek into something that <strong>really</strong> should come later.
+
+    </p>
+  
 
 
   </header>
@@ -386,26 +233,35 @@ on <a href="/tag/cpp/" data-flip="title">C++</a>
   
     
 
-    <p class="read-more">Continue reading <a class="heading" href="/cpp-tutorial/2017/09/21/vectors/" data-flip="title">Sneek Peek: Vectors</a></p>
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/cpp-tutorial/2017/09/21/vectors/">Sneek Peek: Vectors</a>
+      </p>
+    </footer>
   
-
 </article>
 
 
-
-
   
 
-<article id="post-cpp-tutorial/2017/09/20/arrays" class="post mb6" role="article">
+
+<article id="post-cpp-tutorial-2017-09-20-arrays" class="page post mb6" role="article">
   <header>
     <h1 class="post-title">
-      <a href="/cpp-tutorial/2017/09/20/arrays/" data-flip="title">
+      <a href="/cpp-tutorial/2017/09/20/arrays/" class="flip-title">
         Arrays
       </a>
     </h1>
 
     <p class="post-date heading">
+      
       <time datetime="2017-09-20T03:30:00+05:30">20 Sep 2017</time>
+      
+      
+      
+      
       
 
 
@@ -428,16 +284,20 @@ in <span>Cpp-tutorial</span>
 
 
 
-on <a href="/tag/cpp/" data-flip="title">C++</a>
+on <a href="/tag/cpp/" class="flip-title">C++</a>
 
     </p>
 
     
-  
-  
-<p class="message">Exploring the world of Arrays, that affect your programs more than you might think.</p>
 
 
+
+  
+    <p class="message" >
+      Exploring the world of Arrays, that affect your programs more than you might think.
+
+    </p>
+  
 
 
   </header>
@@ -445,92 +305,374 @@ on <a href="/tag/cpp/" data-flip="title">C++</a>
   
     
 
-    <p class="read-more">Continue reading <a class="heading" href="/cpp-tutorial/2017/09/20/arrays/" data-flip="title">Arrays</a></p>
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/cpp-tutorial/2017/09/20/arrays/">Arrays</a>
+      </p>
+    </footer>
+  
+</article>
+
+
   
 
+
+<article id="post-cpp-tutorial-2017-09-19-making-a-simple-program" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title">
+      <a href="/cpp-tutorial/2017/09/19/making-a-simple-program/" class="flip-title">
+        Making a Simple Program
+      </a>
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2017-09-19T05:30:00+05:30">19 Sep 2017</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <span>Cpp-tutorial</span>
+
+      
+
+
+
+
+
+
+
+
+
+on <a href="/tag/cpp/" class="flip-title">C++</a>
+
+    </p>
+
+    
+
+
+
+  
+    <p class="message" >
+      I make a simple program using all that we have learnt up to now, plus something extra.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <hr />
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/cpp-tutorial/2017/09/19/making-a-simple-program/">Making a Simple Program</a>
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+<article id="post-cpp-tutorial-2017-09-19-control-statements" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title">
+      <a href="/cpp-tutorial/2017/09/19/control-statements/" class="flip-title">
+        Control Statements
+      </a>
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2017-09-19T00:30:00+05:30">19 Sep 2017</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <span>Cpp-tutorial</span>
+
+      
+
+
+
+
+
+
+
+
+
+on <a href="/tag/cpp/" class="flip-title">C++</a>
+
+    </p>
+
+    
+
+
+
+  
+    <p class="message" >
+      Part 2 of “The Basics of Coding in C++”
+
+    </p>
+  
+
+
+  </header>
+
+  
+    
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/cpp-tutorial/2017/09/19/control-statements/">Control Statements</a>
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+<article id="post-cpp-tutorial-2017-09-17-a-quick-detour" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title">
+      <a href="/cpp-tutorial/2017/09/17/a-quick-detour/" class="flip-title">
+        A quick detour - Data Types
+      </a>
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2017-09-17T17:30:00+05:30">17 Sep 2017</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <span>Cpp-tutorial</span>
+
+      
+
+
+
+
+
+
+
+
+
+on <a href="/tag/cpp/" class="flip-title">C++</a>
+
+    </p>
+
+    
+
+
+
+  
+    <p class="message" >
+      Some data types, including some that you might not have seen.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/cpp-tutorial/2017/09/17/a-quick-detour/">A quick detour - Data Types</a>
+      </p>
+    </footer>
+  
 </article>
 
 
 
-
-
 <h2 class="sr-only">Pagination</h2>
-<nav class="pagination heading" role="navigation">
+<nav class="pagination heading clearfix" role="navigation">
   <ul>
     <li class="pagination-item older" >
       
-        <a rel="next" href="/page-4/">Older</a>
       
+      
+  <a
+    class=" "
+    href="/page-4/"
+    rel="next"
+    
+  >
+    Older
+  </a>
+
+
     </li>
     <li class="pagination-item newer" >
       
-        <a rel="prev" href="/page-2/">Newer</a>
       
+      
+  <a
+    class=" "
+    href="/page-2/"
+    rel="prev"
+    
+  >
+    Newer
+  </a>
+
+
     </li>
   </ul>
 </nav>
 
 
 
-      
 
-      <footer>
+    
+
+
+    <footer role="contentinfo">
   <hr/>
   
-  <p>
-    <code>Powered by <a href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">6.6.1</span></code>
-  </p>
+  
+  <p><small>Powered by <a class="external" href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">7.5.1</span></small></p>
+  <hr class="sr-only"/>
 </footer>
 
-    </main>
-  </div>
-  <div id="_yDrawer">
-  <div id="_sidebar" class="sidebar">
-    <div class="sidebar-bg" style="background-color:#A85641;background-image:url(/dandelion.png)"></div>
-    <header class="sidebar-sticky" role="banner">
-      <div class="sidebar-about">
-        <h1><a id="_title" href="/">The C++ Student</a></h1>
-        <p>I’m just a student who wants to delve deeper into the world of Computing, with C++ as my base. I’ll be posting quite often from now on, so stay tuned!</p>
+  </main>
+  <hy-drawer>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+    <div class="sidebar-bg sidebar-overlay" style="background-color:#A85641;background-image:url(/dandelion.png)"></div>
 
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        <h2 class="h1"><a href="/">The C++ Student</a></h2>
+        
+        
+          <p class="">
+            I’m just a student who wants to delve deeper into the world of Computing, with C++ as my base.
+
+          </p>
+        
       </div>
 
       <nav class="sidebar-nav heading" role="navigation">
         <span class="sr-only">Navigation:</span>
 <ul>
   
-
   
-
   
-
   
-    <li>
-      <a class="sidebar-nav-item" href="/posts/">Posts</a>
-    </li>
+    
+      <li>
+        <a
+          id="_navigation"
+          href="/upcoming/"
+          class="sidebar-nav-item"
+          
+          >
+          Upcoming Projects
+        </a>
+      </li>
+    
   
-    <li>
-      <a class="sidebar-nav-item" href="/upcoming/">Upcoming Projects</a>
-    </li>
+    
+      <li>
+        <a
+          
+          href="/ongoing/"
+          class="sidebar-nav-item"
+          
+          >
+          Ongoing Projects
+        </a>
+      </li>
+    
   
-    <li>
-      <a class="sidebar-nav-item" href="/ongoing/">Ongoing Projects</a>
-    </li>
+    
+      <li>
+        <a
+          
+          href="/tag/cpp/"
+          class="sidebar-nav-item"
+          
+          >
+          C++
+        </a>
+      </li>
+    
   
-    <li>
-      <a class="sidebar-nav-item" href="/tag/cpp/">C++</a>
-    </li>
+    
+      <li>
+        <a
+          
+          href="/tag/ioccc/"
+          class="sidebar-nav-item"
+          
+          >
+          IOCCC
+        </a>
+      </li>
+    
   
-    <li>
-      <a class="sidebar-nav-item" href="/tag/ethical/">Ethical Hacking</a>
-    </li>
-  
-    <li>
-      <a class="sidebar-nav-item" href="/tag/ioccc/">IOCCC</a>
-    </li>
-  
-    <li>
-      <a class="sidebar-nav-item" href="/about/">Hey, I'm Nischay.</a>
-    </li>
+    
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item"
+          
+          >
+          Hey, I'm Nischay.
+        </a>
+      </li>
+    
   
 </ul>
 
@@ -538,10 +680,16 @@ on <a href="/tag/cpp/" data-flip="title">C++</a>
 
       
 
-      
-        <div class="sidebar-social">
-          <span class="sr-only">Social:</span>
+      <div class="sidebar-social">
+        <span class="sr-only">Social</span>
 <ul>
+  
+    
+    
+  
+
+  
+
   
     
 
@@ -558,7 +706,7 @@ on <a href="/tag/cpp/" data-flip="title">C++</a>
 
 
 <li>
-  <a href="https://github.com/hegdenischay" title="GitHub">
+  <a href="https://github.com/hegdenischay" title="GitHub" class="no-mark-external">
     <span class="icon-github"></span>
     <span class="sr-only">GitHub</span>
   </a>
@@ -580,7 +728,7 @@ on <a href="/tag/cpp/" data-flip="title">C++</a>
 
 
 <li>
-  <a href="hegdenischay@gmail.com" title="Email">
+  <a href="hegdenischay@gmail.com" title="Email" class="no-mark-external">
     <span class="icon-mail"></span>
     <span class="sr-only">Email</span>
   </a>
@@ -602,41 +750,78 @@ on <a href="/tag/cpp/" data-flip="title">C++</a>
 
 
 <li>
-  <a href="https://<url>/feed.xml" title="RSS">
+  <a href="https://<url>/feed.xml" title="RSS" class="no-mark-external">
     <span class="icon-rss2"></span>
     <span class="sr-only">RSS</span>
   </a>
 </li>
 
   
-
-  
-
-  
 </ul>
 
-        </div>
-      
-    </header>
-  </div>
-</div>
+      </div>
+    </div>
+  </header>
+</hy-drawer>
 
-</div>
-
+</hy-push-state>
 
 
-
+  
 
   <!--[if gt IE 9]><!---->
   
-  <script>loadJSDeferred('/assets/js/hydejack.js?v=6.6.1');</script>
-
+  <script>loadJSDeferred('/assets/js/hydejack-7.5.1.js');</script>
   
-
   <!--<![endif]-->
 
 
 
-</body>
+  
+<hr class="sr-only"/>
+<h2 class="sr-only">Templates:</h2>
 
+<template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+<template id="_loading-template">
+  <div class="loading">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+<template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading: <a class="this-link" href=""></a>.
+    </p>
+  </div>
+</template>
+
+<template id="_back-template">
+  <a id="_back" class="back nav-btn no-hover">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </a>
+</template>
+
+<template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="icon-link"></span>
+  </a>
+</template>
+
+
+
+</body>
 </html>
