@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/cplusplusstudent/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cplusplusstudent/" rel="alternate" type="text/html" /><updated>2019-01-23T01:13:43+09:00</updated><id>http://localhost:4000/cplusplusstudent/</id><title type="html">The C++ Student</title><subtitle>I'm just a student who wants to delve deeper into the world of Computing, with C++ as my base.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/cplusplusstudent/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cplusplusstudent/" rel="alternate" type="text/html" /><updated>2019-05-26T01:18:48+09:00</updated><id>http://localhost:4000/cplusplusstudent/feed.xml</id><title type="html">The C++ Student</title><subtitle>I'm just a student who wants to delve deeper into the world of Computing, with C++ as my base.
 </subtitle><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><entry><title type="html">IOCCC (1985)</title><link href="http://localhost:4000/cplusplusstudent/c/2017/11/17/IOCCC3/" rel="alternate" type="text/html" title="IOCCC (1985)" /><published>2017-11-17T04:00:00+09:00</published><updated>2017-11-17T04:00:00+09:00</updated><id>http://localhost:4000/cplusplusstudent/c/2017/11/17/IOCCC3</id><content type="html" xml:base="http://localhost:4000/cplusplusstudent/c/2017/11/17/IOCCC3/">&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#lycklamac&quot; id=&quot;markdown-toc-lycklamac&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lycklama.c&lt;/code&gt;&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#analysing-the-code-and-removing-some-obfuscation&quot; id=&quot;markdown-toc-analysing-the-code-and-removing-some-obfuscation&quot;&gt;Analysing the code, and removing some obfuscation&lt;/a&gt;&lt;/li&gt;
@@ -261,19 +261,43 @@ write(j/p+p,i---j,i/i);
 
 &lt;p&gt;Also note that &lt;code class=&quot;highlighter-rouge&quot;&gt;i[&quot;]&amp;lt;i;++i){--i;}&quot;]&lt;/code&gt; is actually a array of characters initialized as a string.&lt;/p&gt;
 
-&lt;p&gt;Now, &lt;code class=&quot;highlighter-rouge&quot;&gt;write()&lt;/code&gt; is a Unix system call, and what it does is similar to the &lt;a href=&quot;http://www.cplusplus.com/reference/cstring/memset/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;memset&lt;/code&gt;&lt;/a&gt; function, i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;memset(0,i,1)&lt;/code&gt; and since &lt;em&gt;that’s&lt;/em&gt; in a &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop, it basically takes &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; (the array of characters mentioned before) and assigns each element of &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; with data from the &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop, i.e. the hello world code.&lt;/p&gt;
+&lt;p&gt;Sometimes, it’s good to check what’s happening under the hood to figure out the code. I’m going to do just that.
+Running &lt;code class=&quot;highlighter-rouge&quot;&gt;ltrace&lt;/code&gt; tells you what library calls were being used.
+Running &lt;code class=&quot;highlighter-rouge&quot;&gt;ltrace&lt;/code&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;anonymous.c&lt;/code&gt; reveals this:&lt;/p&gt;
 
-&lt;p&gt;More explanations will come as soon as I understand them. 
-A person on discord helped a lot to understand this code. I thank him here..&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;write(0, &quot;h&quot;, 1h)                                 = 1
+write(0, &quot;e&quot;, 1e)                                 = 1
+write(0, &quot;l&quot;, 1l)                                 = 1
+write(0, &quot;l&quot;, 1l)                                 = 1
+write(0, &quot;o&quot;, 1o)                                 = 1
+write(0, &quot;,&quot;, 1,)                                 = 1
+write(0, &quot;w&quot;, 1w)                                 = 1
+write(0, &quot;o&quot;, 1o)                                 = 1
+write(0, &quot;r&quot;, 1r)                                 = 1
+write(0, &quot;l&quot;, 1l)                                 = 1
+write(0, &quot;d&quot;, 1d)                                 = 1
+write(0, &quot;!&quot;, 1!)                                 = 1
+write(0, &quot;\n&quot;, 1
+)                                = 1
+write(0, &quot;&quot;, 1)                                  = 1
+write(0, &quot;1&quot;, 11)                                 = 1
++++ exited (status 0) +++
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;write()&lt;/code&gt; is a Unix system call (you can find more about it by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;man 2 write&lt;/code&gt; on any linux system, and what it does is similar to a &lt;code class=&quot;highlighter-rouge&quot;&gt;printf&lt;/code&gt; statement, i.e., write(0,”h”,1) is the same as typing printf(“h”), since 0 means &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; and 1 is just the size of the data.&lt;/p&gt;
+
+&lt;p&gt;A person on discord helped a lot to understand this code. I thank him here..&lt;/p&gt;
 
 &lt;h2 id=&quot;finished-code&quot;&gt;Finished Code&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;unistd.h&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;sys/unistd.h&amp;gt;
 int i;
 int main()
 {
-for(;i[&quot;]&amp;lt;i;++i){--i;}&quot;];
-write(0,i+++&quot;hell\o, world!\n&quot;,1));
+	for(;i[&quot;1234567891011&quot;];)
+	{
+		write(0,i+++&quot;hell\o, world!\n&quot;,1);
+	}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -614,7 +638,7 @@ Output: A permutation (reordering) &lt;code class=&quot;MathJax_Preview&quot;&gt
 
 &lt;p&gt;Let’s check the pseudocode of the Insertion Sort algorithm:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/CLRS2/insertion.png&quot; alt=&quot;inserton&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/CLRS2/insertion.png&quot; alt=&quot;inserton&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this pseudocode, &lt;code class=&quot;MathJax_Preview&quot;&gt;A[j]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;A[j]&lt;/script&gt; is the &lt;code class=&quot;MathJax_Preview&quot;&gt;{j}^{th}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{j}^{th}&lt;/script&gt; element of the array &lt;code class=&quot;MathJax_Preview&quot;&gt;A&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;.&lt;/p&gt;
 
