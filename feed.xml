@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/cplusplusstudent/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cplusplusstudent/" rel="alternate" type="text/html" /><updated>2019-05-26T01:18:48+09:00</updated><id>http://localhost:4000/cplusplusstudent/feed.xml</id><title type="html">The C++ Student</title><subtitle>I'm just a student who wants to delve deeper into the world of Computing, with C++ as my base.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/cplusplusstudent/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cplusplusstudent/" rel="alternate" type="text/html" /><updated>2019-05-26T01:24:48+09:00</updated><id>http://localhost:4000/cplusplusstudent/feed.xml</id><title type="html">The C++ Student</title><subtitle>I'm just a student who wants to delve deeper into the world of Computing, with C++ as my base.
 </subtitle><author><name>Nischay Hegde</name><email>hegdenischay@gmail.com</email></author><entry><title type="html">IOCCC (1985)</title><link href="http://localhost:4000/cplusplusstudent/c/2017/11/17/IOCCC3/" rel="alternate" type="text/html" title="IOCCC (1985)" /><published>2017-11-17T04:00:00+09:00</published><updated>2017-11-17T04:00:00+09:00</updated><id>http://localhost:4000/cplusplusstudent/c/2017/11/17/IOCCC3</id><content type="html" xml:base="http://localhost:4000/cplusplusstudent/c/2017/11/17/IOCCC3/">&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#lycklamac&quot; id=&quot;markdown-toc-lycklamac&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lycklama.c&lt;/code&gt;&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#analysing-the-code-and-removing-some-obfuscation&quot; id=&quot;markdown-toc-analysing-the-code-and-removing-some-obfuscation&quot;&gt;Analysing the code, and removing some obfuscation&lt;/a&gt;&lt;/li&gt;
@@ -368,7 +368,7 @@ efficient than another.&lt;/p&gt;
 one time more than the loop body. We assume that comments are not executable statements, and so they take no time.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/Chap2Part2/1.png&quot; alt=&quot;Insertion_sort_cost&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/Chap2Part2/1.png&quot; alt=&quot;Insertion_sort_cost&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The total running time is the sum of running times for each statement executed. Therefore, the total time taken is:&lt;/p&gt;
 
@@ -638,7 +638,7 @@ Output: A permutation (reordering) &lt;code class=&quot;MathJax_Preview&quot;&gt
 
 &lt;p&gt;Let’s check the pseudocode of the Insertion Sort algorithm:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/CLRS2/insertion.png&quot; alt=&quot;inserton&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/CLRS2/insertion.png&quot; alt=&quot;inserton&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this pseudocode, &lt;code class=&quot;MathJax_Preview&quot;&gt;A[j]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;A[j]&lt;/script&gt; is the &lt;code class=&quot;MathJax_Preview&quot;&gt;{j}^{th}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{j}^{th}&lt;/script&gt; element of the array &lt;code class=&quot;MathJax_Preview&quot;&gt;A&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;.&lt;/p&gt;
 
@@ -759,7 +759,7 @@ input into the output.&lt;/p&gt;
 &lt;h2 id=&quot;how-it-all-started&quot;&gt;How it all started&lt;/h2&gt;
 &lt;p&gt;So I found an email in my Dad’s inbox. My mom wanted me to check it out. I found this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/boxbe/1.png&quot; alt=&quot;boxbe&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/1.png&quot; alt=&quot;boxbe&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I just thought that an anti-spam service at this day and age was unnecessary, as almost all email providers have anti-spam features.&lt;/p&gt;
 
@@ -771,7 +771,7 @@ input into the output.&lt;/p&gt;
 
 &lt;p&gt;Just out of curiosity, I looked at its Twitter Feed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/boxbe/2.png&quot; alt=&quot;boxbe-twitter&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/2.png&quot; alt=&quot;boxbe-twitter&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Yes, the last time it tweeted was in 2009.&lt;/p&gt;
 
@@ -786,10 +786,10 @@ input into the output.&lt;/p&gt;
 &lt;h2 id=&quot;what-i-did&quot;&gt;What I did&lt;/h2&gt;
 &lt;p&gt;Therefore, I made a dummy AOL Mail account and a dummy ProtonMail account in order to perform a check on whether this was true.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/boxbe/3.png&quot; alt=&quot;boxbe_invites&quot; /&gt; 
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/3.png&quot; alt=&quot;boxbe_invites&quot; /&gt; 
 A part of the webapp no one likes (at least according to twitter).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/boxbe/3_2.png&quot; alt=&quot;boxbe_signup&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/3_2.png&quot; alt=&quot;boxbe_signup&quot; /&gt;
 The sign-up notification.&lt;/p&gt;
 
 &lt;table&gt;
@@ -801,8 +801,8 @@ The sign-up notification.&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/boxbe/4.png&quot; alt=&quot;boxbe_dashboard&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/boxbe/5.png&quot; alt=&quot;boxbe_after&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/4.png&quot; alt=&quot;boxbe_dashboard&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/5.png&quot; alt=&quot;boxbe_after&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -811,9 +811,9 @@ The sign-up notification.&lt;/p&gt;
 
 &lt;p&gt;And to check that it is truly not working anymore, I sent a test message through ProtonMail to the AOL Mail account I had registered boxbe with.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/boxbe/6.png&quot; alt=&quot;proton_mail&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/6.png&quot; alt=&quot;proton_mail&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/boxbe/7.png&quot; alt=&quot;where_it_came&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/cplusplusstudent/assets/boxbe/7.png&quot; alt=&quot;where_it_came&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see, it has appeared in the Spam Folder, something that all ProtonMail emails appear in AOL Mail. So we know for sure that Boxbe was truly removed.&lt;/p&gt;
 
